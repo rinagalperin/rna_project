@@ -1,3 +1,5 @@
+import * as d3 from "d3.min";
+
 $(document).ready(function () {
    console.log('page is loaded');
    onButtonClick();
@@ -18,11 +20,12 @@ function getData(input){
         method: "GET",
         url: "get_data/" + input
     }).done(function (data) {
-        var jsonData = JSON.parse(data);
-        console.log(jsonData.url);
-        $('#graph-pic').attr("src","static/pics/" + jsonData.url + ".png");
+        var seedInput = JSON.parse(data);
+        console.log(seedInput.url);
+        $('#graph-pic').attr("src","../static/pics/" + seedInput.url + ".png");
     });
 }
+
 function parseNewick(a){for(var e=[],r={},s=a.split(/\s*(;|\(|\)|,|:)\s*/),t=0;t<s.length;t++){var n=s[t];switch(n){case"(":var c={};r.branchset=[c],e.push(r),r=c;break;case",":var c={};e[e.length-1].branchset.push(c),r=c;break;case")":r=e.pop();break;case":":break;default:var h=s[t-1];")"==h||"("==h||","==h?r.name=n:":"==h&&(r.length=parseFloat(n))}}return r};
 
 function renderGraph() {

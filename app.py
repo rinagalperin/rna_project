@@ -18,9 +18,17 @@ def get_data(input):
 def info():
     return render_template('info.html', data={})
 
+@app.route('/nav.html')
+def nav():
+    return render_template('nav.html', data={})
+
 @app.route('/reports')
 def reports():
     return render_template('reports.html', data={})
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', data={})
 
 if __name__ == '__main__':
     app.run(debug=True)

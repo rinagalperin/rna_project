@@ -1,55 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="static/js/jquery-3.3.1.min.js"></script>
-    <script src="static/js/d3.min.js"></script>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/css/graph.css">
-
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="static/css/cover.css" rel="stylesheet">
+    <!--Navigation bar-->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+    $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+    </script>
+    <!--end of Navigation bar-->
 </head>
+ <div id="nav-placeholder"></div>
 <body>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">MiRNA System</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link active" href="/reports">Reports</a>
-        <a class="nav-link" href="/info">About Us</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-<main role="main" class="inner cover">
+<div>
+<main role="main" class="inner cover" align="center">
     <h1 class="cover-heading"></h1>
-
-
-  <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter seed family" aria-label="Enter seed family" aria-describedby="button-addon2" id="seed">
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="seed_btn">Search</button>
-  </div>
-</div>
-
+<br><br><br>
       <div>
-          <img width="500" height="500" id="graph-pic" src="static/pics/tree.png" />
+          reports...
       </div>
 
   </main>
@@ -59,7 +27,7 @@
     </div>
   </footer>
 
-    <script src="static/js/main.js"></script>
+    <script src="../static/js/main.js"></script>
 </div>
 </body>
 </html>
