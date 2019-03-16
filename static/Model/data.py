@@ -4,8 +4,8 @@ from os.path import commonprefix
 import numpy as np
 import operator
 
-from mature import Mature
-from mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended
+from static.Model.mature import Mature
+from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended
 
 
 class Data:

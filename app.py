@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import json
 import numpy as np
 
-from static.Model import data, reader, mapper
+from static.Model import data, mapper
 
 app = Flask(__name__)
 seed_length = 6
