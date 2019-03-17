@@ -1,0 +1,58 @@
+{
+    "AACUAG": {
+        "Cavia porcellus": {
+            "cpo-mir-708": {
+                "mature name": "cpo-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Dasypus novemcinctus": {
+            "dno-mir-708": {
+                "mature name": "dno-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-708": {
+                "mature name": "hsa-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-mir-708": {
+                "mature name": "mml-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-708": {
+                "mature name": "mmu-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Oryctolagus cuniculus": {
+            "ocu-mir-708": {
+                "mature name": "ocu-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Pteropus alecto": {
+            "pal-mir-708": {
+                "mature name": "pal-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-mir-708": {
+                "mature name": "rno-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Sus scrofa": {
+            "ssc-mir-708": {
+                "mature name": "ssc-miR-708-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

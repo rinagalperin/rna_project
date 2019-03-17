@@ -22,7 +22,7 @@ class Data:
         # mature-name-and-type: {{cin-miR-4074-3p, 3p}}
         self.pre_mir_name_to_mature_5p_or_3p_map = {}
 
-        self.table_data = self.table_from_txt_file("hairpin.txt")
+        self.table_data = self.table_from_txt_file("static/Model/hairpin.txt")
         self.seed_list = get_all_seed(self.table_data)
         self.organisms = np.unique(self.table_data[1])
 
@@ -31,7 +31,7 @@ class Data:
         self.mature_name_seed_map = self.init_mature_name_seed_map()
 
     def table_from_txt_file(self, path_input):
-        pname_to_data = create_map_5p_3p("mature.txt")
+        pname_to_data = create_map_5p_3p("static/Model/mature.txt")
         with open(path_input, "r") as f:
             split_txt = f.read().split('>')
 
@@ -343,13 +343,13 @@ class Data:
         return string
 
     def init_seed_mature_name_map(self):
-        with open('maps/seed_to_mature_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
+        with open('static/Model/maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
             seed_to_mature_map = json.load(fp)
 
         return seed_to_mature_map
 
     def init_mature_name_seed_map(self):
-        with open('maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
+        with open('static/Model/maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
             mature_to_seed_map = json.load(fp)
 
         return mature_to_seed_map
