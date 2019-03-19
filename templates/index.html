@@ -68,7 +68,7 @@ textarea {
                     <div class="help-tip">
                         <p><br>
                             Enter a 6 or 7 digit seed sequence or a family name
-                            (for example: <font color="#375991">AACUAG</font> or <font color="#375991">let-7-3p</font>),
+                            (for example: <font color="#375991">AACUAG</font> or <br> <font color="#375991">let-7-3p</font>),
                             and click "Search"
                         </p>
                     </div>
@@ -98,25 +98,39 @@ textarea {
             <!-- JSON output -->
             <br>
             <div class="col-md-7" id="jsonArea"  hidden="true">
-                <textarea id="jsonTextArea" cols="30" rows="5"></textarea>
+                <textarea id="jsonTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
                 <!-- save JSON output -->
                 <button class="btn btn-outline-secondary" type="button" id="dwn_json_btn">Download</button>
             </div>
 
+            <!-- GRAPH output -->
+            <br>
+            <div class="col-md-7" id="graphArea"  hidden="true">
+            <script src="../static/ViewModel/graph.js"></script>
+            </div>
+
             <!-- HTML output TODO: add download option-->
             <br>
-            html
+            <div class="col-md-7" id="htmlArea"  hidden="true">
+                <textarea id="htmlTextArea" cols="30" rows="5" title=""></textarea>
+                <br>
+                <!-- save JSON output -->
+                <button class="btn btn-outline-secondary" type="button" id="dwn_html_btn">Download</button>
+            </div>
 
             <!-- CSV output TODO: add download option-->
             <br>
-            csv
+            <div class="col-md-7" id="csvArea"  hidden="true">
+                <textarea id="csvTextArea" cols="30" rows="5" title=""></textarea>
+                <br>
+                <!-- save JSON output -->
+                <button class="btn btn-outline-secondary" type="button" id="dwn_csv_btn">Download</button>
+            </div>
 
 
             <div class="col-md-12">
-                <svg width="960" height="950"></svg>
                 <script src="https://d3js.org/d3.v4.min.js"></script>
-                <script src="../static/ViewModel/graph.js"></script>
             </div>
         </main>
     </div>

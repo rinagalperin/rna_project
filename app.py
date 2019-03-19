@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 import json
-import numpy as np
 
 from static.Model import data, mapper
 
@@ -53,9 +52,14 @@ def nav():
     return render_template('nav.html', data={})
 
 
-@app.route('/reports')
-def reports():
-    return render_template('reports.html', data={})
+@app.route('/examples')
+def examples():
+    return render_template('examples.html', data={})
+
+
+@app.route('/publications')
+def publications():
+    return render_template('publications.html', data={})
 
 
 @app.route('/contact')

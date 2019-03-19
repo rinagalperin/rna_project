@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="../static/View/tooltip.css">
+<style>
+body {
+  padding: 3rem;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 30rem;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.node circle {
+  fill: #999;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 1.5px;
+}
+
+</style>
 <head>
     <!--Navigation bar-->
     <script src="//code.jquery.com/jquery.min.js"></script>
@@ -10,8 +49,32 @@
     </script>
     <!--end of Navigation bar-->
 </head>
+
 <body>
- <div id="nav-placeholder"></div>
-Info...
+    <div class="container">
+        <div id="nav-placeholder" style="height: 100px"></div>
+
+        <main role="main" class="col-md-12">
+            <div class="col-md-5">
+                <br>
+                about us...
+            </div>
+
+
+            <div class="col-md-12">
+                <script src="https://d3js.org/d3.v4.min.js"></script>
+            </div>
+        </main>
+    </div>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner"></div>
+    </footer>
+
+    <script src="../static/ViewModel/main.js"></script>
 </body>
 </html>
+
+<!---
+<p> BioMIR <sup>&reg;</sup> Rina Galperin & Shachar Oren | BGU university | 2019 </p>
+--->
