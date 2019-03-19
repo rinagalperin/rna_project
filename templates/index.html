@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<link rel="stylesheet" href="../static/View/tooltip.css">
 <style>
 body {
   padding: 3rem;
@@ -39,8 +39,6 @@ textarea {
 }
 
 </style>
-
-
 <head>
     <!--Navigation bar-->
     <script src="//code.jquery.com/jquery.min.js"></script>
@@ -58,17 +56,58 @@ textarea {
 
         <main role="main" class="col-md-12">
             <div class="col-md-5">
+                <br>
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Enter seed family" aria-label="Recipient's username" aria-describedby="button-addon2" id="seed">
-                  <div>
+                  &nbsp;&nbsp;
+                    <div>
                     <button class="btn btn-outline-secondary" type="button" id="seed_btn">Search</button>
                   </div>
+                    &nbsp;&nbsp;
+                    <!-- search TOOL TIP -->
+                    <div class="help-tip">
+                        <p><br>
+                            Enter a 6 or 7 digit seed sequence or a family name
+                            (for example: <font color="#375991">AACUAG</font> or <font color="#375991">let-7-3p</font>),
+                            and click "Search"
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-7">
-                <textarea name="" id="myTextarea" cols="30" rows="10"></textarea>
+            <div class="input-group mb-3">
+                <!-- choose one/more output type -->
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="json" value="json">&nbsp;&nbsp;JSON
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="tree" value="tree">&nbsp;&nbsp;Phylogenetic Tree
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="html" value="html">&nbsp;&nbsp;HTML
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="csv" value="csv">&nbsp;&nbsp;CSV
+
+                &nbsp;
+                <!-- output types TOOL TIP -->
+                <div class="help-tip">
+                    <p><br>
+                        Choose one or more output types
+                    </p>
+                </div>
             </div>
+
+            <!-- JSON output TODO: add download option-->
+            <br>
+            <div class="col-md-7">
+                <textarea name="" id="jsonArea" cols="30" rows="5"></textarea>
+            </div>
+
+            <!-- HTML output TODO: add download option-->
+            <br>
+            html
+
+            <!-- CSV output TODO: add download option-->
+            <br>
+            csv
 
 
             <div class="col-md-12">

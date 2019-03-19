@@ -1,14 +1,26 @@
+function isChecked(element) {
+    return document.getElementById(element).checked;
+}
+
+function jsonOutput(){
+    // show text area of json output
+    document.getElementById("jsonArea").style.visibility = "";
+}
+
+
 $(document).ready(function () {
    console.log('page is loaded');
    onButtonClick();
-   renderGraph();
+   // hide all outputs until selection is made
+   //document.getElementById("jsonArea").style.visibility = "hidden";
 });
 
 function onButtonClick(){
     $('#seed_btn').click(function (event) {
         event.preventDefault();
         console.log('btn clicked');
-        var input = $('#seed').val();
+        let input = $('#seed').val();
+
         getData(input);
     })
 }
@@ -22,7 +34,7 @@ function getData(input) {
         //$('#graph-pic').attr("src","../static/pics/" + seedInput.url + ".png");
         //$('#graph-pic').attr(seedInput.url);
         let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
-        $('#myTextarea').text(textedJson);
+        $('#jsonArea').text(textedJson);
         //$("#graph-pic").append(document.createTextNode(data));
     });
 

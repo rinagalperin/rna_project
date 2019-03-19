@@ -1,0 +1,91 @@
+/* question mark position */
+.help-tip{
+    position: relative;
+    top: 0px;
+    right: -5px;
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+/* question mark symbol */
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+/* info text */
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+/* The tooltip */
+.help-tip p{
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -28px;
+    top: -122px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* The header/title of the tooltip
+    swap "solid" with "solid transparent"
+    to eliminate the bookmark symbol */
+.help-tip p:before{
+    position: relative;
+    content: '';
+    color: #484848;
+    width:0;
+    height: 0;
+    border:6px solid;
+    border-bottom-color: #1E2021;
+    right:10px;
+    top:-8px;
+}
+
+/* Prevents the tooltip from being hidden */
+.help-tip p:after{
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
