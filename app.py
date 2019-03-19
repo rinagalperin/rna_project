@@ -13,13 +13,19 @@ def hello_world():
     return render_template('index.html', data={})
 
 
-@app.route('/get_data/<chosen_seed>')
-def get_data(chosen_seed):
-    # user's input seed
-    #chosen_seed = {"url": input}
-    seed_length = len(chosen_seed)
+@app.route('/get_data/<user_input>')
+def get_data(user_input):
+    if '-' in user_input:
+        seed_length = 6
+    else:
+        seed_length = len(user_input)
 
     my_data = data.Data(seed_length)
+
+    if '-' in user_input:
+        chosen_seed = my_data.mature_name_seed_map[user_input]
+    else:
+        chosen_seed = user_input
 
     table_data = my_data.table_data
     seed_list = my_data.seed_list

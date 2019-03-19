@@ -1,0 +1,888 @@
+{
+    "GAGGUA": {
+        "Alligator mississippiensis": {
+            "ami-let-7b": {
+                "mature name": "ami-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ami-let-7d": {
+                "mature name": "ami-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ami-let-7e": {
+                "mature name": "ami-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ami-let-7g": {
+                "mature name": "ami-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ami-let-7i": {
+                "mature name": "ami-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ami-mir-98": {
+                "mature name": "ami-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Anolis carolinensis": {
+            "aca-let-7a": {
+                "mature name": "aca-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "aca-let-7b": {
+                "mature name": "aca-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "aca-let-7d": {
+                "mature name": "aca-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "aca-let-7e": {
+                "mature name": "aca-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "aca-let-7i": {
+                "mature name": "aca-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "aca-mir-98": {
+                "mature name": "aca-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Apis mellifera": {
+            "ame-let-7": {
+                "mature name": "ame-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Ascaris suum": {
+            "asu-let-7": {
+                "mature name": "asu-let-7-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "asu-mir-84": {
+                "mature name": "asu-miR-84-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "asu-mir-5364": {
+                "mature name": "asu-miR-5364-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Bombyx mori": {
+            "bmo-let-7": {
+                "mature name": "bmo-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Bos taurus": {
+            "bta-mir-6119": {
+                "mature name": "bta-miR-6119-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Caenorhabditis elegans": {
+            "cel-let-7": {
+                "mature name": "cel-let-7-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cel-mir-48": {
+                "mature name": "cel-miR-48-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cel-mir-84": {
+                "mature name": "cel-miR-84-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cel-mir-241": {
+                "mature name": "cel-miR-241-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cel-mir-794": {
+                "mature name": "cel-miR-794-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cel-mir-795": {
+                "mature name": "cel-miR-795-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Caenorhabditis remanei": {
+            "crm-mir-84": {
+                "mature name": "crm-miR-84-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "crm-mir-48": {
+                "mature name": "crm-miR-48-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Capra hircus": {
+            "chi-let-7a": {
+                "mature name": "chi-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7b": {
+                "mature name": "chi-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7c": {
+                "mature name": "chi-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7d": {
+                "mature name": "chi-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7e": {
+                "mature name": "chi-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7f": {
+                "mature name": "chi-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7g": {
+                "mature name": "chi-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-let-7i": {
+                "mature name": "chi-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "chi-mir-98": {
+                "mature name": "chi-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Cavia porcellus": {
+            "cpo-let-7b": {
+                "mature name": "cpo-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-let-7c": {
+                "mature name": "cpo-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-let-7d": {
+                "mature name": "cpo-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-let-7e": {
+                "mature name": "cpo-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-let-7g": {
+                "mature name": "cpo-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-let-7i": {
+                "mature name": "cpo-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-mir-98": {
+                "mature name": "cpo-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpo-mir-202": {
+                "mature name": "cpo-miR-202-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Chrysemys picta": {
+            "cpi-let-7b": {
+                "mature name": "cpi-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpi-let-7d": {
+                "mature name": "cpi-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpi-let-7e": {
+                "mature name": "cpi-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpi-let-7g": {
+                "mature name": "cpi-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpi-let-7i": {
+                "mature name": "cpi-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cpi-mir-98": {
+                "mature name": "cpi-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Ciona intestinalis": {
+            "cin-let-7b": {
+                "mature name": "cin-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cin-let-7d": {
+                "mature name": "cin-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cin-let-7f": {
+                "mature name": "cin-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Columba livia": {
+            "cli-let-7c": {
+                "mature name": "cli-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cli-let-7d": {
+                "mature name": "cli-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cli-let-7e": {
+                "mature name": "cli-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cli-let-7f": {
+                "mature name": "cli-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cli-let-7g": {
+                "mature name": "cli-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cli-let-7i": {
+                "mature name": "cli-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Cricetulus griseus": {
+            "cgr-let-7d": {
+                "mature name": "cgr-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "cgr-let-7g": {
+                "mature name": "cgr-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Culex quinquefasciatus": {
+            "cqu-let-7": {
+                "mature name": "cqu-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Dasypus novemcinctus": {
+            "dno-let-7a": {
+                "mature name": "dno-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dno-let-7b": {
+                "mature name": "dno-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dno-let-7d": {
+                "mature name": "dno-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dno-let-7g": {
+                "mature name": "dno-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dno-let-7i": {
+                "mature name": "dno-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dno-mir-98": {
+                "mature name": "dno-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Dinoponera quadriceps": {
+            "dqu-let-7": {
+                "mature name": "dqu-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Drosophila erecta": {
+            "der-mir-9681": {
+                "mature name": "der-miR-9681-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Drosophila melanogaster": {
+            "dme-let-7": {
+                "mature name": "dme-let-7-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "dme-mir-984": {
+                "mature name": "dme-miR-984-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Drosophila yakuba": {
+            "dya-mir-9681": {
+                "mature name": "dya-miR-9681-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Echinococcus granulosus": {
+            "egr-let-7": {
+                "mature name": "egr-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Echinococcus multilocularis": {
+            "emu-let-7": {
+                "mature name": "emu-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Gadus morhua": {
+            "gmo-let-7j": {
+                "mature name": "gmo-let-7j-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gmo-let-7f": {
+                "mature name": "gmo-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gmo-let-7c": {
+                "mature name": "gmo-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Gallus gallus": {
+            "gga-let-7c": {
+                "mature name": "gga-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gga-let-7g": {
+                "mature name": "gga-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gga-let-7f": {
+                "mature name": "gga-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gga-let-7j": {
+                "mature name": "gga-let-7j-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "gga-let-7k": {
+                "mature name": "gga-let-7k-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Gyrodactylus salaris": {
+            "gsa-let-7": {
+                "mature name": "gsa-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Heligmosomoides polygyrus": {
+            "hpo-let-7": {
+                "mature name": "hpo-let-7-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hpo-mir-84a": {
+                "mature name": "hpo-miR-84a-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-let-7b": {
+                "mature name": "hsa-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-let-7c": {
+                "mature name": "hsa-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-let-7d": {
+                "mature name": "hsa-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-let-7e": {
+                "mature name": "hsa-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-mir-98": {
+                "mature name": "hsa-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-let-7g": {
+                "mature name": "hsa-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-let-7i": {
+                "mature name": "hsa-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "hsa-mir-202": {
+                "mature name": "hsa-miR-202-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Lytechinus variegatus": {
+            "lva-let-7": {
+                "mature name": "lva-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-let-7b": {
+                "mature name": "mml-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mml-let-7c": {
+                "mature name": "mml-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mml-let-7e": {
+                "mature name": "mml-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mml-let-7g": {
+                "mature name": "mml-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mml-let-7i": {
+                "mature name": "mml-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Melibe leonina": {
+            "mle-let-7": {
+                "mature name": "mle-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mesocestoides corti": {
+            "mco-let-7": {
+                "mature name": "mco-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Monodelphis domestica": {
+            "mdo-let-7g": {
+                "mature name": "mdo-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mdo-let-7i": {
+                "mature name": "mdo-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-let-7g": {
+                "mature name": "mmu-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-let-7i": {
+                "mature name": "mmu-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-mir-202": {
+                "mature name": "mmu-miR-202-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "mmu-let-7d": {
+                "mature name": "mmu-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-let-7b": {
+                "mature name": "mmu-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-let-7e": {
+                "mature name": "mmu-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-mir-98": {
+                "mature name": "mmu-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Ophiophagus hannah": {
+            "oha-let-7b": {
+                "mature name": "oha-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oha-let-7d": {
+                "mature name": "oha-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oha-let-7g": {
+                "mature name": "oha-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oha-let-7i": {
+                "mature name": "oha-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oha-let-7e": {
+                "mature name": "oha-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oha-mir-98": {
+                "mature name": "oha-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Ornithorhynchus anatinus": {
+            "oan-let-7b": {
+                "mature name": "oan-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oan-let-7e": {
+                "mature name": "oan-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oan-let-7g": {
+                "mature name": "oan-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oan-let-7d": {
+                "mature name": "oan-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "oan-mir-7405": {
+                "mature name": "oan-miR-7405-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Oryctolagus cuniculus": {
+            "ocu-let-7b": {
+                "mature name": "ocu-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ocu-let-7c": {
+                "mature name": "ocu-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ocu-let-7d": {
+                "mature name": "ocu-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ocu-let-7g": {
+                "mature name": "ocu-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ocu-let-7i": {
+                "mature name": "ocu-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ocu-mir-98": {
+                "mature name": "ocu-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Panagrellus redivivus": {
+            "prd-mir-84": {
+                "mature name": "prd-miR-84-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "prd-let-7": {
+                "mature name": "prd-let-7-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "prd-mir-7892": {
+                "mature name": "prd-miR-7892-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "prd-mir-7966a": {
+                "mature name": "prd-miR-7966a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Paralichthys olivaceus": {
+            "pol-let-7b": {
+                "mature name": "pol-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pol-let-7a": {
+                "mature name": "pol-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pol-let-7d": {
+                "mature name": "pol-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Parasteatoda tepidariorum": {
+            "pte-let-7": {
+                "mature name": "pte-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Patiria miniata": {
+            "pmi-let-7": {
+                "mature name": "pmi-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Petromyzon marinus": {
+            "pma-let-7b": {
+                "mature name": "pma-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Polistes canadensis": {
+            "pca-let-7": {
+                "mature name": "pca-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Pristionchus pacificus": {
+            "ppc-mir-84d": {
+                "mature name": "ppc-miR-84d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ppc-mir-84c": {
+                "mature name": "ppc-miR-84c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ppc-mir-84e": {
+                "mature name": "ppc-miR-84e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ppc-mir-8290": {
+                "mature name": "ppc-miR-8290-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "ppc-mir-84f": {
+                "mature name": "ppc-miR-84f-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Pteropus alecto": {
+            "pal-let-7f": {
+                "mature name": "pal-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-let-7g": {
+                "mature name": "pal-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-let-7e": {
+                "mature name": "pal-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-let-7i": {
+                "mature name": "pal-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-mir-98": {
+                "mature name": "pal-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-let-7c": {
+                "mature name": "pal-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pal-mir-6119": {
+                "mature name": "pal-miR-6119-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Python bivittatus": {
+            "pbv-let-7b": {
+                "mature name": "pbv-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pbv-let-7d": {
+                "mature name": "pbv-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pbv-let-7e": {
+                "mature name": "pbv-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pbv-let-7g": {
+                "mature name": "pbv-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pbv-let-7i": {
+                "mature name": "pbv-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "pbv-mir-98": {
+                "mature name": "pbv-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-let-7d": {
+                "mature name": "rno-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "rno-let-7b": {
+                "mature name": "rno-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "rno-let-7e": {
+                "mature name": "rno-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "rno-let-7i": {
+                "mature name": "rno-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "rno-mir-98": {
+                "mature name": "rno-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "rno-mir-202": {
+                "mature name": "rno-miR-202-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "rno-let-7g": {
+                "mature name": "rno-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Salmo salar": {
+            "ssa-let-7j": {
+                "mature name": "ssa-let-7j-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ssa-let-7f": {
+                "mature name": "ssa-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ssa-let-7h": {
+                "mature name": "ssa-let-7h-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Schistosoma mansoni": {
+            "sma-let-7": {
+                "mature name": "sma-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Schmidtea mediterranea": {
+            "sme-let-7a": {
+                "mature name": "sme-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "sme-let-7b": {
+                "mature name": "sme-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "sme-let-7c": {
+                "mature name": "sme-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Strongyloides ratti": {
+            "str-mir-84": {
+                "mature name": "str-miR-84-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Sus scrofa": {
+            "ssc-let-7i": {
+                "mature name": "ssc-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "ssc-let-7d": {
+                "mature name": "ssc-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Taeniopygia guttata": {
+            "tgu-let-7i": {
+                "mature name": "tgu-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tgu-let-7b": {
+                "mature name": "tgu-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tgu-let-7e": {
+                "mature name": "tgu-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tgu-let-7f": {
+                "mature name": "tgu-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tgu-let-7d": {
+                "mature name": "tgu-let-7d-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Tribolium castaneum": {
+            "tca-let-7": {
+                "mature name": "tca-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Triops cancriformis": {
+            "tcf-let-7": {
+                "mature name": "tcf-let-7-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Tupaia chinensis": {
+            "tch-let-7g": {
+                "mature name": "tch-let-7g-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tch-let-7f": {
+                "mature name": "tch-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tch-mir-98": {
+                "mature name": "tch-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tch-let-7i": {
+                "mature name": "tch-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "tch-let-7e": {
+                "mature name": "tch-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Xenopus laevis": {
+            "xla-let-7a": {
+                "mature name": "xla-let-7a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-let-7b": {
+                "mature name": "xla-let-7b-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-let-7c": {
+                "mature name": "xla-let-7c-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-let-7e": {
+                "mature name": "xla-let-7e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-let-7f": {
+                "mature name": "xla-let-7f-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-let-7j": {
+                "mature name": "xla-let-7j-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "xla-let-7i": {
+                "mature name": "xla-let-7i-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "xla-mir-98": {
+                "mature name": "xla-miR-98-5p",
+                "mature 3p or 5p": "5p"
+            }
+        }
+    }
+}

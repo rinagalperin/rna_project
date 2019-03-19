@@ -343,7 +343,7 @@ class Data:
         return string
 
     def init_seed_mature_name_map(self):
-        with open('static/Model/maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
+        with open('static/Model/maps/seed_to_mature_map_' + str(self.seed_length) + '.txt', 'rb') as fp:
             seed_to_mature_map = json.load(fp)
 
         return seed_to_mature_map

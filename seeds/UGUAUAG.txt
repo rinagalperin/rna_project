@@ -1,0 +1,10 @@
+{
+    "UGUAUAG": {
+        "Bombyx mori": {
+            "bmo-let-7": {
+                "mature name": "bmo-let-7-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

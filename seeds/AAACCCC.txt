@@ -1,0 +1,10 @@
+{
+    "AAACCCC": {
+        "Homo sapiens": {
+            "hsa-mir-6771": {
+                "mature name": "hsa-miR-6771-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}
