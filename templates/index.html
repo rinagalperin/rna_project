@@ -78,13 +78,13 @@ textarea {
             <div class="input-group mb-3">
                 <!-- choose one/more output type -->
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="json" value="json">&nbsp;&nbsp;JSON
+                <input type="checkbox" id="json">&nbsp;&nbsp;JSON
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="tree" value="tree">&nbsp;&nbsp;Phylogenetic Tree
+                <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="html" value="html">&nbsp;&nbsp;HTML
+                <input type="checkbox" id="html">&nbsp;&nbsp;HTML
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="csv" value="csv">&nbsp;&nbsp;CSV
+                <input type="checkbox" id="csv">&nbsp;&nbsp;CSV
 
                 &nbsp;
                 <!-- output types TOOL TIP -->
@@ -95,10 +95,13 @@ textarea {
                 </div>
             </div>
 
-            <!-- JSON output TODO: add download option-->
+            <!-- JSON output -->
             <br>
-            <div class="col-md-7">
-                <textarea name="" id="jsonArea" cols="30" rows="5"></textarea>
+            <div class="col-md-7" id="jsonArea"  hidden="true">
+                <textarea id="jsonTextArea" cols="30" rows="5"></textarea>
+                <br>
+                <!-- save JSON output -->
+                <button class="btn btn-outline-secondary" type="button" id="dwn_json_btn">Download</button>
             </div>
 
             <!-- HTML output TODO: add download option-->

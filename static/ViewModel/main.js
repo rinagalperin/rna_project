@@ -2,26 +2,44 @@ function isChecked(element) {
     return document.getElementById(element).checked;
 }
 
-function jsonOutput(){
+function jsonOutput(show){
     // show text area of json output
-    document.getElementById("jsonArea").style.visibility = "";
+    if(show){
+        document.getElementById("jsonArea").removeAttribute("hidden");
+    }
+    // hide text area of json output
+    else{
+        document.getElementById("jsonArea").setAttribute("hidden", "true");
+    }
 }
 
+function csvOutput(show){
+
+}
 
 $(document).ready(function () {
    console.log('page is loaded');
-   onButtonClick();
+   onSeedButtonClick();
+   onDwnJsonButtonClick();
    // hide all outputs until selection is made
    //document.getElementById("jsonArea").style.visibility = "hidden";
 });
 
-function onButtonClick(){
+function onSeedButtonClick(){
     $('#seed_btn').click(function (event) {
         event.preventDefault();
-        console.log('btn clicked');
         let input = $('#seed').val();
-
         getData(input);
+    })
+}
+
+function onDwnJsonButtonClick(){
+    $('#dwn_json_btn').click(function (event) {
+        event.preventDefault();
+        let seed = $('#seed').val();
+        let json_data = $('#jsonTextArea').val();
+        //let json_file_name = $('#jsonFileName').val();
+        download(json_data, "BioMir_seed_json_"+seed, "txt");
     })
 }
 
@@ -30,14 +48,41 @@ function getData(input) {
         method: "GET",
         url: "get_data/" + input
     }).done(function (data) {
-        console.log(JSON.parse(data));
         //$('#graph-pic').attr("src","../static/pics/" + seedInput.url + ".png");
         //$('#graph-pic').attr(seedInput.url);
-        let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
-        $('#jsonArea').text(textedJson);
         //$("#graph-pic").append(document.createTextNode(data));
+        if(isChecked("json")){
+            // show json text area
+            jsonOutput(true);
+            // parse json result
+            let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
+            // display result in text area
+            $('#jsonTextArea').text(textedJson);
+        }
+
+        if(isChecked("csv")){
+            csvOutput(true)
+        }
     });
 
+}
+
+function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
 }
 
 //function parseNewick(a){for(var e=[],r={},s=a.split(/\s*(;|\(|\)|,|:)\s*/),t=0;t<s.length;t++){var n=s[t];switch(n){case"(":var c={};r.branchset=[c],e.push(r),r=c;break;case",":var c={};e[e.length-1].branchset.push(c),r=c;break;case")":r=e.pop();break;case":":break;default:var h=s[t-1];")"==h||"("==h||","==h?r.name=n:":"==h&&(r.length=parseFloat(n))}}return r};
