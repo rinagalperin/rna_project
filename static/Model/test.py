@@ -1,3 +1,4 @@
+import pynteractive
 from pynteractive import *
 import random
 
@@ -26,5 +27,4 @@ a.markClade(['144', '93'], 'red')
 a.markClade(['116', '107', '58', ], 'blue')
 a.markClade(['39', '72', '164', ], 'green')
 
-if __name__ == '__main__':
-    x=9
+pynteractive.raw_input()

@@ -68,8 +68,7 @@ textarea {
                     <div class="help-tip">
                         <p><br>
                             Enter a 6 or 7 digit seed sequence or a family name
-                            (for example: <font color="#375991">AACUAG</font> or <br> <font color="#375991">let-7-3p</font>),
-                            and click "Search"
+                            (for example: <font color="#375991">AACUAG</font> or <br> <font color="#375991">let-7-3p</font>)
                         </p>
                     </div>
                 </div>
@@ -80,17 +79,17 @@ textarea {
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="json">&nbsp;&nbsp;JSON
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
-                &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="html">&nbsp;&nbsp;HTML
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="csv">&nbsp;&nbsp;CSV
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="newick">&nbsp;&nbsp;Phylogenetic Tree
 
                 &nbsp;
                 <!-- output types TOOL TIP -->
                 <div class="help-tip">
                     <p><br>
-                        Choose one or more output types
+                        Choose one or more output types, and click "Search"
                     </p>
                 </div>
             </div>
@@ -110,7 +109,7 @@ textarea {
             <script src="../static/ViewModel/graph.js"></script>
             </div>
 
-            <!-- HTML output TODO: add download option-->
+            <!-- HTML output -->
             <br>
             <div class="col-md-7" id="htmlArea"  hidden="true">
                 <textarea id="htmlTextArea" cols="30" rows="5" title=""></textarea>
@@ -119,13 +118,20 @@ textarea {
                 <button class="btn btn-outline-secondary" type="button" id="dwn_html_btn">Download</button>
             </div>
 
-            <!-- CSV output TODO: add download option-->
+            <!-- CSV output -->
             <br>
             <div class="col-md-7" id="csvArea"  hidden="true">
                 <textarea id="csvTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
-                <!-- save JSON output -->
                 <button class="btn btn-outline-secondary" type="button" id="dwn_csv_btn">Download</button>
+            </div>
+
+            <!-- Newick output -->
+            <br>
+            <div class="col-md-20" id="newickArea"  hidden="true">
+                <div id="newickTextArea" title=""></div>
+                <br>
+                <button class="btn btn-outline-secondary" type="button" id="dwn_newick_btn">Download</button>
             </div>
 
 
@@ -140,6 +146,8 @@ textarea {
     </footer>
 
     <script src="../static/ViewModel/main.js"></script>
+    <script type="module" src="../static/ViewModel/raphael.min.js"></script>
+    <script type="module" src="../static/ViewModel/jsphylosvg-min.js"></script>
 </body>
 </html>
 
