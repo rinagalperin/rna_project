@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e45d915-2b0d-4615-bd1f-5deb76f086f1" name="Default Changelist" comment="delete main py">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Model/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/static/Model/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/View/cover.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/View/cover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Model/tree_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/static/Model/tree_creator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/ViewModel/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ViewModel/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/easy-install.pth" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,22 +41,22 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="18" />
-          <entry key="csv" value="4" />
-          <entry key="html" value="15" />
-          <entry key="js" value="25" />
+          <entry key="csv" value="5" />
+          <entry key="html" value="16" />
+          <entry key="js" value="26" />
           <entry key="png" value="5" />
-          <entry key="py" value="47" />
+          <entry key="py" value="48" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="18" />
-          <entry key="HTML" value="15" />
+          <entry key="HTML" value="16" />
           <entry key="Image" value="5" />
-          <entry key="JavaScript" value="25" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="47" />
+          <entry key="JavaScript" value="26" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="Python" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,120 +64,35 @@
           <entry key="Python Console" value="80" />
           <entry key="css" value="436" />
           <entry key="csv" value="15" />
-          <entry key="html" value="2202" />
-          <entry key="js" value="2040" />
-          <entry key="py" value="2699" />
+          <entry key="html" value="2264" />
+          <entry key="js" value="2350" />
+          <entry key="py" value="2876" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="436" />
-          <entry key="HTML" value="2202" />
-          <entry key="JavaScript" value="2040" />
+          <entry key="HTML" value="2264" />
+          <entry key="JavaScript" value="2350" />
           <entry key="PLAIN_TEXT" value="32" />
-          <entry key="Python" value="2779" />
+          <entry key="Python" value="2956" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="86" column="63" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
+            <state relative-caret-position="162">
+              <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1553863465000" expanded="true" signature="262:264" ph="..." />
-                <marker date="1553863465000" expanded="true" signature="3050:3068" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2396">
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
-              <folding>
-                <element signature="n#!!block;n#isChecked#0" />
-                <element signature="n#!!block;n#jsonOutput#0" />
-                <element signature="n#!!block;n#csvOutput#0" />
-                <element signature="n#!!block;n#onSeedButtonClick#0" />
-                <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
-                <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
-                <element signature="n#!!block;n#download#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ViewModel/jsphylosvg-min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="32" selection-end-line="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ViewModel/graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="31" lean-forward="true" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-277">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#482#585#0" />
-                <element signature="e#628#980#0" />
-                <element signature="e#1011#1102#0" />
-                <element signature="e#1161#1858#0" />
-                <element signature="e#2099#4164#0" />
-                <element signature="e#4210#4298#0" />
-                <element signature="e#4346#4595#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="79" column="65" selection-start-line="79" selection-start-column="65" selection-end-line="79" selection-end-column="65" />
-              <folding>
-                <element signature="e#2308#2314#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="215" column="31" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#1506#6924#0" />
-                <element signature="e#9914#10317#0" />
-                <element signature="e#10379#11131#0" />
-                <element signature="e#11248#12776#0" />
-                <element signature="e#12836#12964#0" />
-                <element signature="e#13015#13193#0" />
-                <element signature="e#13244#13422#0" />
+                <marker date="1553902866000" expanded="true" signature="262:264" ph="..." />
+                <marker date="1553902866000" expanded="true" signature="1529:2583" ph="..." />
+                <marker date="1553902866000" expanded="true" signature="3868:3886" ph="..." />
               </folding>
             </state>
           </provider>
@@ -189,24 +101,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="443">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1553863396000" expanded="true" signature="87:128" ph="..." />
+                <marker date="1553901664000" expanded="true" signature="87:128" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/test.py">
+        <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="258">
+              <caret line="220" column="22" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#isChecked#0" />
+                <element signature="n#!!block;n#jsonOutput#0" />
+                <element signature="n#!!block;n#csvOutput#0" />
+                <element signature="n#!!block;n#newickOutput#1" />
+                <element signature="e#613#727#0" />
+                <element signature="n#!!block;n#onSeedButtonClick#0" />
+                <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
+                <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
+                <element signature="n#!!block;n#onDwnCsvButtonClick#1" />
+                <element signature="n#!!block;n#onDwnCsvButtonClick#1" />
+                <element signature="n#!!block;n#download#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -234,7 +166,6 @@
       <find>fro</find>
       <find>data</find>
       <find>population.csv</find>
-      <find>csv</find>
       <find>getData</find>
       <find>heap</find>
       <find>myTextarea</find>
@@ -250,13 +181,14 @@
       <find>factory</find>
       <find>Model</find>
       <find>Lytechinus variegatus</find>
-      <find>Homo sapiens</find>
       <find>output typ</find>
       <find>parent</find>
       <find>jsphylosvg</find>
-      <find>newick</find>
       <find>tsets</find>
+      <find>newick</find>
+      <find>Homo sapiens</find>
       <find>print</find>
+      <find>csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -294,10 +226,10 @@
         <option value="$PROJECT_DIR$/static/Model/test.py" />
         <option value="$PROJECT_DIR$/static/Model/data.py" />
         <option value="$PROJECT_DIR$/static/ViewModel/jsphylosvg-min.js" />
-        <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
         <option value="$PROJECT_DIR$/static/Model/tree_creator.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -584,11 +516,11 @@
     <frame x="0" y="23" width="1366" height="673" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.22885196" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.22885196" />
       <window_info id="Structure" order="1" sideWeight="0.5024155" side_tool="true" weight="0.21978852" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49622357" weight="0.3297491" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4954683" weight="0.3297491" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47280967" weight="0.4014337" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4939577" weight="0.39964157" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -597,8 +529,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5226586" side_tool="true" visible="true" weight="0.4032258" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47734138" visible="true" weight="0.4032258" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50453174" side_tool="true" weight="0.3297491" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" visible="true" weight="0.17741935" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49773413" weight="0.3297491" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -704,13 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="60" selection-end-column="1225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -847,23 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="215" column="31" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1506#6924#0" />
-            <element signature="e#9914#10317#0" />
-            <element signature="e#10379#11131#0" />
-            <element signature="e#11248#12776#0" />
-            <element signature="e#12836#12964#0" />
-            <element signature="e#13015#13193#0" />
-            <element signature="e#13244#13422#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/ete3/coretype/tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1290">
@@ -875,13 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3895">
           <caret line="740" column="8" selection-start-line="740" selection-start-column="8" selection-end-line="740" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" lean-forward="true" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -909,18 +810,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
+    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2396">
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        <state relative-caret-position="99">
+          <caret line="215" column="31" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#isChecked#0" />
-            <element signature="n#!!block;n#jsonOutput#0" />
-            <element signature="n#!!block;n#csvOutput#0" />
-            <element signature="n#!!block;n#onSeedButtonClick#0" />
-            <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
-            <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
-            <element signature="n#!!block;n#download#0" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1506#6924#0" />
+            <element signature="e#9914#10317#0" />
+            <element signature="e#10379#11131#0" />
+            <element signature="e#11248#12776#0" />
+            <element signature="e#12836#12964#0" />
+            <element signature="e#13015#13193#0" />
+            <element signature="e#13244#13422#0" />
           </folding>
         </state>
       </provider>
@@ -942,35 +844,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1553863396000" expanded="true" signature="87:128" ph="..." />
-          </folding>
+        <state>
+          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="86" column="63" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1553863465000" expanded="true" signature="262:264" ph="..." />
-            <marker date="1553863465000" expanded="true" signature="3050:3068" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1553901664000" expanded="true" signature="87:128" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="79" column="65" selection-start-line="79" selection-start-column="65" selection-end-line="79" selection-end-column="65" />
+        <state relative-caret-position="88">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="220" column="22" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
           <folding>
-            <element signature="e#2308#2314#0#HTML" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#isChecked#0" />
+            <element signature="n#!!block;n#jsonOutput#0" />
+            <element signature="n#!!block;n#csvOutput#0" />
+            <element signature="n#!!block;n#newickOutput#1" />
+            <element signature="e#613#727#0" />
+            <element signature="n#!!block;n#onSeedButtonClick#0" />
+            <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
+            <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
+            <element signature="n#!!block;n#onDwnCsvButtonClick#1" />
+            <element signature="n#!!block;n#onDwnCsvButtonClick#1" />
+            <element signature="n#!!block;n#download#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1553902866000" expanded="true" signature="262:264" ph="..." />
+            <marker date="1553902866000" expanded="true" signature="1529:2583" ph="..." />
+            <marker date="1553902866000" expanded="true" signature="3868:3886" ph="..." />
           </folding>
         </state>
       </provider>

@@ -59,6 +59,7 @@ def json_to_html(json_input):
     return result
 
 
+# returns pretty newick tree
 @app.route('/json_to_newick/<json_input>')
 def json_to_newick(json_input):
     json_dict = json.loads(json_input)
@@ -78,15 +79,39 @@ def json_to_newick(json_input):
     tree_builder = tree_creator.TreeCreator(json_input)
     tree_result = tree_builder.create_tree('static/Model/miRbase_newick.txt')
 
-    # for node in tree_result.traverse("postorder"):
-    #     if node.name in organisms:
-    #         node.add_feature("num_of_matures", str(organism_num_of_matures[node.name]))
-    #         print(node.__getattribute__("num_of_matures"))
-    #         node.up.name = "RinaTree"
-    #         print(node.up.name)
-    #         #child = node.add_child(TreeNode(), "Rina", 1, 0)
+    for node in tree_result.traverse("postorder"):
+        if node.name in organisms:
+            node.name = node.name + ' Rina'
+            # node.add_feature("num_of_matures", str(organism_num_of_matures[node.name]))
+            # print(node.__getattribute__("num_of_matures"))
+            # node.up.name = "RinaTree"
+            # print(node.up.name)
+            #child = node.add_child(TreeNode(), "Rina", 1, 0)
 
-    return tree_result#str(tree_result)
+    return str(tree_result)
+
+
+# returns basic newick format for tree rendering in JS
+@app.route('/json_to_tree/<json_input>')
+def json_to_tree(json_input):
+    json_dict = json.loads(json_input)
+
+    seed = list(json_dict)[0]
+    organisms = list(json_dict[seed])
+    organism_num_of_matures = {}
+
+    for organism in organisms:
+        matures = list(json_dict[seed][organism])
+        organism_num_of_matures[organism] = len(matures)
+
+        for mature in matures:
+            mature_name = json_dict[seed][organism][mature]['mature name']
+            mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
+
+    tree_builder = tree_creator.TreeCreator(json_input)
+    newick_result = tree_builder.create_newick('static/Model/miRbase_newick.txt')
+
+    return newick_result
 
 
 @app.route('/info')

@@ -81,9 +81,9 @@ textarea {
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="html">&nbsp;&nbsp;HTML
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" id="csv">&nbsp;&nbsp;CSV
+                <input type="checkbox" id="newick">&nbsp;&nbsp;newick
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" id="newick">&nbsp;&nbsp;Phylogenetic Tree
+                <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
 
                 &nbsp;
                 <!-- output types TOOL TIP -->
@@ -95,8 +95,8 @@ textarea {
             </div>
 
             <!-- JSON output -->
-            <br>
             <div class="col-md-7" id="jsonArea"  hidden="true">
+                <br>
                 <textarea id="jsonTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
                 <!-- save JSON output -->
@@ -104,14 +104,14 @@ textarea {
             </div>
 
             <!-- GRAPH output -->
-            <br>
             <div class="col-md-7" id="graphArea"  hidden="true">
-            <script src="../static/ViewModel/graph.js"></script>
+                <br>
+                <script src="../static/ViewModel/graph.js"></script>
             </div>
 
             <!-- HTML output -->
-            <br>
             <div class="col-md-7" id="htmlArea"  hidden="true">
+                <br>
                 <textarea id="htmlTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
                 <!-- save JSON output -->
@@ -119,19 +119,27 @@ textarea {
             </div>
 
             <!-- CSV output -->
-            <br>
             <div class="col-md-7" id="csvArea"  hidden="true">
+                <br>
                 <textarea id="csvTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
                 <button class="btn btn-outline-secondary" type="button" id="dwn_csv_btn">Download</button>
             </div>
 
             <!-- Newick output -->
-            <br>
-            <div class="col-md-20" id="newickArea"  hidden="true">
-                <div id="newickTextArea" title=""></div>
+            <div class="col-md-7" id="newickArea"  hidden="true">
+                <br>
+                <textarea id="newickTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
                 <button class="btn btn-outline-secondary" type="button" id="dwn_newick_btn">Download</button>
+            </div>
+
+            <!-- Tree output -->
+            <div class="col-md-20" id="treeArea"  hidden="true">
+                <br>
+                <div id="treeTextArea" title=""></div>
+                <br>
+                <button class="btn btn-outline-secondary" type="button" id="dwn_tree_btn">Download</button>
             </div>
 
 

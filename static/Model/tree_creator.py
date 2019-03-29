@@ -16,6 +16,17 @@ class TreeCreator:
             map[s[0]] = s[1]
         return map
 
+    def create_newick(self, newick):
+        with open(newick, 'r') as myfile:
+            map_of_codes = self.init_map_of_codes()
+            tree_str = myfile.read().replace('\n', '')
+            tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
+            tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
+            for name in tree_names:
+                tree_str = tree_str.replace(name, map_of_codes[name])
+
+            return tree_str
+
     def create_tree(self, newick):
         with open(newick, 'r') as myfile:
             map_of_codes = self.init_map_of_codes()
@@ -25,5 +36,5 @@ class TreeCreator:
             for name in tree_names:
                 tree_str = tree_str.replace(name, map_of_codes[name])
 
-            #result = Tree(tree_str)
-            return tree_str#result
+            result = Tree(tree_str)
+            return result

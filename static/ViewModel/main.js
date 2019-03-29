@@ -100,6 +100,15 @@ function csvOutput(show){
     }
 }
 
+function treeOutput(show){
+    if(show){
+        document.getElementById("treeArea").removeAttribute("hidden");
+    }
+    else{
+        document.getElementById("treeArea").setAttribute("hidden", "true");
+    }
+}
+
 function newickOutput(show){
     if(show){
         document.getElementById("newickArea").removeAttribute("hidden");
@@ -144,12 +153,22 @@ function onDwnCsvButtonClick(){
     })
 }
 
+function onDwnTreeButtonClick(){
+    $('#dwn_tree_btn').click(function (event) {
+        event.preventDefault();
+        let seed = $('#seed').val();
+        let tree_data = $('#treeTextArea').val();
+        download(tree_data, "BioMir_"+seed, "PNG");
+    })
+}
+
+// TODO: allow downloading the result as image
 function onDwnNewickButtonClick(){
     $('#dwn_newick_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
-        let csv_data = $('#newickTextArea').val();
-        download(csv_data, "BioMir_newick_"+seed, "txt");
+        let newick_data = $('#newickTextArea').val();
+        download(newick_data, "BioMir_newick_"+seed, "PNG");
     })
 }
 
@@ -169,16 +188,37 @@ function getData(input) {
             let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
             // display result in text area
             $('#jsonTextArea').text(textedJson);
+        }else{
+            jsonOutput(false);
         }
-
+        /*
         if(isChecked("csv")){
             csvOutput(true);
             jsonToCsv(data);
+        }else{
+            csvOutput(false);
         }
+
+        if(isChecked("html")){
+            htmlOutput(true);
+            jsonToHtml(data);
+        }else{
+            htmlOutput(false);
+        }
+        */
 
         if(isChecked("newick")){
             newickOutput(true);
             jsonToNewick(data)
+        }else{
+            newickOutput(false);
+        }
+
+        if(isChecked("tree")){
+            treeOutput(true);
+            jsonToTree(data);
+        }else{
+            treeOutput(false);
         }
     });
 }
@@ -216,14 +256,24 @@ function jsonToNewick(json_input){
         method: "GET",
         url: "json_to_newick/" + json_input
     }).done(function (result) {
+        $('#newickTextArea').text(result);
+    });
+}
+
+function jsonToTree(json_input){
+    $.ajax({
+        method: "GET",
+        url: "json_to_tree/" + json_input
+    }).done(function (result) {
+        // TODO: not duplicate graph visual on page if clicking "SEARCH" again...
         let phylocanvas = new Smits.PhyloCanvas(
                    result,     // Newick or XML string
-                   'newickTextArea',    // Div Id where to render
+                   'treeTextArea',    // Div Id where to render
                    1000, 1000,     // Height, Width in pixels
                    'circular'      // Type of tree
         );
 
-        //$('#newickTextArea').text(phylocanvas);
+        // $('#newickTextArea').text(phylocanvas);
     });
 }
 
