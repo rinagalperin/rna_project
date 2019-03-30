@@ -2,6 +2,7 @@ from ete3 import TreeNode
 from flask import Flask, render_template
 import json
 import pandas as pd
+from json2html import json2html
 
 from static.Model import data, mapper, tree_creator
 
@@ -55,7 +56,7 @@ def json_to_csv(json_input):
 
 @app.route('/json_to_html/<json_input>')
 def json_to_html(json_input):
-    result = json_to_table_txt(json_input)
+    result = json2html.convert(json=json_input)
     return result
 
 

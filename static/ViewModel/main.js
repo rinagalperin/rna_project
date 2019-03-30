@@ -82,39 +82,12 @@ function isChecked(element) {
     return document.getElementById(element).checked;
 }
 
-function jsonOutput(show){
+function controlOutput(show, area){
     if(show){
-        document.getElementById("jsonArea").removeAttribute("hidden");
+        document.getElementById(area).removeAttribute("hidden");
     }
     else{
-        document.getElementById("jsonArea").setAttribute("hidden", "true");
-    }
-}
-
-function csvOutput(show){
-    if(show){
-        document.getElementById("csvArea").removeAttribute("hidden");
-    }
-    else{
-        document.getElementById("csvArea").setAttribute("hidden", "true");
-    }
-}
-
-function treeOutput(show){
-    if(show){
-        document.getElementById("treeArea").removeAttribute("hidden");
-    }
-    else{
-        document.getElementById("treeArea").setAttribute("hidden", "true");
-    }
-}
-
-function newickOutput(show){
-    if(show){
-        document.getElementById("newickArea").removeAttribute("hidden");
-    }
-    else{
-        document.getElementById("newickArea").setAttribute("hidden", "true");
+        document.getElementById(area).setAttribute("hidden", "true");
     }
 }
 
@@ -124,6 +97,8 @@ $(document).ready(function () {
    onDwnJsonButtonClick();
    onDwnCsvButtonClick();
    onDwnNewickButtonClick();
+   onDwnHtmlButtonClick();
+   onDwnTreeButtonClick();
 });
 
 function onSeedButtonClick(){
@@ -139,7 +114,6 @@ function onDwnJsonButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let json_data = $('#jsonTextArea').val();
-        //let json_file_name = $('#jsonFileName').val();
         download(json_data, "BioMir_json_"+seed, "txt");
     })
 }
@@ -159,6 +133,15 @@ function onDwnTreeButtonClick(){
         let seed = $('#seed').val();
         let tree_data = $('#treeTextArea').val();
         download(tree_data, "BioMir_"+seed, "PNG");
+    })
+}
+
+function onDwnHtmlButtonClick(){
+    $('#dwn_html_btn').click(function (event) {
+        event.preventDefault();
+        let seed = $('#seed').val();
+        let tree_data = $('#htmlTextArea').val();
+        download(tree_data, "BioMir_"+seed, "html");
     })
 }
 
@@ -183,13 +166,13 @@ function getData(input) {
 
         if(isChecked("json")){
             // show json text area
-            jsonOutput(true);
+            controlOutput(true, "jsonArea");
             // parse json result
             let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
             // display result in text area
             $('#jsonTextArea').text(textedJson);
         }else{
-            jsonOutput(false);
+            controlOutput(false, "jsonArea");
         }
         /*
         if(isChecked("csv")){
@@ -198,27 +181,27 @@ function getData(input) {
         }else{
             csvOutput(false);
         }
-
-        if(isChecked("html")){
-            htmlOutput(true);
-            jsonToHtml(data);
-        }else{
-            htmlOutput(false);
-        }
         */
 
         if(isChecked("newick")){
-            newickOutput(true);
+            controlOutput(true, "newickArea");
             jsonToNewick(data)
         }else{
-            newickOutput(false);
+            controlOutput(false, "newickArea");
         }
 
         if(isChecked("tree")){
-            treeOutput(true);
+            controlOutput(true, "treeArea");
             jsonToTree(data);
         }else{
-            treeOutput(false);
+            controlOutput(false, "treeArea");
+        }
+
+        if(isChecked("html")){
+            controlOutput(true, "htmlArea");
+            jsonToHtml(data);
+        }else{
+            controlOutput(false, "htmlArea");
         }
     });
 }
@@ -257,6 +240,15 @@ function jsonToNewick(json_input){
         url: "json_to_newick/" + json_input
     }).done(function (result) {
         $('#newickTextArea').text(result);
+    });
+}
+
+function jsonToHtml(json_input){
+    $.ajax({
+        method: "GET",
+        url: "json_to_html/" + json_input
+    }).done(function (result) {
+        $('#htmlTextArea').html(result);
     });
 }
 
