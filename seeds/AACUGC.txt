@@ -1,0 +1,20 @@
+{
+    "AACUGC": {
+        "Mus musculus": {
+            "mmu-mir-883a": {
+                "mature name": "mmu-miR-883a-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "mmu-mir-883b": {
+                "mature name": "mmu-miR-883b-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-mir-883": {
+                "mature name": "rno-miR-883-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

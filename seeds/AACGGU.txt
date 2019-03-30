@@ -1,0 +1,10 @@
+{
+    "AACGGU": {
+        "Mesocestoides corti": {
+            "mco-mir-12071": {
+                "mature name": "mco-miR-12071-5p",
+                "mature 3p or 5p": "5p"
+            }
+        }
+    }
+}

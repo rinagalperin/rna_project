@@ -140,8 +140,8 @@ function onDwnHtmlButtonClick(){
     $('#dwn_html_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
-        let tree_data = $('#htmlTextArea').val();
-        download(tree_data, "BioMir_"+seed, "html");
+        let tree_data = $('#htmlTextArea').html();
+        download(tree_data, "BioMir_"+seed, "txt");
     })
 }
 
@@ -264,8 +264,5 @@ function jsonToTree(json_input){
                    1000, 1000,     // Height, Width in pixels
                    'circular'      // Type of tree
         );
-
-        // $('#newickTextArea').text(phylocanvas);
     });
 }
-

@@ -5,6 +5,7 @@ import pandas as pd
 from json2html import json2html
 
 from static.Model import data, mapper, tree_creator
+from static.Model.list_creator import table2ul
 
 app = Flask(__name__)
 
@@ -58,6 +59,9 @@ def json_to_csv(json_input):
 def json_to_html(json_input):
     result = json2html.convert(json=json_input)
     return result
+
+    # result = table2ul(json2html.convert(json=json_input))
+    # return result
 
 
 # returns pretty newick tree
