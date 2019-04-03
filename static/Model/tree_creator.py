@@ -1,40 +1,48 @@
 import re
-from ete3 import Tree
 
 
 class TreeCreator:
     def __init__(self, json_dict):
-        self.json_dict = json_dict
+        # paths configurations
+        self.newick_path = 'static/Model/miRbase_newick.txt'
+        self.organisms_code_names_path = 'static/Model/miRbase_codes_names.txt'
 
-    def init_map_of_codes(self):
-        map = {}
-        with open('static/Model/miRbase_codes_names.txt') as f:
+        # instantiations
+        self.short_name_to_full_name_map = {}
+        self.full_name_to_short_name_map = {}
+        self.json_dict = json_dict
+        self.newick = self.init_newick()
+
+        # initializations
+        self.init_name_maps()
+
+    def init_name_maps(self):
+        map_1 = {}
+        with open(self.organisms_code_names_path) as f:
             content = f.readlines()
         content = [x.strip() for x in content]
         for code in content:
             s = code.split('	')
-            map[s[0]] = s[1]
-        return map
+            map_1[s[0]] = s[1]
+        self.short_name_to_full_name_map = map_1
 
-    def create_newick(self, newick):
-        with open(newick, 'r') as myfile:
-            map_of_codes = self.init_map_of_codes()
+        map_2 = {}
+        tree_str = self.newick
+        tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
+        tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
+        for name in tree_names:
+            map_2[name] = self.short_name_to_full_name_map[name]
+
+        self.full_name_to_short_name_map = map_2
+
+    def get_short_organism_name(self, full_name):
+        return self.full_name_to_short_name_map[full_name]
+
+    def get_full_organism_name(self, short_name):
+        return self.short_name_to_full_name_map[short_name]
+
+    def init_newick(self):
+        with open(self.newick_path, 'r') as myfile:
             tree_str = myfile.read().replace('\n', '')
-            tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
-            tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
-            for name in tree_names:
-                tree_str = tree_str.replace(name, map_of_codes[name])
 
-            return tree_str
-
-    def create_tree(self, newick):
-        with open(newick, 'r') as myfile:
-            map_of_codes = self.init_map_of_codes()
-            tree_str = myfile.read().replace('\n', '')
-            tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
-            tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
-            for name in tree_names:
-                tree_str = tree_str.replace(name, map_of_codes[name])
-
-            result = Tree(tree_str)
-            return result
+        return tree_str

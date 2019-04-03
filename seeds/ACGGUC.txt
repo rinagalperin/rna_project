@@ -1,0 +1,16 @@
+{
+    "ACGGUC": {
+        "Echinococcus granulosus": {
+            "egr-mir-96": {
+                "mature name": "egr-miR-96-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Heligmosomoides polygyrus": {
+            "hpo-mir-10152": {
+                "mature name": "hpo-miR-10152-5p",
+                "mature 3p or 5p": "5p"
+            }
+        }
+    }
+}

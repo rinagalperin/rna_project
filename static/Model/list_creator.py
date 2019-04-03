@@ -1,29 +1,37 @@
-from bs4 import BeautifulSoup, Tag, BeautifulStoneSoup
-
-
-def table2ul(content, flatten_rows=False):
+def table2list(table):
     """
-    Convert a <table> into a <ul>.
-    Each cell, <td>, gets converted into a list item <li> unless
-    the flatten_rows paramter is given. In this case, all content from
-    a table row, <tr>, gets converted into a list item.
-    """
-    soup = BeautifulSoup(content, 'html.parser')
+        Convert a <table> into a <ul>.
+        Each cell, <td>, gets converted into a list item <li>, as follows:
+        1) <table border="1"> --> <ul>, </table> --> </ul>
+        2) <th>, </th>, <tbody>, </tbody> --> delete
+        3) <tr>, <td> --> <li>, </tr>, </td> --> </li>
+        """
+    list = table\
+        .replace('<table border="1">', '<ul>')\
+        .replace('</table>', '</ul>')\
+        .replace('<tr>', '<li>')\
+        .replace('</tr>', '</li>')\
+        .replace('<td>', ':   ')\
+        .replace('</td>', '')\
+        .replace('<th>', '')\
+        .replace('</th>', '')\
+        .replace('<tbody>', '')\
+        .replace('</tbody>', '')
 
-    for table in soup.findAll('table'):
-        ul = Tag(soup, 'ul')
+    style = '<style>\
+                ul {\
+                  list-style: none;\
+                  color: black;\
+                }\
+                li::before {\
+                  content: \"\2022\";\
+                  color: black;\
+                  font-weight: bold;\
+                  display: inline-block;\
+                  width: 1em;\
+                  margin-left: -1em;\
+                }</style>'
 
-        if flatten_rows:
-            for row in table.findAll('tr'):
-                li = Tag(soup, 'li')
-                for cell in row.findAll('td'):
-                    li.contents.extend(cell.contents)
-                ul.append(li)
-        else:
-            for cell in table.findAll('td'):
-                li = Tag(soup, 'li')
-                li.contents = cell.contents
-                ul.append(li)
-        table.replaceWith(ul)
+    list_with_style = list# + style
 
-    return soup.prettify()
+    return list_with_style

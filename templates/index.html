@@ -81,7 +81,7 @@ textarea {
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="html">&nbsp;&nbsp;HTML
                 &nbsp;&nbsp;&nbsp;
-                <input type="checkbox" id="newick">&nbsp;&nbsp;newick
+                <input type="checkbox" id="fasta">&nbsp;&nbsp;FASTA
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
 
@@ -110,7 +110,7 @@ textarea {
             </div>
 
             <!-- HTML output -->
-            <div class="col-md-7" id="htmlArea"  hidden="true">
+            <div class="col-md-15" id="htmlArea"  hidden="true">
                 <br>
                 <div id="htmlTextArea" cols="30" rows="5" title=""></div>
                 <br>
@@ -126,12 +126,12 @@ textarea {
                 <button class="btn btn-outline-secondary" type="button" id="dwn_csv_btn">Download</button>
             </div>
 
-            <!-- Newick output -->
-            <div class="col-md-7" id="newickArea"  hidden="true">
+            <!-- FASTA output -->
+            <div class="col-md-7" id="fastaArea"  hidden="true">
                 <br>
-                <textarea id="newickTextArea" cols="30" rows="5" title=""></textarea>
+                <textarea id="fastaTextArea" cols="30" rows="5" title=""></textarea>
                 <br>
-                <button class="btn btn-outline-secondary" type="button" id="dwn_newick_btn">Download</button>
+                <button class="btn btn-outline-secondary" type="button" id="dwn_fasta_btn">Download</button>
             </div>
 
             <!-- Tree output -->

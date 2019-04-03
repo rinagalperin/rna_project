@@ -96,7 +96,7 @@ $(document).ready(function () {
    onSeedButtonClick();
    onDwnJsonButtonClick();
    onDwnCsvButtonClick();
-   onDwnNewickButtonClick();
+   onDwnFastaButtonClick();
    onDwnHtmlButtonClick();
    onDwnTreeButtonClick();
 });
@@ -146,12 +146,12 @@ function onDwnHtmlButtonClick(){
 }
 
 // TODO: allow downloading the result as image
-function onDwnNewickButtonClick(){
-    $('#dwn_newick_btn').click(function (event) {
+function onDwnFastaButtonClick(){
+    $('#dwn_fasta_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
-        let newick_data = $('#newickTextArea').val();
-        download(newick_data, "BioMir_newick_"+seed, "PNG");
+        let fasta_data = $('#fastaTextArea').val();
+        download(fasta_data, "BioMir_fasta_"+seed, "PNG");
     })
 }
 
@@ -183,11 +183,11 @@ function getData(input) {
         }
         */
 
-        if(isChecked("newick")){
-            controlOutput(true, "newickArea");
-            jsonToNewick(data)
+        if(isChecked("fasta")){
+            controlOutput(true, "fastaArea");
+            jsonToFasta(data)
         }else{
-            controlOutput(false, "newickArea");
+            controlOutput(false, "fastaArea");
         }
 
         if(isChecked("tree")){
@@ -234,12 +234,12 @@ function jsonToCsv(json_input){
     });
 }
 
-function jsonToNewick(json_input){
+function jsonToFasta(json_input){
     $.ajax({
         method: "GET",
-        url: "json_to_newick/" + json_input
+        url: "json_to_fasta/" + json_input
     }).done(function (result) {
-        $('#newickTextArea').text(result);
+        $('#fastaTextArea').text(result);
     });
 }
 
