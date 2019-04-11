@@ -1,3 +1,4 @@
+
 <phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd" xmlns="http://www.phyloxml.org">
 <phylogeny rooted="false">
   <render>
@@ -12,20 +13,20 @@
 	</parameters>
 	<charts>
 		<component type="binary" thickness="10" />
-		<content type="bar" fill="red" width="0.2" />
+		<content type="bar" fill="#333" width="0.2" />
 	</charts>
 	<styles>
-		<caffeine fill='red' stroke='#DDD' />
-		<base fill='red' stroke='#DDD' />
-		<other fill='white' stroke='#DDD' />
-		
-		<high fill='red' stroke='red' />
-		<mid fill='blue' stroke='#DDD' />
-		<low fill='black' stroke='#DDD' />
-		<none fill='red' stroke='#CCC' />
-		
-		<barChart fill='white' stroke-width="0" />
-	</styles>	
+		<caffeine fill='#A93' stroke='#DDD' />
+		<base fill='#8b7100' stroke='#DDD' />
+		<other fill='#333' stroke='#DDD' />
+
+		<high fill='#666' stroke='#DDD' />
+		<mid fill='#999' stroke='#DDD' />
+		<low fill='#CCC' stroke='#DDD' />
+		<none fill='#FFF' stroke='#CCC' />
+
+		<barChart fill='#333' stroke-width="0" />
+	</styles>
   </render>
   <clade>
     <clade>
@@ -53,12 +54,12 @@
 			  <annotation>
 				<desc>Nice froth</desc>
 				<uri>http://en.wikipedia.org/wiki/Milk_Foam</uri>
-			  </annotation>			
+			  </annotation>
 			  <chart>
 				<component>other</component>
 				<acidity>low</acidity>
 				<content>0</content>
-			  </chart>			  
+			  </chart>
           </clade>
           <clade>
             <name>Espresso Macchiato</name>
@@ -66,12 +67,12 @@
 			  <annotation>
 				<desc>Tight Espresso</desc>
 				<uri>http://en.wikipedia.org/wiki/Espresso_Macchiato</uri>
-			  </annotation>				
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>high</acidity>
 				<content>80</content>
-			  </chart>			  
+			  </chart>
           </clade>
           <clade>
             <branch_length>5.0</branch_length>
@@ -81,7 +82,7 @@
 			  <annotation>
 				<desc>No Heartburn please</desc>
 				<uri>http://en.wikipedia.org/wiki/Flat_White</uri>
-			  </annotation>				
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>mid</acidity>
@@ -96,12 +97,12 @@
 				  <annotation>
 					<desc>Don't burn it now</desc>
 					<uri>http://en.wikipedia.org/wiki/Steamed_Milk</uri>
-				  </annotation>					
+				  </annotation>
 				  <chart>
 					<component>other</component>
 					<acidity>none</acidity>
 					<content>0</content>
-				  </chart>				  
+				  </chart>
               </clade>
               <clade>
                 <name>Cappuccino</name>
@@ -109,12 +110,12 @@
 				  <annotation>
 					<desc>Ah, a classic</desc>
 					<uri>http://en.wikipedia.org/wiki/Cappuccino</uri>
-				  </annotation>		
+				  </annotation>
 				  <chart>
 					<component>caffeine</component>
 					<acidity>mid</acidity>
 					<content>50</content>
-				  </chart>				  
+				  </chart>
               </clade>
               <clade>
                 <branch_length>5.0</branch_length>
@@ -124,12 +125,12 @@
 				  <annotation>
 					<desc>Sweet tooth?</desc>
 					<uri>http://en.wikipedia.org/wiki/Whipped_Cream</uri>
-				  </annotation>			
+				  </annotation>
 				  <chart>
 					<component>other</component>
 					<acidity>none</acidity>
 					<content>0</content>
-				  </chart>				  
+				  </chart>
                 </clade>
                 <clade>
                   <name>Chocolate Syrup</name>
@@ -137,12 +138,12 @@
 				  <annotation>
 					<desc>What's next?</desc>
 					<uri>http://en.wikipedia.org/wiki/Chocolate_Syrup</uri>
-				  </annotation>		
+				  </annotation>
 				  <chart>
 					<component>other</component>
 					<acidity>none</acidity>
 					<content>0</content>
-				  </chart>				  
+				  </chart>
                 </clade>
                 <clade>
                   <name>Cafe Mocha</name>
@@ -150,12 +151,12 @@
 				  <annotation>
 					<desc>Where's my coffee?</desc>
 					<uri>http://en.wikipedia.org/wiki/Cafe_Mocha</uri>
-				  </annotation>			
+				  </annotation>
 				  <chart>
 					<component>caffeine</component>
 					<acidity>low</acidity>
 					<content>20</content>
-				  </chart>				  
+				  </chart>
                 </clade>
               </clade>
             </clade>
@@ -168,12 +169,12 @@
 	  <annotation>
 		<desc>Old-timer</desc>
 		<uri>http://en.wikipedia.org/wiki/Coffee_arabica</uri>
-	  </annotation>			
+	  </annotation>
 	  <chart>
 		<component>base</component>
 		<acidity>high</acidity>
 		<content>70</content>
-	  </chart>	  
+	  </chart>
       </clade>
       <clade>
         <branch_length>1.0</branch_length>
@@ -183,7 +184,7 @@
 		  <annotation>
 			<desc>Traditional</desc>
 			<uri>http://en.wikipedia.org/wiki/Columbian_Coffee</uri>
-		  </annotation>	
+		  </annotation>
 		  <chart>
 			<component>base</component>
 			<acidity>high</acidity>
@@ -198,7 +199,7 @@
 			  <annotation>
 				<desc>I taste like the bean</desc>
 				<uri>http://en.wikipedia.org/wiki/Heavy_Roast</uri>
-			  </annotation>		
+			  </annotation>
 			  <chart>
 				<component>base</component>
 				<acidity>high</acidity>
@@ -211,12 +212,12 @@
 			  <annotation>
 				<desc>Cigarette, anyone?</desc>
 				<uri>http://en.wikipedia.org/wiki/French_Roast</uri>
-			  </annotation>				
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>high</acidity>
 				<content>60</content>
-			  </chart>			  
+			  </chart>
           </clade>
           <clade>
             <name>European Roast</name>
@@ -224,12 +225,12 @@
 			<annotation>
 				<desc>Smooth</desc>
 				<uri>http://en.wikipedia.org/wiki/European_Roast</uri>
-			  </annotation>	
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>mid</acidity>
 				<content>50</content>
-			  </chart>			  
+			  </chart>
           </clade>
           <clade>
             <branch_length>2.0</branch_length>
@@ -239,12 +240,12 @@
 			  <annotation>
 				<desc>A little bit of both</desc>
 				<uri>http://en.wikipedia.org/wiki/Medium_Roast</uri>
-			  </annotation>				 
+			  </annotation>
 			  <chart>
 				<component>base</component>
 				<acidity>mid</acidity>
 				<content>40</content>
-			  </chart>			  
+			  </chart>
             </clade>
             <clade>
               <name>Viennese Roast</name>
@@ -252,12 +253,12 @@
 			  <annotation>
 				<desc>Nice blend</desc>
 				<uri>http://en.wikipedia.org/wiki/Viennese_Roast</uri>
-			  </annotation>				  
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>mid</acidity>
 				<content>45</content>
-			  </chart>			  
+			  </chart>
             </clade>
             <clade>
               <name>American Roast</name>
@@ -265,12 +266,12 @@
 			  <annotation>
 				<desc>Yanks need no caffeine</desc>
 				<uri>http://en.wikipedia.org/wiki/American_Roast</uri>
-			  </annotation>			  
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>mid</acidity>
 				<content>30</content>
-			  </chart>			  
+			  </chart>
             </clade>
             <clade>
               <name>Instant Coffee</name>
@@ -278,12 +279,12 @@
 			  <annotation>
 				<desc>Hold your nose</desc>
 				<uri>http://en.wikipedia.org/wiki/Instant_Coffee</uri>
-			  </annotation>				  
+			  </annotation>
 			  <chart>
 				<component>caffeine</component>
 				<acidity>low</acidity>
 				<content>15</content>
-			  </chart>			  
+			  </chart>
             </clade>
           </clade>
         </clade>
@@ -293,12 +294,12 @@
 		  <annotation>
 			<desc>Filter filter filter</desc>
 			<uri>http://en.wikipedia.org/wiki/Brazilian_Coffee</uri>
-		  </annotation>			  
+		  </annotation>
 		  <chart>
 			<component>base</component>
 			<acidity>high</acidity>
 			<content>65</content>
-		  </chart>		  
+		  </chart>
         </clade>
       </clade>
     </clade>
@@ -308,12 +309,12 @@
 	  <annotation>
 		<desc>Espresso and water</desc>
 		<uri>http://en.wikipedia.org/wiki/Americano</uri>
-	  </annotation>		  
+	  </annotation>
 	  <chart>
 		<component>caffeine</component>
 		<acidity>mid</acidity>
 		<content>50</content>
-	  </chart>	  
+	  </chart>
     </clade>
     <clade>
       <name>Water</name>
@@ -321,15 +322,13 @@
 	  <annotation>
 		<desc>Solvent of Life</desc>
 		<uri>http://en.wikipedia.org/wiki/Water</uri>
-	  </annotation>		  
+	  </annotation>
 	  <chart>
-		<component>other
-        </component>
+		<component>other</component>
 		<acidity>none</acidity>
 		<content>0</content>
 	  </chart>
-
-        </clade>
+    </clade>
   </clade>
 </phylogeny>
 </phyloxml>

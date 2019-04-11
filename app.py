@@ -1,3 +1,4 @@
+#from bio import Phylo
 from flask import Flask, render_template
 import json
 import pandas as pd
@@ -102,6 +103,8 @@ def json_to_tree(json_input):
     newick_result = tree_builder.newick
 
     return newick_result
+
+    #Phylo.convert(newick_result, 'newick', 'rina-test.nex', 'phyloxml')
 
 
 @app.route('/info')
