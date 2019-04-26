@@ -178,8 +178,7 @@ function jsonToTree(json_input){
         url: "json_to_tree/" + json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-        // TODO: convert the newick to phyloxml and pass it on instead of 'data' (the uri)
-    	let uri = "/static/ViewModel/tree.xml";
+    	let uri = "/static/ViewModel/12.xml";
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
     	    var temp_xml = test(data, relevant_organisms_arr);
@@ -202,22 +201,54 @@ function jsonToTree(json_input){
 
 function test(xmlFile, relevant_organisms){
     var xmlString = new XMLSerializer().serializeToString(xmlFile);
-
     var updated_bg_colors = xmlString.replace(/<name>/g, '<name bgStyle="nonorganisms">');
 
-    // color all relevant organisms
+    // color all relevant organisms w/ different color
     for(var i in relevant_organisms){
         var organism = relevant_organisms[i].replace(',','').replace(' ', '').replace(/'/g, '');
+        var full_name = getOrganismFullName(organism);
+
         relevant_organisms[i] = organism;
 
         var original = '<name bgStyle="nonorganisms">' + organism + '</name>';
-        var updated = '<name bgStyle="organisms">' + organism + '</name>';
+        var full_name_hover =
+            '<annotation><desc>'+
+            full_name+
+            '</desc><uri>http://en.wikipedia.org/wiki/'+
+            full_name+
+            '</uri></annotation>';
+        var updated = '<name bgStyle="organisms">' + organism + '</name>' + full_name_hover;
 
         updated_bg_colors = updated_bg_colors.replace(original, updated);
     }
 
-    console.log(relevant_organisms)
     // TODO: add bar charts
 
     return updated_bg_colors;
+}
+
+function getOrganismFullName(short_name){
+    var response = '';
+     $.ajax({
+        type: "GET",
+        url: 'get_organism_full_name/' + short_name,
+         async: false,
+        success: function(result) {
+            response = result;
+        },
+        error: function() {
+            alert('Error occured');
+        }
+    });
+
+     return response;
+}
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
 }

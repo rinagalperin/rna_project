@@ -115,6 +115,22 @@ def json_to_tree(json_input):
     return str(short_names_organisms).strip('[]')
 
 
+@app.route('/get_organism_full_name/<short_name>')
+def get_organism_full_name(short_name):
+    organisms_code_names_path = 'static/Model/miRbase_codes_names.txt'
+    map_1 = {}
+    with open(organisms_code_names_path) as f:
+        content = f.readlines()
+    content = [x.strip() for x in content]
+    for code in content:
+        s = code.split('	')
+        map_1[s[0]] = s[1]
+
+    result = str(map_1[short_name])
+
+    return result
+
+
 @app.route('/info')
 def info():
     return render_template('info.html', data={})

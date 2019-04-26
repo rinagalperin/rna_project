@@ -1,6 +1,3 @@
-import re
-
-
 class TreeCreator:
     def __init__(self, json_dict):
         # paths configurations
