@@ -2,35 +2,75 @@
 <phylogeny rooted="false">
 
     <render>
-        <parameters>
-            <circular>
-                <bufferRadius>0.5</bufferRadius>
-            </circular>
-            <rectangular>
-                <alignRight>1</alignRight>
-                <bufferX>300</bufferX>
-            </rectangular>
-	    </parameters>
+    <parameters>
+		<circular>
+			<bufferRadius>0.5</bufferRadius>
+		</circular>
+		<rectangular>
+			<alignRight>1</alignRight>
+			<bufferX>300</bufferX>
+		</rectangular>
+	</parameters>
+	<charts>
+		<group type="integratedBinary" thickness="10"  />
+		<component type="binary" thickness="10" />
+		<content type="bar" fill="#666" width="0.2" />
+	</charts>
+	<styles>
+		<caffeine fill='#A93' stroke='#DDD' />
+		<base fill='#8b7100' stroke='#DDD' />
+		<other fill='#333' stroke='#DDD' />
 
-        <charts>
-            <group type="integratedBinary" thickness="10"  />
-            <component type="binary" thickness="10" />
-            <content type="bar" fill="#666" width="0.2" />
-        </charts>
+		<high fill='#666' stroke='#DDD' />
+		<mid fill='#999' stroke='#DDD' />
+		<low fill='#CCC' stroke='#DDD' />
+		<none fill='#FFF' stroke='#CCC' />
 
-        <styles>
-            <high fill='#666' stroke='#DDD' />
-            <mid fill='#999' stroke='#DDD' />
-            <low fill='#CCC' stroke='#DDD' />
-            <none fill='#FFF' stroke='#CCC' />
 
-            <barChart fill='pink' stroke-width="3" />
-        </styles>
-    </render>
+		<barChart fill='pink' stroke-width="3" />
+		<markgroupA fill="#000" stroke="#000" opacity="0.7" label="PEETS" labelStyle="sectorHighlightText" />
+		<markgroupB fill="#000" stroke="#000" opacity="0.7" label="STARBUCKS" labelStyle="sectorHighlightText" />
+		<sectorHighlightText font-family="Verdana" font-size="9" font-weight="bold" fill="#FFFFFF" rotate="90" />
+
+		<ncategory fill="#eeeeee" stroke="#eeeeee" type="radialGradient" >
+			<stop offset="0%" style="stop-color:#eeeeee; stop-opacity:0"/>
+			<stop offset="93%" style="stop-color:#eeeeee; stop-opacity:1"/>
+			<stop offset="100%" style="stop-color:#dddddd; stop-opacity:1"/>
+		</ncategory>
+		<sweet fill="#d7e3bc" stroke="#d7e3bc" type="radialGradient" >
+			<stop offset="0%" style="stop-color:#d7e3bc; stop-opacity:0"/>
+			<stop offset="93%" style="stop-color:#d7e3bc; stop-opacity:1"/>
+			<stop offset="100%" style="stop-color:#BED192; stop-opacity:1"/>
+		</sweet>
+		<rich fill="#f1e6a8" stroke="#f1e6a8" type="radialGradient" >
+			<stop offset="0%" style="stop-color:#f1e6a8; stop-opacity:0"/>
+			<stop offset="93%" style="stop-color:#f1e6a8; stop-opacity:1"/>
+			<stop offset="100%" style="stop-color:#E3D378; stop-opacity:1"/>
+		</rich>
+		<bold fill="#e5bd94" stroke="#e5bd94" type="radialGradient" >
+			<stop offset="0%" style="stop-color:#e5bd94; stop-opacity:0"/>
+			<stop offset="93%" style="stop-color:#e5bd94; stop-opacity:1"/>
+			<stop offset="100%" style="stop-color:#D1A373; stop-opacity:1"/>
+		</bold>
+		<highlight_ncategory fill="#F3F3F3" stroke="#EEEEEE" />
+		<highlight_sweet fill="#EBF2DA" stroke="#d7e3bc" />
+		<highlight_bold fill="#e8cdb1" stroke="#e5bd94" />
+	</styles>
+  </render>
 
   <clade>
     <clade>
-      <name>smc</name>
+      <name bgStyle="bold">smc</name>
+		  <annotation>
+			<desc>Base of many coffees</desc>
+			<uri>http://en.wikipedia.org/wiki/Espresso</uri>
+		  </annotation>
+		  <chart>
+			<component>base</component>
+			<acidity label="test">high</acidity>
+			<content>100</content>
+			<group>none</group>
+		  </chart>
     </clade>
     <clade>
       <clade>
@@ -559,395 +599,6 @@
         <clade>
           <name>sci</name>
         </clade>
-      </clade>
-    </clade>
-    <clade>
-      <name>ddi</name>
-    </clade>
-    <clade>
-      <clade>
-        <name>cre</name>
-      </clade>
-      <clade>
-        <clade>
-          <name>cln</name>
-        </clade>
-        <clade>
-          <name>pab</name>
-        </clade>
-        <clade>
-          <name>pde</name>
-        </clade>
-        <clade>
-          <name>pta</name>
-        </clade>
-      </clade>
-      <clade>
-        <clade>
-          <name>ppt</name>
-        </clade>
-        <clade>
-          <name>smo</name>
-        </clade>
-      </clade>
-      <clade>
-        <clade>
-          <name>atr</name>
-        </clade>
-        <clade>
-          <clade>
-            <name>seu</name>
-          </clade>
-          <clade>
-            <name>pgi</name>
-          </clade>
-          <clade>
-            <clade>
-              <name>cca</name>
-            </clade>
-            <clade>
-              <name>han</name>
-            </clade>
-            <clade>
-              <name>har</name>
-            </clade>
-            <clade>
-              <name>hci</name>
-            </clade>
-            <clade>
-              <name>hex</name>
-            </clade>
-            <clade>
-              <name>hpa</name>
-            </clade>
-            <clade>
-              <name>hpe</name>
-            </clade>
-            <clade>
-              <name>htu</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>aly</name>
-            </clade>
-            <clade>
-              <name>ath</name>
-            </clade>
-            <clade>
-              <name>bna</name>
-            </clade>
-            <clade>
-              <name>bol</name>
-            </clade>
-            <clade>
-              <name>bra</name>
-            </clade>
-            <clade>
-              <name>cas</name>
-            </clade>
-          </clade>
-          <clade>
-            <name>cpa</name>
-          </clade>
-          <clade>
-            <clade>
-              <name>cme</name>
-            </clade>
-            <clade>
-              <name>cst</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>hbr</name>
-            </clade>
-            <clade>
-              <name>mes</name>
-            </clade>
-            <clade>
-              <name>rco</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>aau</name>
-            </clade>
-            <clade>
-              <name>ahy</name>
-            </clade>
-            <clade>
-              <name>amg</name>
-            </clade>
-            <clade>
-              <name>gma</name>
-            </clade>
-            <clade>
-              <name>gso</name>
-            </clade>
-            <clade>
-              <name>lja</name>
-            </clade>
-            <clade>
-              <name>mtr</name>
-            </clade>
-            <clade>
-              <name>pvu</name>
-            </clade>
-            <clade>
-              <name>vun</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>ama</name>
-            </clade>
-            <clade>
-              <name>dpr</name>
-            </clade>
-            <clade>
-              <name>rgl</name>
-            </clade>
-            <clade>
-              <name>smi</name>
-            </clade>
-            <clade>
-              <name>ssl</name>
-            </clade>
-          </clade>
-          <clade>
-            <name>lus</name>
-          </clade>
-          <clade>
-            <clade>
-              <name>gar</name>
-            </clade>
-            <clade>
-              <name>ghb</name>
-            </clade>
-            <clade>
-              <name>ghr</name>
-            </clade>
-            <clade>
-              <name>gra</name>
-            </clade>
-            <clade>
-              <name>tcc</name>
-            </clade>
-          </clade>
-          <clade>
-            <name>eun</name>
-          </clade>
-          <clade>
-            <name>pla</name>
-          </clade>
-          <clade>
-            <name>aqc</name>
-          </clade>
-          <clade>
-            <clade>
-              <name>bcy</name>
-            </clade>
-            <clade>
-              <name>bgy</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>fve</name>
-            </clade>
-            <clade>
-              <name>mdm</name>
-            </clade>
-            <clade>
-              <name>ppe</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>ccl</name>
-            </clade>
-            <clade>
-              <name>crt</name>
-            </clade>
-            <clade>
-              <name>csi</name>
-            </clade>
-            <clade>
-              <name>ctr</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>peu</name>
-            </clade>
-            <clade>
-              <name>ptc</name>
-            </clade>
-          </clade>
-          <clade>
-            <clade>
-              <name>nta</name>
-            </clade>
-            <clade>
-              <name>sly</name>
-            </clade>
-            <clade>
-              <name>stu</name>
-            </clade>
-          </clade>
-          <clade>
-            <name>vvi</name>
-          </clade>
-        </clade>
-        <clade>
-          <clade>
-            <name>aof</name>
-          </clade>
-          <clade>
-            <name>ata</name>
-          </clade>
-          <clade>
-            <name>bdi</name>
-          </clade>
-          <clade>
-            <name>egu</name>
-          </clade>
-          <clade>
-            <name>far</name>
-          </clade>
-          <clade>
-            <name>hvu</name>
-          </clade>
-          <clade>
-            <name>osa</name>
-          </clade>
-          <clade>
-            <name>sbi</name>
-          </clade>
-          <clade>
-            <name>sof</name>
-          </clade>
-          <clade>
-            <name>ssp</name>
-          </clade>
-          <clade>
-            <name>tae</name>
-          </clade>
-          <clade>
-            <name>ttu</name>
-          </clade>
-          <clade>
-            <name>vca</name>
-          </clade>
-          <clade>
-            <name>zma</name>
-          </clade>
-        </clade>
-      </clade>
-    </clade>
-    <clade>
-      <clade>
-        <name>bfv</name>
-      </clade>
-      <clade>
-        <name>bhv1</name>
-      </clade>
-      <clade>
-        <name>bhv5</name>
-      </clade>
-      <clade>
-        <name>bkv</name>
-      </clade>
-      <clade>
-        <name>blv</name>
-      </clade>
-      <clade>
-        <name>bpcv1</name>
-      </clade>
-      <clade>
-        <name>bpcv2</name>
-      </clade>
-      <clade>
-        <name>dev</name>
-      </clade>
-      <clade>
-        <name>ebv</name>
-      </clade>
-      <clade>
-        <name>gggpv1</name>
-      </clade>
-      <clade>
-        <name>hbv</name>
-      </clade>
-      <clade>
-        <name>hcmv</name>
-      </clade>
-      <clade>
-        <name>hhv6b</name>
-      </clade>
-      <clade>
-        <name>hiv1</name>
-      </clade>
-      <clade>
-        <name>hsv1</name>
-      </clade>
-      <clade>
-        <name>hsv2</name>
-      </clade>
-      <clade>
-        <name>hvsa</name>
-      </clade>
-      <clade>
-        <name>hvt</name>
-      </clade>
-      <clade>
-        <name>iltv</name>
-      </clade>
-      <clade>
-        <name>jcv</name>
-      </clade>
-      <clade>
-        <name>kshv</name>
-      </clade>
-      <clade>
-        <name>mcmv</name>
-      </clade>
-      <clade>
-        <name>mcpv</name>
-      </clade>
-      <clade>
-        <name>mdv1</name>
-      </clade>
-      <clade>
-        <name>mdv2</name>
-      </clade>
-      <clade>
-        <name>mghv</name>
-      </clade>
-      <clade>
-        <name>prv</name>
-      </clade>
-      <clade>
-        <name>ptvpv2a</name>
-      </clade>
-      <clade>
-        <name>racpv</name>
-      </clade>
-      <clade>
-        <name>rlcv</name>
-      </clade>
-      <clade>
-        <name>rrv</name>
-      </clade>
-      <clade>
-        <name>sfv</name>
-      </clade>
-      <clade>
-        <name>sv40</name>
-      </clade>
-      <clade>
-        <name>ttv</name>
       </clade>
     </clade>
   </clade>
