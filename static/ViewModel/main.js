@@ -178,7 +178,7 @@ function jsonToTree(json_input){
         url: "json_to_tree/" + json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-    	let uri = "/static/ViewModel/12.xml";
+    	let uri = "/static/ViewModel/38.xml";
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
     	    var temp_xml = test(data, relevant_organisms_arr);
