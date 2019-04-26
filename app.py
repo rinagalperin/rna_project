@@ -17,11 +17,17 @@ def hello_world():
 @app.route('/get_data/<user_input>')
 def get_data(user_input):
     if '-' in user_input:
+        # default seed length in case user enters a family name
+        # instead of a seed sequence
         seed_length = 6
     else:
         seed_length = len(user_input)
 
     my_data = data.Data(seed_length)
+
+    # in case user enters the seed sequence in non-capital letters,
+    # turn the input to all upper case.
+    user_input = user_input.upper()
 
     if '-' in user_input:
         chosen_seed = my_data.mature_name_seed_map[user_input]

@@ -177,7 +177,9 @@ function jsonToTree(json_input){
         method: "GET",
         url: "json_to_tree/" + json_input
     }).done(function (result) {
-    	let uri = "/static/ViewModel/12-coffee.xml";
+        // result: our tree in newick format (string object)
+        // TODO: convert the newick to phyloxml and pass it on instead of 'data' (the uri)
+    	let uri = "/static/ViewModel/rina.xml";
     	$.get(uri, function(data) {
             let dataObject = {
                 phyloxml: data,     // If using phyloXML, need to tell us - or else we assume it is Newick
