@@ -96,21 +96,23 @@ def json_to_tree(json_input):
     seed = list(json_dict)[0]
     organisms = list(json_dict[seed])
     organism_num_of_matures = {}
-
-    for organism in organisms:
-        matures = list(json_dict[seed][organism])
-        organism_num_of_matures[organism] = len(matures)
-
-        for mature in matures:
-            mature_name = json_dict[seed][organism][mature]['mature name']
-            mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
+    short_names_organisms = []
 
     tree_builder = tree_creator.TreeCreator(json_input)
-    newick_result = tree_builder.newick
+    for organism in organisms:
+        short_name_organism = tree_builder.get_short_organism_name(organism)
+        short_names_organisms.append(short_name_organism)
+    #     matures = list(json_dict[seed][organism])
+    #     organism_num_of_matures[organism] = len(matures)
+    #
+    #     for mature in matures:
+    #         mature_name = json_dict[seed][organism][mature]['mature name']
+    #         mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
+    #
+    # tree_builder = tree_creator.TreeCreator(json_input)
+    # newick_result = tree_builder.newick
 
-    return newick_result
-
-    #Phylo.convert(newick_result, 'newick', 'rina-test.nex', 'phyloxml')
+    return str(short_names_organisms).strip('[]')
 
 
 @app.route('/info')

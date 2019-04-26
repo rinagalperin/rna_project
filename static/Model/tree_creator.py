@@ -27,11 +27,12 @@ class TreeCreator:
         self.short_name_to_full_name_map = map_1
 
         map_2 = {}
-        tree_str = self.newick
-        tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
-        tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
-        for name in tree_names:
-            map_2[name] = self.short_name_to_full_name_map[name]
+        # tree_str = self.newick
+        # tree_names = re.split('[\s+\n+\"\'\:\)\(\,\:\'\']', tree_str)
+        # tree_names = list(filter(lambda x: x != "" and x != ';', tree_names))
+        for short_name in self.short_name_to_full_name_map.keys():
+            full_name = self.short_name_to_full_name_map[short_name]
+            map_2[full_name] = short_name
 
         self.full_name_to_short_name_map = map_2
 
