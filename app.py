@@ -58,13 +58,12 @@ def get_data(user_input):
     return json_result
 
 
-# TODO
-@app.route('/json_to_csv/<json_input>')
-def json_to_csv(json_input):
-    result = json_to_table_txt(json_input)
-    df = pd.read_fwf(result, 'results')
-    df.to_csv('results-rina.csv')
-    return df
+# @app.route('/json_to_csv/<json_input>')
+# def json_to_csv(json_input):
+#     result = json_to_table_txt(json_input)
+#     df = pd.read_fwf(result, 'results')
+#     df.to_csv('results-rina.csv')
+#     return df
 
 
 @app.route('/json_to_html/<json_input>')

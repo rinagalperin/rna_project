@@ -1,0 +1,74 @@
+{
+    "AUGUGU": {
+        "Apis mellifera": {
+            "ame-mir-3755": {
+                "mature name": "ame-miR-3755-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Cavia porcellus": {
+            "cpo-mir-511": {
+                "mature name": "cpo-miR-511-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Drosophila virilis": {
+            "dvi-mir-9708c": {
+                "mature name": "dvi-miR-9708c-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-511": {
+                "mature name": "hsa-miR-511-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-mir-511": {
+                "mature name": "mml-miR-511-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Monodelphis domestica": {
+            "mdo-mir-7394a": {
+                "mature name": "mdo-miR-7394a-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-466a": {
+                "mature name": "mmu-miR-466a-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-mir-466e": {
+                "mature name": "mmu-miR-466e-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-mir-511": {
+                "mature name": "mmu-miR-511-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "mmu-mir-1198": {
+                "mature name": "mmu-miR-1198-5p",
+                "mature 3p or 5p": "5p"
+            },
+            "mmu-mir-466p": {
+                "mature name": "mmu-miR-466p-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-mir-511": {
+                "mature name": "rno-miR-511-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Tribolium castaneum": {
+            "tca-mir-3806c": {
+                "mature name": "tca-miR-3806c-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

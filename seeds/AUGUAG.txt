@@ -1,0 +1,40 @@
+{
+    "AUGUAG": {
+        "Brugia malayi": {
+            "bma-mir-9509": {
+                "mature name": "bma-miR-9509-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-7852": {
+                "mature name": "hsa-miR-7852-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-380": {
+                "mature name": "mmu-miR-380-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-mir-380": {
+                "mature name": "rno-miR-380-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Salmo salar": {
+            "ssa-mir-135b-1": {
+                "mature name": "ssa-miR-135b-1-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Xenopus laevis": {
+            "xla-mir-135": {
+                "mature name": "xla-miR-135-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

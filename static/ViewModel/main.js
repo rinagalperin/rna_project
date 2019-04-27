@@ -1,3 +1,5 @@
+let tree_dwn_path = "";
+
 function isChecked(element) {
     return document.getElementById(element).checked;
 }
@@ -15,7 +17,7 @@ $(document).ready(function () {
    console.log('page is loaded');
    onSeedButtonClick();
    onDwnJsonButtonClick();
-   onDwnCsvButtonClick();
+   //onDwnCsvButtonClick();
    onDwnFastaButtonClick();
    onDwnHtmlButtonClick();
    onDwnTreeButtonClick();
@@ -51,8 +53,7 @@ function onDwnTreeButtonClick(){
     $('#dwn_tree_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
-        let tree_data = $('#treeTextArea').val();
-        download(tree_data, "BioMir_"+seed, "PNG");
+        download(tree_dwn_path, "BioMir_"+seed, "image/svg+xml;charset=utf-8");
     })
 }
 
@@ -61,7 +62,7 @@ function onDwnHtmlButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let tree_data = $('#htmlTextArea').html();
-        download(tree_data, "BioMir_"+seed, "txt");
+        download(tree_data, "BioMir_"+seed, "text/html");
     })
 }
 
@@ -71,7 +72,7 @@ function onDwnFastaButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let fasta_data = $('#fastaTextArea').val();
-        download(fasta_data, "BioMir_fasta_"+seed, "PNG");
+        download(fasta_data, "BioMir_fasta_"+seed, "txt");
     })
 }
 
@@ -110,6 +111,7 @@ function getData(input) {
             }
 
             if (isChecked("tree")) {
+                $('#treeTextArea').empty(); // avoid duplicate graphs (one below the other)
                 controlOutput(true, "treeArea");
                 jsonToTree(data);
             } else {
@@ -144,15 +146,15 @@ function download(data, filename, type) {
     }
 }
 
-function jsonToCsv(json_input){
-    $.ajax({
-        method: "GET",
-        url: "json_to_csv/" + json_input
-    }).done(function (result) {
-        console.log(result);
-        $('#csvTextArea').text(result);
-    });
-}
+// function jsonToCsv(json_input){
+//     $.ajax({
+//         method: "GET",
+//         url: "json_to_csv/" + json_input
+//     }).done(function (result) {
+//         console.log(result);
+//         $('#csvTextArea').text(result);
+//     });
+// }
 
 function jsonToFasta(json_input){
     $.ajax({
@@ -181,7 +183,7 @@ function jsonToTree(json_input){
     	let uri = "/static/ViewModel/39.xml";
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
-    	    var temp_xml = test(data, relevant_organisms_arr);
+    	    var temp_xml = edit_graph(data, relevant_organisms_arr);
 
             let dataObject = {
                 phyloxml: temp_xml,     // If using phyloXML, need to tell us - or else we assume it is Newick
@@ -195,11 +197,13 @@ function jsonToTree(json_input){
                 1000, 1000,     // Height, Width in pixels
                 'circular'      // Type of tree
             );
-        });
+
+            tree_dwn_path = phylocanvas.getSvgSource();  // Put SVG source into the svgSource variable
+    	});
     });
 }
 
-function test(xmlFile, relevant_organisms){
+function edit_graph(xmlFile, relevant_organisms){
     var xmlString = new XMLSerializer().serializeToString(xmlFile);
     var updated_bg_colors = xmlString.replace(
         /<name>/g,
