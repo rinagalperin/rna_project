@@ -178,7 +178,7 @@ function jsonToTree(json_input){
         url: "json_to_tree/" + json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-    	let uri = "/static/ViewModel/38.xml";
+    	let uri = "/static/ViewModel/39.xml";
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
     	    var temp_xml = test(data, relevant_organisms_arr);
@@ -201,7 +201,11 @@ function jsonToTree(json_input){
 
 function test(xmlFile, relevant_organisms){
     var xmlString = new XMLSerializer().serializeToString(xmlFile);
-    var updated_bg_colors = xmlString.replace(/<name>/g, '<name bgStyle="nonorganisms">');
+    var updated_bg_colors = xmlString.replace(
+        /<name>/g,
+        '<name bgStyle="nonorganisms">').replace(
+            /<\/name>/g, '</name><chart><component>other</component></chart>'
+    );
 
     // color all relevant organisms w/ different color
     for(var i in relevant_organisms){
@@ -210,14 +214,15 @@ function test(xmlFile, relevant_organisms){
 
         relevant_organisms[i] = organism;
 
-        var original = '<name bgStyle="nonorganisms">' + organism + '</name>';
+        var original = '<name bgStyle="nonorganisms">' + organism + '</name><chart><component>other</component></chart>';
         var full_name_hover =
             '<annotation><desc>'+
             full_name+
             '</desc><uri>http://en.wikipedia.org/wiki/'+
             full_name+
             '</uri></annotation>';
-        var updated = '<name bgStyle="organisms">' + organism + '</name>' + full_name_hover;
+        var outer_group_mark = '<component>base</component>';
+        var updated = '<name bgStyle="organisms">' + organism + '</name>' + full_name_hover + outer_group_mark;
 
         updated_bg_colors = updated_bg_colors.replace(original, updated);
     }
