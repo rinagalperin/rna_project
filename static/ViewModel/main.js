@@ -204,24 +204,36 @@ function test(xmlFile, relevant_organisms){
     var updated_bg_colors = xmlString.replace(
         /<name>/g,
         '<name bgStyle="nonorganisms">').replace(
-            /<\/name>/g, '</name><chart><component>other</component></chart>'
+            /<\/name>/g, '</name><chart><component>other</component><content>0</content></chart>'
     );
 
-    // color all relevant organisms w/ different color
+    // color all relevant organisms w/ different color & add group mark & bar chart
     for(var i in relevant_organisms){
-        var organism = relevant_organisms[i].replace(',','').replace(' ', '').replace(/'/g, '');
+        var organism_with_count = relevant_organisms[i].replace(',','').replace(' ', '').replace(/'/g, '');
+        var count = parseInt(organism_with_count.match(/\d+$/)[0]);
+
+        var organism = organism_with_count.replace(String(count), '');
+        count = count * 10;
+
         var full_name = getOrganismFullName(organism);
 
         relevant_organisms[i] = organism;
 
-        var original = '<name bgStyle="nonorganisms">' + organism + '</name><chart><component>other</component></chart>';
+        var original =
+            '<name bgStyle="nonorganisms">' + organism + '</name>' +
+            '<chart>' +
+            '<component>other</component>' +
+            '<content>0</content>' +
+            '</chart>';
+
         var full_name_hover =
             '<annotation><desc>'+
             full_name+
             '</desc><uri>http://en.wikipedia.org/wiki/'+
             full_name+
             '</uri></annotation>';
-        var outer_group_mark = '<component>base</component>';
+
+        var outer_group_mark = '<chart><component>base</component><content>' + count + '</content></chart>';
         var updated = '<name bgStyle="organisms">' + organism + '</name>' + full_name_hover + outer_group_mark;
 
         updated_bg_colors = updated_bg_colors.replace(original, updated);
