@@ -112,8 +112,6 @@ def json_to_tree(json_input):
         matures = list(json_dict[seed][organism])
         short_names_organisms.append(short_name_organism + str(len(matures)))
         organism_num_of_matures[organism] = len(matures)
-
-        # TODO: somehow pass the value of 'len(matures)' as part of the response, to know how to set the bar chart
     #
     #     for mature in matures:
     #         mature_name = json_dict[seed][organism][mature]['mature name']

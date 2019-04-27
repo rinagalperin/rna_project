@@ -213,7 +213,7 @@ function test(xmlFile, relevant_organisms){
         var count = parseInt(organism_with_count.match(/\d+$/)[0]);
 
         var organism = organism_with_count.replace(String(count), '');
-        count = count * 10;
+        var longer_count = count * 10;
 
         var full_name = getOrganismFullName(organism);
 
@@ -228,12 +228,14 @@ function test(xmlFile, relevant_organisms){
 
         var full_name_hover =
             '<annotation><desc>'+
-            full_name+
+            full_name +
+            ' , number of matures: ' +
+            count +
             '</desc><uri>http://en.wikipedia.org/wiki/'+
             full_name+
             '</uri></annotation>';
 
-        var outer_group_mark = '<chart><component>base</component><content>' + count + '</content></chart>';
+        var outer_group_mark = '<chart><component>base</component><content>' + longer_count + '</content></chart>';
         var updated = '<name bgStyle="organisms">' + organism + '</name>' + full_name_hover + outer_group_mark;
 
         updated_bg_colors = updated_bg_colors.replace(original, updated);
