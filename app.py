@@ -1,4 +1,3 @@
-#from bio import Phylo
 from flask import Flask, render_template
 import json
 import pandas as pd
@@ -23,6 +22,10 @@ def get_data(user_input):
     else:
         seed_length = len(user_input)
 
+    # illegal seed sequence length
+    if seed_length != 6 and seed_length != 7:
+        return '-1'
+
     my_data = data.Data(seed_length)
 
     # in case user enters the seed sequence in non-capital letters,
@@ -46,12 +49,16 @@ def get_data(user_input):
         pre_mir_name_to_seeds_map,
         my_data.pre_mir_name_to_mature_5p_or_3p_map)
 
+    if len(seed_dict[chosen_seed]) == 0:
+        return '-1'
+
     mapper.create_seed_json(chosen_seed, seed_dict)
     json_result = json.dumps(seed_dict)
 
     return json_result
 
 
+# TODO
 @app.route('/json_to_csv/<json_input>')
 def json_to_csv(json_input):
     result = json_to_table_txt(json_input)
@@ -67,6 +74,7 @@ def json_to_html(json_input):
     return result
 
 
+# TODO
 @app.route('/json_to_fasta/<json_input>')
 def json_to_fasta(json_input):
     # json_dict = json.loads(json_input)

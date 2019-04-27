@@ -80,48 +80,48 @@ function getData(input) {
         method: "GET",
         url: "get_data/" + input
     }).done(function (data) {
-        //$('#graph-pic').attr("src","../static/pics/" + seedInput.url + ".png");
-        //$('#graph-pic').attr(seedInput.url);
-        //$("#graph-pic").append(document.createTextNode(data));
+        if(data === '-1'){
+            alert("Seed sequence does not exist! \n Please verify you have entered a valid seed and try again.")
+        }else {
+            if (isChecked("json")) {
+                // show json text area
+                controlOutput(true, "jsonArea");
+                // parse json result
+                let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
+                // display result in text area
+                $('#jsonTextArea').text(textedJson);
+            } else {
+                controlOutput(false, "jsonArea");
+            }
+            /*
+            if(isChecked("csv")){
+                csvOutput(true);
+                jsonToCsv(data);
+            }else{
+                csvOutput(false);
+            }
+            */
 
-        if(isChecked("json")){
-            // show json text area
-            controlOutput(true, "jsonArea");
-            // parse json result
-            let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
-            // display result in text area
-            $('#jsonTextArea').text(textedJson);
-        }else{
-            controlOutput(false, "jsonArea");
-        }
-        /*
-        if(isChecked("csv")){
-            csvOutput(true);
-            jsonToCsv(data);
-        }else{
-            csvOutput(false);
-        }
-        */
+            if (isChecked("fasta")) {
+                controlOutput(true, "fastaArea");
+                jsonToFasta(data)
+            } else {
+                controlOutput(false, "fastaArea");
+            }
 
-        if(isChecked("fasta")){
-            controlOutput(true, "fastaArea");
-            jsonToFasta(data)
-        }else{
-            controlOutput(false, "fastaArea");
-        }
+            if (isChecked("tree")) {
+                controlOutput(true, "treeArea");
+                jsonToTree(data);
+            } else {
+                controlOutput(false, "treeArea");
+            }
 
-        if(isChecked("tree")){
-            controlOutput(true, "treeArea");
-            jsonToTree(data);
-        }else{
-            controlOutput(false, "treeArea");
-        }
-
-        if(isChecked("html")){
-            controlOutput(true, "htmlArea");
-            jsonToHtml(data);
-        }else{
-            controlOutput(false, "htmlArea");
+            if (isChecked("html")) {
+                controlOutput(true, "htmlArea");
+                jsonToHtml(data);
+            } else {
+                controlOutput(false, "htmlArea");
+            }
         }
     });
 }

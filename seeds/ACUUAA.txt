@@ -1,0 +1,16 @@
+{
+    "ACUUAA": {
+        "Echinococcus granulosus": {
+            "egr-mir-10274": {
+                "mature name": "egr-miR-10274-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-3066": {
+                "mature name": "mmu-miR-3066-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

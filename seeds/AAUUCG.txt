@@ -1,0 +1,114 @@
+{
+    "AAUUCG": {
+        "Anolis carolinensis": {
+            "aca-mir-10a": {
+                "mature name": "aca-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Ascaris suum": {
+            "asu-mir-5360": {
+                "mature name": "asu-miR-5360-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Danio rerio": {
+            "dre-mir-10c": {
+                "mature name": "dre-miR-10c-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Echinococcus granulosus": {
+            "egr-mir-10293": {
+                "mature name": "egr-miR-10293-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Echinococcus multilocularis": {
+            "emu-mir-10293": {
+                "mature name": "emu-miR-10293-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Gallus gallus": {
+            "gga-mir-10a": {
+                "mature name": "gga-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Gyrodactylus salaris": {
+            "gsa-mir-10a": {
+                "mature name": "gsa-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Locusta migratoria": {
+            "lmi-mir-10": {
+                "mature name": "lmi-miR-10-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-mir-10a": {
+                "mature name": "mml-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Melibe leonina": {
+            "mle-mir-10a": {
+                "mature name": "mle-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Monodelphis domestica": {
+            "mdo-mir-10a": {
+                "mature name": "mdo-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Plutella xylostella": {
+            "pxy-mir-10": {
+                "mature name": "pxy-miR-10-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Python bivittatus": {
+            "pbv-mir-10b-2": {
+                "mature name": "pbv-miR-10b-2-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Schistosoma japonicum": {
+            "sja-mir-10": {
+                "mature name": "sja-miR-10-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Schistosoma mansoni": {
+            "sma-mir-10": {
+                "mature name": "sma-miR-10-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "sma-mir-8466": {
+                "mature name": "sma-miR-8466-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Schmidtea mediterranea": {
+            "sme-mir-10a": {
+                "mature name": "sme-miR-10a-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "sme-mir-2165": {
+                "mature name": "sme-miR-2165-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Tetranychus urticae": {
+            "tur-mir-10": {
+                "mature name": "tur-miR-10-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

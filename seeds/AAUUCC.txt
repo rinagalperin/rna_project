@@ -1,0 +1,16 @@
+{
+    "AAUUCC": {
+        "Caenorhabditis elegans": {
+            "cel-mir-66": {
+                "mature name": "cel-miR-66-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-6906": {
+                "mature name": "mmu-miR-6906-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}
