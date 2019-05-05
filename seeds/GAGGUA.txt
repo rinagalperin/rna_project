@@ -175,7 +175,7 @@
             },
             "bma-mir-5364": {
                 "mature name": "bma-miR-5364",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Caenorhabditis brenneri": {
@@ -203,11 +203,11 @@
             },
             "cbr-mir-84": {
                 "mature name": "cbr-miR-84",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "cbr-mir-7593": {
                 "mature name": "cbr-miR-7593",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Caenorhabditis elegans": {
@@ -229,7 +229,7 @@
             },
             "cel-mir-793": {
                 "mature name": "cel-miR-793",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "cel-mir-794": {
                 "mature name": "cel-miR-794-5p",
@@ -259,7 +259,7 @@
             },
             "crm-mir-7594": {
                 "mature name": "crm-miR-7594",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "crm-mir-7612": {
                 "mature name": "crm-miR-7612",
@@ -879,7 +879,7 @@
             },
             "hco-mir-5991": {
                 "mature name": "hco-miR-5991",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "hco-mir-84b": {
                 "mature name": "hco-miR-84b",
@@ -951,7 +951,7 @@
             },
             "hsa-mir-4500": {
                 "mature name": "hsa-miR-4500",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Ictalurus punctatus": {
@@ -1017,7 +1017,7 @@
             },
             "mml-mir-6134": {
                 "mature name": "mml-miR-6134",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Manduca sexta": {
@@ -1119,7 +1119,7 @@
             },
             "mmu-mir-1961": {
                 "mature name": "mmu-miR-1961",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "mmu-let-7j": {
                 "mature name": "mmu-let-7j",
@@ -1419,7 +1419,7 @@
             },
             "ptr-mir-202": {
                 "mature name": "ptr-miR-202",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Panagrellus redivivus": {

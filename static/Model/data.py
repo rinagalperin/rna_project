@@ -1,11 +1,8 @@
 import json
-import re
 from collections import defaultdict
 from os.path import commonprefix
 import numpy as np
 import operator
-
-import regexp as regexp
 
 from static.Model.mature import Mature
 from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended, \
@@ -205,6 +202,7 @@ class Data:
             "Sycon ciliatum",
             "Dictyostelium discoideum"
         ]
+
         for entry in split_txt:
             if len(entry) > 0:
                 split_entry = entry.split(" ")
@@ -220,16 +218,16 @@ class Data:
 
                     # init 5p 3p
                     entry_five_p = pname_to_data.get(pre_mir_name + '-5p', None)
-                    if entry_five_p is None:
-                        entry_five_p = pname_to_data.get(pre_mir_name, None)
-                        if entry_five_p is not None and self.find_three_or_five_p(entry_five_p, pre_mir_sequence) == '5p':
-                            entry_five_p = pname_to_data.get(pre_mir_name, None)
-
                     entry_three_p = pname_to_data.get(pre_mir_name + '-3p', None)
-                    if entry_three_p is None:
-                        entry_three_p = pname_to_data.get(pre_mir_name, None)
-                        if entry_three_p is not None and self.find_three_or_five_p(entry_three_p, pre_mir_sequence) == '3p':
-                            entry_three_p = pname_to_data.get(pre_mir_name, None)
+
+                    # if the entry doesn't explicitly states '3p' or '5p'
+                    if entry_three_p is None or entry_five_p is None:
+                        general_entry = pname_to_data.get(pre_mir_name, None)
+                        if general_entry is not None:
+                            if self.find_three_or_five_p(general_entry, pre_mir_sequence) == '3p':
+                                entry_three_p = general_entry
+                            elif self.find_three_or_five_p(general_entry, pre_mir_sequence) == '5p':
+                                entry_five_p = general_entry
 
                     self.pre_mir_name_to_seeds_map[pre_mir_name] = {}
                     self.pre_mir_name_to_mature_5p_or_3p_map[pre_mir_name] = {}
@@ -271,15 +269,15 @@ class Data:
                          threePMatureMirSeed])
 
         ##########################################
-        export_table_to_csv([preMirName,
-                             organisms,
-                             preMirSeq,
-                             fivePMatureMirName,
-                             fivePMatureMirSeq,
-                             fivePMatureMirSeed,
-                             threePMatureMirName,
-                             threePMatureMirSeq,
-                             threePMatureMirSeed])
+        # export_table_to_csv([preMirName,
+        #                      organisms,
+        #                      preMirSeq,
+        #                      fivePMatureMirName,
+        #                      fivePMatureMirSeq,
+        #                      fivePMatureMirSeed,
+        #                      threePMatureMirName,
+        #                      threePMatureMirSeq,
+        #                      threePMatureMirSeed])
         ##########################################
 
         return data
@@ -385,7 +383,7 @@ class Data:
         if unknown_p_entry is not None:
             entry_three_p_seq = unknown_p_entry[-1:]
             lines = entry_three_p_seq[0].splitlines()
-            print(lines)
+
             if len(lines) == 2:
                 sub_sequence = lines[1]
                 end_index_of_sub_in_full = self.find_str(pre_mir_sequence, sub_sequence)

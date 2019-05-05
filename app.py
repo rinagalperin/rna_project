@@ -27,17 +27,23 @@ def get_data(user_input):
         return '-1'
 
     my_data = data.Data(seed_length)
+    seed_or_family_name = ''
 
     if '-' in user_input:
         user_input = user_input.lower()
         if user_input not in my_data.mature_name_seed_map.keys():
             return '-1'
         chosen_seed = my_data.mature_name_seed_map[user_input]
+        # user entered family name, so other name is the seed
+        seed_or_family_name = chosen_seed
     else:
         # in case user enters the seed sequence in non-capital letters,
         # turn the input to all upper case.
         user_input = user_input.upper()
         chosen_seed = user_input
+        # user entered seed sequence, so other name is the family name
+        family_name = my_data.seed_mature_name_map[user_input]
+        seed_or_family_name = family_name
 
     table_data = my_data.table_data
     seed_list = my_data.seed_list
@@ -57,7 +63,7 @@ def get_data(user_input):
     mapper.create_seed_json(chosen_seed, seed_dict)
     json_result = json.dumps(seed_dict)
 
-    return json_result
+    return json_result + '$' + seed_or_family_name
 
 
 # @app.route('/json_to_csv/<json_input>')
@@ -139,6 +145,10 @@ def get_organism_full_name(short_name):
 
     return result
 
+
+@app.route('/get_seed_or_family_name/<seed_or_family>')
+def get_seed_or_family_name(seed_or_family):
+    return seed_or_family
 
 @app.route('/info')
 def info():

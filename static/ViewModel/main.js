@@ -84,6 +84,19 @@ function getData(input) {
         if(data === '-1'){
             alert("Seed sequence does not exist! \n Please verify you have entered a valid seed and try again.")
         }else {
+            // construct output page title of seed sequence + family name
+            let user_input = $('#seed').val().toLowerCase();
+            let other_name = data.split('$')[1];
+            let result_title = '';
+            if(user_input.includes('-')){
+                result_title = 'seed sequence: ' + other_name + ', family name: ' + user_input;
+            }else{
+                result_title = 'seed sequence: ' + user_input + ', family name: ' + other_name;
+            }
+            $('#result_title').text(result_title);
+
+            data = data.split('$')[0];
+
             if (isChecked("json")) {
                 // show json text area
                 controlOutput(true, "jsonArea");
@@ -255,6 +268,23 @@ function getOrganismFullName(short_name){
      $.ajax({
         type: "GET",
         url: 'get_organism_full_name/' + short_name,
+         async: false,
+        success: function(result) {
+            response = result;
+        },
+        error: function() {
+            alert('Error occured');
+        }
+    });
+
+     return response;
+}
+
+function getSeedOrFamilyName(seed_or_family){
+    var response = '';
+     $.ajax({
+        type: "GET",
+        url: 'get_seed_or_family_name/' + seed_or_family,
          async: false,
         success: function(result) {
             response = result;
