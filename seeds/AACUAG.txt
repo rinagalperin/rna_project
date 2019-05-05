@@ -12,6 +12,12 @@
                 "mature 3p or 5p": "3p"
             }
         },
+        "Equus caballus": {
+            "eca-mir-9139": {
+                "mature name": "eca-miR-9139",
+                "mature 3p or 5p": "5p"
+            }
+        },
         "Homo sapiens": {
             "hsa-mir-708": {
                 "mature name": "hsa-miR-708-3p",

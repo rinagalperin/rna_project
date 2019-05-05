@@ -28,13 +28,15 @@ def get_data(user_input):
 
     my_data = data.Data(seed_length)
 
-    # in case user enters the seed sequence in non-capital letters,
-    # turn the input to all upper case.
-    user_input = user_input.upper()
-
     if '-' in user_input:
+        user_input = user_input.lower()
+        if user_input not in my_data.mature_name_seed_map.keys():
+            return '-1'
         chosen_seed = my_data.mature_name_seed_map[user_input]
     else:
+        # in case user enters the seed sequence in non-capital letters,
+        # turn the input to all upper case.
+        user_input = user_input.upper()
         chosen_seed = user_input
 
     table_data = my_data.table_data

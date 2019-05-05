@@ -5,6 +5,66 @@
                 "mature name": "bmo-let-7-3p",
                 "mature 3p or 5p": "3p"
             }
+        },
+        "Bos taurus": {
+            "bta-mir-568": {
+                "mature name": "bta-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Canis familiaris": {
+            "cfa-mir-568": {
+                "mature name": "cfa-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Equus caballus": {
+            "eca-mir-568": {
+                "mature name": "eca-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-568": {
+                "mature name": "hsa-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-mir-568": {
+                "mature name": "mml-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-568": {
+                "mature name": "mmu-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Pan troglodytes": {
+            "ptr-mir-568": {
+                "mature name": "ptr-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Pongo pygmaeus": {
+            "ppy-mir-568": {
+                "mature name": "ppy-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Rattus norvegicus": {
+            "rno-mir-568": {
+                "mature name": "rno-miR-568",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Rhipicephalus microplus": {
+            "rmi-mir-5318": {
+                "mature name": "rmi-miR-5318",
+                "mature 3p or 5p": "5p"
+            }
         }
     }
 }

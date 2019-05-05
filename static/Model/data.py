@@ -1,11 +1,15 @@
 import json
+import re
 from collections import defaultdict
 from os.path import commonprefix
 import numpy as np
 import operator
 
+import regexp as regexp
+
 from static.Model.mature import Mature
-from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended
+from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended, \
+    export_table_to_csv
 
 
 class Data:
@@ -26,7 +30,10 @@ class Data:
         self.seed_list = get_all_seed(self.table_data)
         self.organisms = np.unique(self.table_data[1])
 
+        ###### create map files ##################
         #self.create_seed_mature_name_map_file()
+        ##########################################
+
         self.seed_mature_name_map = self.init_seed_mature_name_map()
         self.mature_name_seed_map = self.init_mature_name_seed_map()
 
@@ -61,13 +68,10 @@ class Data:
             "Columba livia",
             "Gallus gallus",
             "Taeniopygia guttata",
-            "Callorhinchus milii",
-            "Echinops telfairi",
             "Canis familiaris",
             "Dasypus novemcinctus",
             "Oryctolagus cuniculus",
             "Artibeus jamaicensis",
-            "Bubalus bubalis",
             "Equus caballus",
             "Eptesicus fuscus",
             "Pteropus alecto",
@@ -110,7 +114,6 @@ class Data:
             "Ophiophagus hannah",
             "Python bivittatus",
             "Astatotilapia burtoni",
-            "Carassius auratus",
             "Cyprinus carpio",
             "Danio rerio",
             "Electrophorus electricus",
@@ -120,9 +123,7 @@ class Data:
             "Ictalurus punctatus",
             "Metriaclima zebra",
             "Neolamprologus brichardi",
-            "Nothobranchius furzeri",
             "Oryzias latipes",
-            "Oncorhynchus mykiss",
             "Oreochromis niloticus",
             "Pundamilia nyererei",
             "Paralichthys olivaceus",
@@ -141,7 +142,6 @@ class Data:
             "Triops cancriformis",
             "Aedes aegypti",
             "Anopheles gambiae",
-            "Aphis gossypii",
             "Apis mellifera",
             "Acyrthosiphon pisum",
             "Bactrocera dorsalis",
@@ -163,7 +163,6 @@ class Data:
             "Drosophila yakuba",
             "Heliconius melpomene",
             "Locusta migratoria",
-            "Mayetiola destructor",
             "Manduca sexta",
             "Nasonia giraulti",
             "Nasonia longicornis",
@@ -175,7 +174,6 @@ class Data:
             "Strigamia maritima",
             "Ascaris suum",
             "Brugia malayi",
-            "Brugia pahangi",
             "Caenorhabditis brenneri",
             "Caenorhabditis briggsae",
             "Caenorhabditis elegans",
@@ -200,28 +198,38 @@ class Data:
             "Schistosoma japonicum",
             "Schistosoma mansoni",
             "Schmidtea mediterranea",
-            "Aiptasia pallida",
             "Hydra magnipapillata",
             "Nematostella vectensis",
             "Amphimedon queenslandica",
             "Leucosolenia complicata",
-            "Sycon ciliatum"
+            "Sycon ciliatum",
+            "Dictyostelium discoideum"
         ]
-
         for entry in split_txt:
             if len(entry) > 0:
                 split_entry = entry.split(" ")
                 organism = split_entry[2] + " " + split_entry[3]
 
                 if organism in metazoaFamilies:
-                    pre_mir_name = split_entry[0]
+                    pre_mir_name = split_entry[0].lower()
+                    pre_mir_sequence = split_entry[-1].replace("\n", '').replace('stem-loop', '')
+
                     organisms.append(organism)
                     preMirName.append(pre_mir_name)
-                    preMirSeq.append(split_entry[-1].replace("\n", '').replace('stem-loop', ''))
+                    preMirSeq.append(pre_mir_sequence)
 
                     # init 5p 3p
-                    entry_five_p = pname_to_data.get(pre_mir_name.lower() + "-5p", None)
-                    entry_three_p = pname_to_data.get(pre_mir_name + "-3p", None)
+                    entry_five_p = pname_to_data.get(pre_mir_name + '-5p', None)
+                    if entry_five_p is None:
+                        entry_five_p = pname_to_data.get(pre_mir_name, None)
+                        if entry_five_p is not None and self.find_three_or_five_p(entry_five_p, pre_mir_sequence) == '5p':
+                            entry_five_p = pname_to_data.get(pre_mir_name, None)
+
+                    entry_three_p = pname_to_data.get(pre_mir_name + '-3p', None)
+                    if entry_three_p is None:
+                        entry_three_p = pname_to_data.get(pre_mir_name, None)
+                        if entry_three_p is not None and self.find_three_or_five_p(entry_three_p, pre_mir_sequence) == '3p':
+                            entry_three_p = pname_to_data.get(pre_mir_name, None)
 
                     self.pre_mir_name_to_seeds_map[pre_mir_name] = {}
                     self.pre_mir_name_to_mature_5p_or_3p_map[pre_mir_name] = {}
@@ -262,15 +270,17 @@ class Data:
                          threePMatureMirSeq,
                          threePMatureMirSeed])
 
-        # export_table_to_csv([preMirName,
-        #                      organisms,
-        #                      preMirSeq,
-        #                      fivePMatureMirName,
-        #                      fivePMatureMirSeq,
-        #                      fivePMatureMirSeed,
-        #                      threePMatureMirName,
-        #                      threePMatureMirSeq,
-        #                      threePMatureMirSeed])
+        ##########################################
+        export_table_to_csv([preMirName,
+                             organisms,
+                             preMirSeq,
+                             fivePMatureMirName,
+                             fivePMatureMirSeq,
+                             fivePMatureMirSeed,
+                             threePMatureMirName,
+                             threePMatureMirSeq,
+                             threePMatureMirSeed])
+        ##########################################
 
         return data
 
@@ -330,10 +340,11 @@ class Data:
             if common_prefix is not None or len(str(common_prefix)) != 0:
                 seed_to_mature_map[seed] = common_prefix
                 mature_to_seed_map[common_prefix] = seed
+                #print("done with entry " + str(len(seed_to_mature_map)))
 
-        with open('maps/seed_to_mature_map_' + str(self.seed_length) + '.txt', "w") as f:
+        with open('static/Model/maps/seed_to_mature_map_' + str(self.seed_length) + '.txt', "w") as f:
             json.dump(seed_to_mature_map, f, indent=4)
-        with open('maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', "w") as f:
+        with open('static/Model/maps/mature_to_seed_map_' + str(self.seed_length) + '.txt', "w") as f:
             json.dump(mature_to_seed_map, f, indent=4)
 
     def remove_letters_from_string(self, string):
@@ -353,3 +364,33 @@ class Data:
             mature_to_seed_map = json.load(fp)
 
         return mature_to_seed_map
+
+    # return the *end* index of sub_string's first appearance in full_string
+    # for example: find_str("Happy birthday", "py") will return: 4
+    def find_str(self, full_string, sub_string):
+        index = 0
+
+        if sub_string in full_string:
+            c = sub_string[0]
+            for ch in full_string:
+                if ch == c:
+                    if full_string[index:index + len(sub_string)] == sub_string:
+                        return index + len(sub_string) - 1
+
+                index += 1
+
+        return -1
+
+    def find_three_or_five_p(self, unknown_p_entry, pre_mir_sequence):
+        if unknown_p_entry is not None:
+            entry_three_p_seq = unknown_p_entry[-1:]
+            lines = entry_three_p_seq[0].splitlines()
+            print(lines)
+            if len(lines) == 2:
+                sub_sequence = lines[1]
+                end_index_of_sub_in_full = self.find_str(pre_mir_sequence, sub_sequence)
+                if end_index_of_sub_in_full <= len(pre_mir_sequence) / 2:
+                    return '5p'
+                else:
+                    return '3p'
+        return 'none'

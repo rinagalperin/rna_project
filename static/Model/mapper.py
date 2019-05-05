@@ -37,7 +37,7 @@ def export_table_to_csv(data_list):
         '3P Mature Mir Sequence',
         '3P Mature Mir Seed'))
 
-    table.write('table.csv', format='csv', overwrite=True)
+    table.write('table-new.csv', format='csv', overwrite=True)
 
 
 def get_all_seed(data):
