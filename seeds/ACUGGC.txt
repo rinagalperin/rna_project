@@ -3,7 +3,7 @@
         "Aedes aegypti": {
             "aae-mir-193": {
                 "mature name": "aae-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Alligator mississippiensis": {
@@ -37,7 +37,7 @@
         "Biston betularia": {
             "bib-mir-193": {
                 "mature name": "bib-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Bos taurus": {
@@ -47,7 +47,7 @@
             },
             "bta-mir-193b": {
                 "mature name": "bta-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Branchiostoma belcheri": {
@@ -59,11 +59,11 @@
         "Branchiostoma floridae": {
             "bfl-mir-193a": {
                 "mature name": "bfl-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "bfl-mir-193b": {
                 "mature name": "bfl-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Brugia malayi": {
@@ -75,7 +75,7 @@
         "Caenorhabditis briggsae": {
             "cbr-mir-240": {
                 "mature name": "cbr-miR-240",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Caenorhabditis elegans": {
@@ -87,19 +87,19 @@
         "Callithrix jacchus": {
             "cja-mir-193": {
                 "mature name": "cja-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Capitella teleta": {
             "cte-mir-193": {
                 "mature name": "cte-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Capra hircus": {
             "chi-mir-193a": {
                 "mature name": "chi-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "chi-mir-193b": {
                 "mature name": "chi-miR-193b-3p",
@@ -139,13 +139,13 @@
             },
             "cgr-mir-193a": {
                 "mature name": "cgr-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Cyprinus carpio": {
             "ccr-mir-193a": {
                 "mature name": "ccr-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Danio rerio": {
@@ -157,7 +157,7 @@
         "Daphnia pulex": {
             "dpu-mir-193": {
                 "mature name": "dpu-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Dasypus novemcinctus": {
@@ -173,7 +173,7 @@
         "Daubentonia madagascariensis": {
             "dma-mir-193": {
                 "mature name": "dma-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Dinoponera quadriceps": {
@@ -203,7 +203,7 @@
         "Eptesicus fuscus": {
             "efu-mir-193a": {
                 "mature name": "efu-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Equus caballus": {
@@ -213,13 +213,13 @@
             },
             "eca-mir-193b": {
                 "mature name": "eca-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Fugu rubripes": {
             "fru-mir-193": {
                 "mature name": "fru-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Gadus morhua": {
@@ -241,7 +241,7 @@
         "Gorilla gorilla": {
             "ggo-mir-193a": {
                 "mature name": "ggo-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Heliconius melpomene": {
@@ -267,13 +267,13 @@
             },
             "hsa-mir-892b": {
                 "mature name": "hsa-miR-892b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Lottia gigantea": {
             "lgi-mir-193": {
                 "mature name": "lgi-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Lytechinus variegatus": {
@@ -293,13 +293,13 @@
             },
             "mml-mir-892b": {
                 "mature name": "mml-miR-892b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Manduca sexta": {
             "mse-mir-193": {
                 "mature name": "mse-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Melibe leonina": {
@@ -311,13 +311,13 @@
         "Metriaclima zebra": {
             "mze-mir-193": {
                 "mature name": "mze-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Microcebus murinus": {
             "mmr-mir-193": {
                 "mature name": "mmr-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Monodelphis domestica": {
@@ -343,13 +343,13 @@
         "Neolamprologus brichardi": {
             "nbr-mir-193": {
                 "mature name": "nbr-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Nomascus leucogenys": {
             "nle-mir-193b": {
                 "mature name": "nle-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Ophiophagus hannah": {
@@ -361,7 +361,7 @@
         "Oreochromis niloticus": {
             "oni-mir-193": {
                 "mature name": "oni-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Ornithorhynchus anatinus": {
@@ -383,37 +383,37 @@
         "Oryzias latipes": {
             "ola-mir-193a": {
                 "mature name": "ola-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Otolemur garnettii": {
             "oga-mir-193b": {
                 "mature name": "oga-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "oga-mir-193a": {
                 "mature name": "oga-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Pan paniscus": {
             "ppa-mir-193b": {
                 "mature name": "ppa-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "ppa-mir-193a": {
                 "mature name": "ppa-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Pan troglodytes": {
             "ptr-mir-193a": {
                 "mature name": "ptr-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "ptr-mir-193b": {
                 "mature name": "ptr-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Panagrellus redivivus": {
@@ -429,11 +429,11 @@
         "Papio hamadryas": {
             "pha-mir-193a": {
                 "mature name": "pha-miR-193a",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "pha-mir-193b": {
                 "mature name": "pha-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Parasteatoda tepidariorum": {
@@ -455,7 +455,7 @@
         "Petromyzon marinus": {
             "pma-mir-193": {
                 "mature name": "pma-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Pongo pygmaeus": {
@@ -465,17 +465,17 @@
             },
             "ppy-mir-193b": {
                 "mature name": "ppy-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             },
             "ppy-mir-892b": {
                 "mature name": "ppy-miR-892b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Pristionchus pacificus": {
             "ppc-mir-240": {
                 "mature name": "ppc-miR-240",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Pteropus alecto": {
@@ -515,7 +515,7 @@
             },
             "sko-mir-193b": {
                 "mature name": "sko-miR-193b",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Salmo salar": {
@@ -527,7 +527,7 @@
         "Sarcophilus harrisii": {
             "sha-mir-193": {
                 "mature name": "sha-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Strongyloides ratti": {
@@ -551,7 +551,7 @@
         "Tetraodon nigroviridis": {
             "tni-mir-193": {
                 "mature name": "tni-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Tribolium castaneum": {
@@ -563,7 +563,7 @@
         "Triops cancriformis": {
             "tcf-mir-193": {
                 "mature name": "tcf-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         },
         "Tupaia chinensis": {
@@ -581,7 +581,7 @@
         "Xenopus tropicalis": {
             "xtr-mir-193": {
                 "mature name": "xtr-miR-193",
-                "mature 3p or 5p": "5p"
+                "mature 3p or 5p": "3p"
             }
         }
     }

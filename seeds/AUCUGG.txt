@@ -1,0 +1,54 @@
+{
+    "AUCUGG": {
+        "Callithrix jacchus": {
+            "cja-mir-1298": {
+                "mature name": "cja-miR-1298",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Cavia porcellus": {
+            "cpo-mir-1298": {
+                "mature name": "cpo-miR-1298-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Gallus gallus": {
+            "gga-mir-1705": {
+                "mature name": "gga-miR-1705",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-1298": {
+                "mature name": "hsa-miR-1298-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "hsa-mir-3126": {
+                "mature name": "hsa-miR-3126-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Macaca mulatta": {
+            "mml-mir-619": {
+                "mature name": "mml-miR-619",
+                "mature 3p or 5p": "3p"
+            },
+            "mml-mir-1298": {
+                "mature name": "mml-miR-1298-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Mus musculus": {
+            "mmu-mir-1298": {
+                "mature name": "mmu-miR-1298-3p",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Oryctolagus cuniculus": {
+            "ocu-mir-1298": {
+                "mature name": "ocu-miR-1298-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

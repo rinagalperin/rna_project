@@ -1,0 +1,22 @@
+{
+    "AUCCAC": {
+        "Bos taurus": {
+            "bta-mir-502b": {
+                "mature name": "bta-miR-502b",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Homo sapiens": {
+            "hsa-mir-5092": {
+                "mature name": "hsa-miR-5092",
+                "mature 3p or 5p": "3p"
+            }
+        },
+        "Polistes canadensis": {
+            "pca-mir-3759": {
+                "mature name": "pca-miR-3759-3p",
+                "mature 3p or 5p": "3p"
+            }
+        }
+    }
+}

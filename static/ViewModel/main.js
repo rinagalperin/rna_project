@@ -1,4 +1,5 @@
 let tree_dwn_path = "";
+let organism_three_p_five_p_count = {};
 
 function isChecked(element) {
     return document.getElementById(element).checked;
@@ -97,11 +98,41 @@ function getData(input) {
 
             data = data.split('$')[0];
 
+            // ------------------------------------
+            // gather 3p/5p count per organism:
+
+            let seed = Object.keys(JSON.parse(data))[0];
+            let organisms_json = JSON.parse(data)[seed];
+
+            // iterate over all organisms
+            Object.keys(organisms_json).forEach(function(organism) {
+                let matures_json = organisms_json[organism];
+                let count_of_3p = 0;
+                let count_of_5p = 0;
+
+                // iterate over all matures of the organism
+                Object.keys(matures_json).forEach(function(mature_key) {
+                    //let mature = mature_key;
+                    let three_p_five_p = matures_json[mature_key]['mature 3p or 5p'];
+                    // increase count of relevant type of mature sequence
+                    three_p_five_p === '3p' ? count_of_3p++ : count_of_5p++;
+                });
+
+                // result example:
+                // Homo sapiens: "2$8"
+                // meaning: Homo sapiens organism has 2 matures of type 3p with the given seed,
+                // and 8 matures of type 5p with the given seed.
+                organism_three_p_five_p_count[organism] = count_of_3p + '$' + count_of_5p;
+            });
+
+            // ------------------------------------
+
             if (isChecked("json")) {
                 // show json text area
                 controlOutput(true, "jsonArea");
                 // parse json result
                 let textedJson = JSON.stringify(JSON.parse(data), undefined, 4);
+
                 // display result in text area
                 $('#jsonTextArea').text(textedJson);
             } else {
@@ -243,13 +274,20 @@ function edit_graph(xmlFile, relevant_organisms){
             '<content>0</content>' +
             '</chart>';
 
+        var count_of_3p = organism_three_p_five_p_count[full_name].split('$')[0];
+        var count_of_5p = organism_three_p_five_p_count[full_name].split('$')[1];
+
         var full_name_hover =
-            '<annotation><desc>'+
+            '<annotation><desc>' +
             full_name +
-            ' , number of matures: ' +
+            '\n number of matures: ' +
             count +
-            '</desc><uri>http://en.wikipedia.org/wiki/'+
-            full_name+
+            '\n #3p: ' +
+            count_of_3p +
+            '\n #5p: ' +
+            count_of_5p +
+            '</desc><uri>http://en.wikipedia.org/wiki/' +
+            full_name +
             '</uri></annotation>';
 
         var outer_group_mark = '<chart><component>base</component><content>' + longer_count + '</content></chart>';
@@ -268,23 +306,6 @@ function getOrganismFullName(short_name){
      $.ajax({
         type: "GET",
         url: 'get_organism_full_name/' + short_name,
-         async: false,
-        success: function(result) {
-            response = result;
-        },
-        error: function() {
-            alert('Error occured');
-        }
-    });
-
-     return response;
-}
-
-function getSeedOrFamilyName(seed_or_family){
-    var response = '';
-     $.ajax({
-        type: "GET",
-        url: 'get_seed_or_family_name/' + seed_or_family,
          async: false,
         success: function(result) {
             response = result;

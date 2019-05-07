@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import json
-import pandas as pd
+from collections import defaultdict
 from json2html import json2html
 
 from static.Model import data, mapper, tree_creator, list_creator
@@ -63,6 +63,7 @@ def get_data(user_input):
     mapper.create_seed_json(chosen_seed, seed_dict)
     json_result = json.dumps(seed_dict)
 
+    # concatenate several results using the '$' separator
     return json_result + '$' + seed_or_family_name
 
 
@@ -103,27 +104,36 @@ def json_to_fasta(json_input):
     return 'Rina'
 
 
-# returns basic newick format for tree rendering in JS
+# returns all relevant organisms to the user's entry, in abbreviation format.
 @app.route('/json_to_tree/<json_input>')
 def json_to_tree(json_input):
     json_dict = json.loads(json_input)
-
     seed = list(json_dict)[0]
+
     organisms = list(json_dict[seed])
     organism_num_of_matures = {}
     short_names_organisms = []
 
+    # gather how many 3p mature sequences the organism has, and how many 5p.
+    organism_three_p = defaultdict(int)
+    organism_five_p = defaultdict(int)
+
     tree_builder = tree_creator.TreeCreator(json_input)
+
     for organism in organisms:
         short_name_organism = tree_builder.get_short_organism_name(organism)
         matures = list(json_dict[seed][organism])
         short_names_organisms.append(short_name_organism + str(len(matures)))
         organism_num_of_matures[organism] = len(matures)
-    #
-    #     for mature in matures:
-    #         mature_name = json_dict[seed][organism][mature]['mature name']
-    #         mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
-    #
+
+        # for mature in matures:
+        #     # mature_name = json_dict[seed][organism][mature]['mature name']
+        #     mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
+        #     if mature_3p_or_5p == '3p':
+        #         organism_three_p[organism] += 1
+        #     else:
+        #         organism_five_p[organism] += 1
+
     # tree_builder = tree_creator.TreeCreator(json_input)
     # newick_result = tree_builder.newick
 
@@ -144,11 +154,6 @@ def get_organism_full_name(short_name):
     result = str(map_1[short_name])
 
     return result
-
-
-@app.route('/get_seed_or_family_name/<seed_or_family>')
-def get_seed_or_family_name(seed_or_family):
-    return seed_or_family
 
 @app.route('/info')
 def info():
