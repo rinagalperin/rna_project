@@ -89,9 +89,9 @@ function getData(input) {
             let other_name = data.split('$')[1];
             let result_title = '';
             if(user_input.includes('-')){
-                result_title = 'seed sequence: ' + other_name + ', family name: ' + user_input;
+                result_title = 'seed sequence: ' + other_name.toUpperCase() + ', family name: ' + user_input.toLowerCase();
             }else{
-                result_title = 'seed sequence: ' + user_input + ', family name: ' + other_name;
+                result_title = 'seed sequence: ' + user_input.toUpperCase() + ', family name: ' + other_name.toLowerCase();
             }
             $('#result_title').text(result_title);
 

@@ -1,0 +1,26 @@
+{
+    "AACUCG": {
+        "Bos taurus": {
+            "bta-mir-2284t": {
+                "mature name": "bta-miR-2284t-3p",
+                "mature 3p or 5p": "3p"
+            },
+            "bta-mir-2435": {
+                "mature name": "bta-miR-2435",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Drosophila virilis": {
+            "dvi-mir-9698": {
+                "mature name": "dvi-miR-9698-5p",
+                "mature 3p or 5p": "5p"
+            }
+        },
+        "Mesocestoides corti": {
+            "mco-mir-10": {
+                "mature name": "mco-miR-10-5p",
+                "mature 3p or 5p": "5p"
+            }
+        }
+    }
+}
