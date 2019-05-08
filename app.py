@@ -1,9 +1,10 @@
-from flask import Flask, render_template
 import json
+import re
 from collections import defaultdict
-from json2html import json2html
 
-from static.Model import data, mapper, tree_creator, list_creator
+from flask import Flask, render_template
+
+from static.Model import data, mapper, tree_creator
 
 app = Flask(__name__)
 
@@ -77,9 +78,33 @@ def get_data(user_input):
 
 @app.route('/json_to_html/<json_input>')
 def json_to_html(json_input):
-    table = json2html.convert(json=json_input)
-    result = list_creator.table2list(table)
-    return result
+    import codecs
+    f = codecs.open('templates/tree.html', 'r')
+    # base html tree, need to add info on relevant organisms
+    base = f.read()
+
+    json_dict = json.loads(json_input)
+    seed = list(json_dict)[0]
+    organisms = list(json_dict[seed])
+
+    for organism in organisms:
+        matures = list(json_dict[seed][organism])
+        num_of_3p = 0
+        num_of_5p = 0
+        for mature in matures:
+            # mature_name = json_dict[seed][organism][mature]['mature name']
+            mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
+            if mature_3p_or_5p == '3p':
+                num_of_3p += 1
+            else:
+                num_of_5p += 1
+
+        extra_info = '<span class=INFO3> [' + str(num_of_3p) + '-3p, ' + str(num_of_5p) + '-5p] </span>'
+        result = re.search(organism+'(.*)</LI>', base)
+        original_line = result.group(1)
+        base = base.replace(original_line, original_line + extra_info)
+
+    return base
 
 
 # TODO

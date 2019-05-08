@@ -53,28 +53,6 @@
     </styles>
     </render>
   <clade><branch_length>0.0</branch_length>
-    <clade><branch_length>0.0</branch_length>
-        <!-- bgStyle="organisms" : paint the background of the chart diameter in color. this
-        needs to be added to all name tags of relevant organisms -->
-      <name>smc</name>
-    </clade>
-    <clade><branch_length>0.0</branch_length>
-      <clade><branch_length>13.0</branch_length>
-        <name>esi</name>
-      </clade>
-      <clade><branch_length>13.0</branch_length>
-        <name>pin</name>
-      </clade>
-      <clade><branch_length>13.0</branch_length>
-        <name>pra</name>
-      </clade>
-      <clade><branch_length>13.0</branch_length>
-        <name>psj</name>
-      </clade>
-      <clade><branch_length>13.0</branch_length>
-        <name>pti</name>
-      </clade>
-    </clade>
     <clade><branch_length>14.0</branch_length>
       <clade><branch_length>13.0</branch_length>
         <clade><branch_length>12.0</branch_length>
@@ -586,6 +564,9 @@
           <name>sci</name>
         </clade>
       </clade>
+    </clade>
+      <clade><branch_length>0.0</branch_length>
+      <name>ddi</name>
     </clade>
   </clade>
 </phylogeny>
