@@ -101,8 +101,11 @@ def json_to_html(json_input):
 
         extra_info = '<span class=INFO3> [' + str(num_of_3p) + '-3p, ' + str(num_of_5p) + '-5p] </span>'
         result = re.search(organism+'(.*)</LI>', base)
-        original_line = result.group(1)
-        base = base.replace(original_line, original_line + extra_info)
+        if result is None:
+            print(organism)
+        else:
+            original_line = result.group(1)
+            base = base.replace(original_line, original_line + extra_info)
 
     return base
 

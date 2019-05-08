@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e45d915-2b0d-4615-bd1f-5deb76f086f1" name="Default Changelist" comment="delete main py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ViewModel/39.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ViewModel/40.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ViewModel/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ViewModel/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tree.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,9 +69,9 @@
           <entry key="Python Console" value="144" />
           <entry key="css" value="521" />
           <entry key="csv" value="15" />
-          <entry key="html" value="3425" />
+          <entry key="html" value="3432" />
           <entry key="js" value="7439" />
-          <entry key="py" value="7807" />
+          <entry key="py" value="7840" />
           <entry key="txt" value="19" />
           <entry key="xml" value="728" />
         </counts>
@@ -82,10 +79,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="521" />
-          <entry key="HTML" value="3432" />
+          <entry key="HTML" value="3439" />
           <entry key="JavaScript" value="7432" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="7951" />
+          <entry key="Python" value="7984" />
           <entry key="XML" value="728" />
         </counts>
       </usages-collector>
@@ -93,11 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="22">
+              <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#3293#4479#0" />
@@ -108,21 +105,21 @@
                 <element signature="e#5233#5285#0" />
                 <element signature="e#5330#5377#0" />
                 <element signature="e#5419#5454#0" />
-                <marker date="1557349424000" expanded="true" signature="263:265" ph="..." />
-                <marker date="1557349424000" expanded="true" signature="2471:2476" ph="..." />
-                <marker date="1557349424000" expanded="true" signature="3386:3976" ph="..." />
-                <marker date="1557349424000" expanded="true" signature="4125:4130" ph="..." />
-                <marker date="1557349424000" expanded="true" signature="5753:5755" ph="..." />
+                <marker date="1557349957000" expanded="true" signature="263:265" ph="..." />
+                <marker date="1557349957000" expanded="true" signature="2471:2476" ph="..." />
+                <marker date="1557349957000" expanded="true" signature="3463:4053" ph="..." />
+                <marker date="1557349957000" expanded="true" signature="4202:4207" ph="..." />
+                <marker date="1557349957000" expanded="true" signature="5830:5832" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/tree.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
-              <caret line="92" column="137" lean-forward="true" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="137" />
+              <caret line="54" column="141" selection-start-line="54" selection-start-column="141" selection-end-line="54" selection-end-column="141" />
               <folding>
                 <element signature="n#head#0;n#HTML#0;n#!!top" />
               </folding>
@@ -233,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/ViewModel/9.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/10.xml" />
         <option value="$PROJECT_DIR$/static/Model/tree_creator.py" />
         <option value="$PROJECT_DIR$/static/ViewModel/13.xml" />
@@ -284,6 +280,7 @@
         <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
         <option value="$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/tree.html" />
       </list>
     </option>
   </component>
@@ -577,7 +574,7 @@
     <frame x="0" y="23" width="1336" height="673" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.20015456" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.20015456" />
       <window_info id="Structure" order="1" sideWeight="0.5024155" side_tool="true" weight="0.21978852" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -591,7 +588,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50453174" side_tool="true" weight="0.3297491" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" visible="true" weight="0.281362" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" visible="true" weight="0.22222222" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49773413" weight="0.3297491" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -878,20 +875,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tree.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="92" column="137" lean-forward="true" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="137" />
-          <folding>
-            <element signature="n#head#0;n#HTML#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="22">
+          <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#3293#4479#0" />
@@ -902,11 +889,21 @@
             <element signature="e#5233#5285#0" />
             <element signature="e#5330#5377#0" />
             <element signature="e#5419#5454#0" />
-            <marker date="1557349424000" expanded="true" signature="263:265" ph="..." />
-            <marker date="1557349424000" expanded="true" signature="2471:2476" ph="..." />
-            <marker date="1557349424000" expanded="true" signature="3386:3976" ph="..." />
-            <marker date="1557349424000" expanded="true" signature="4125:4130" ph="..." />
-            <marker date="1557349424000" expanded="true" signature="5753:5755" ph="..." />
+            <marker date="1557349957000" expanded="true" signature="263:265" ph="..." />
+            <marker date="1557349957000" expanded="true" signature="2471:2476" ph="..." />
+            <marker date="1557349957000" expanded="true" signature="3463:4053" ph="..." />
+            <marker date="1557349957000" expanded="true" signature="4202:4207" ph="..." />
+            <marker date="1557349957000" expanded="true" signature="5830:5832" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tree.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="54" column="141" selection-start-line="54" selection-start-column="141" selection-end-line="54" selection-end-column="141" />
+          <folding>
+            <element signature="n#head#0;n#HTML#0;n#!!top" />
           </folding>
         </state>
       </provider>
