@@ -83,7 +83,7 @@ function getData(input) {
         url: "get_data/" + input
     }).done(function (data) {
         if(data === '-1'){
-            alert("Seed sequence does not exist! \n Please verify you have entered a valid seed and try again.")
+            alert("Seed sequence does not exist! \n Please verify you have entered a valid seed or family name \n and try again.")
         }else {
             // construct output page title of seed sequence + family name
             let user_input = $('#seed').val().toLowerCase();
@@ -100,16 +100,13 @@ function getData(input) {
 
             // ------------------------------------
             // gather 3p/5p count per organism:
-
             let seed = Object.keys(JSON.parse(data))[0];
             let organisms_json = JSON.parse(data)[seed];
-
             // iterate over all organisms
             Object.keys(organisms_json).forEach(function(organism) {
                 let matures_json = organisms_json[organism];
                 let count_of_3p = 0;
                 let count_of_5p = 0;
-
                 // iterate over all matures of the organism
                 Object.keys(matures_json).forEach(function(mature_key) {
                     //let mature = mature_key;
@@ -155,7 +152,7 @@ function getData(input) {
             }
 
             if (isChecked("tree")) {
-                $('#treeTextArea').empty(); // avoid duplicate graphs (one below the other)
+                $('#treeTextArea').empty(); // avoid multiple graphs (one *below* the other)
                 controlOutput(true, "treeArea");
                 jsonToTree(data);
             } else {
@@ -295,8 +292,6 @@ function edit_graph(xmlFile, relevant_organisms){
 
         updated_bg_colors = updated_bg_colors.replace(original, updated);
     }
-
-    // TODO: add bar charts
 
     return updated_bg_colors;
 }

@@ -4,8 +4,52 @@
     <list default="true" id="6e45d915-2b0d-4615-bd1f-5deb76f086f1" name="Default Changelist" comment="delete main py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seeds/ACUGGC.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seeds/ACUGGC.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/575757.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAAAAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAACCC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAACCCC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACCCC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACGGU.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUAA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUAG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUAGA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUCG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AACUGC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAUUCC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAUUCG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AAUUUU.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACCGUC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACCUAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACCUGG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACGGUC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACGUAG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACUGGA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACUGGC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACUUAA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/ACUUAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCAAA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCCAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCCAG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCCGG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCUAA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUCUGG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUGUAG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUGUAU.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AUGUGU.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AucAAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/AuuAAC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/GAGGUA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/UGGAGAA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/UGUAUA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/UGUAUAG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seeds/UUUUCG.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/ViewModel/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ViewModel/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_entry.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_entry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_wiki.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_wiki.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/examples.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/examples.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +70,7 @@
     <session id="-1142406138">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
@@ -42,11 +86,11 @@
         <counts>
           <entry key="css" value="20" />
           <entry key="csv" value="6" />
-          <entry key="html" value="24" />
+          <entry key="html" value="25" />
           <entry key="js" value="39" />
           <entry key="php" value="1" />
-          <entry key="png" value="9" />
-          <entry key="py" value="89" />
+          <entry key="png" value="13" />
+          <entry key="py" value="93" />
           <entry key="rina_works" value="1" />
           <entry key="ts" value="2" />
           <entry key="txt" value="35" />
@@ -56,11 +100,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="20" />
-          <entry key="HTML" value="24" />
-          <entry key="Image" value="9" />
+          <entry key="HTML" value="25" />
+          <entry key="Image" value="13" />
           <entry key="JavaScript" value="39" />
           <entry key="PLAIN_TEXT" value="42" />
-          <entry key="Python" value="89" />
+          <entry key="Python" value="93" />
           <entry key="TypeScript" value="2" />
           <entry key="XML" value="109" />
         </counts>
@@ -70,9 +114,9 @@
           <entry key="Python Console" value="144" />
           <entry key="css" value="521" />
           <entry key="csv" value="15" />
-          <entry key="html" value="3331" />
-          <entry key="js" value="7316" />
-          <entry key="py" value="6993" />
+          <entry key="html" value="3425" />
+          <entry key="js" value="7374" />
+          <entry key="py" value="6995" />
           <entry key="txt" value="19" />
           <entry key="xml" value="723" />
         </counts>
@@ -80,10 +124,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="521" />
-          <entry key="HTML" value="3338" />
-          <entry key="JavaScript" value="7309" />
+          <entry key="HTML" value="3432" />
+          <entry key="JavaScript" value="7367" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="7137" />
+          <entry key="Python" value="7139" />
           <entry key="XML" value="723" />
         </counts>
       </usages-collector>
@@ -94,16 +138,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+            <state relative-caret-position="260">
+              <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
               <folding>
                 <element signature="e#1656#1760#0" />
                 <element signature="e#1840#2423#0" />
-                <marker date="1557263012000" expanded="true" signature="298:300" ph="..." />
-                <marker date="1557263012000" expanded="true" signature="2356:2361" ph="..." />
-                <marker date="1557263012000" expanded="true" signature="2547:3137" ph="..." />
-                <marker date="1557263012000" expanded="true" signature="3286:3291" ph="..." />
-                <marker date="1557263012000" expanded="true" signature="4914:4916" ph="..." />
+                <marker date="1557270408000" expanded="true" signature="298:300" ph="..." />
+                <marker date="1557270408000" expanded="true" signature="2358:2363" ph="..." />
+                <marker date="1557270408000" expanded="true" signature="2549:3139" ph="..." />
+                <marker date="1557270408000" expanded="true" signature="3288:3293" ph="..." />
+                <marker date="1557270408000" expanded="true" signature="4916:4918" ph="..." />
               </folding>
             </state>
           </provider>
@@ -112,80 +156,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="292" column="91" selection-start-line="292" selection-start-column="79" selection-end-line="292" selection-end-column="91" />
+            <state relative-caret-position="153">
+              <caret line="234" selection-start-line="234" selection-end-line="234" />
               <folding>
                 <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
                 <element signature="n#!!block;n#download#0" />
                 <element signature="e#4292#4326#0" />
                 <element signature="n#!!block;n#jsonToFasta#0" />
                 <element signature="n#!!block;n#jsonToHtml#0" />
-                <element signature="n#!!block;n#jsonToTree#0" />
+                <element signature="n#!!block;n#edit_graph#0" />
                 <element signature="n#!!block;n#getOrganismFullName#0" />
                 <element signature="n#!!block;n#sleep#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="89" column="46" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="104" column="48" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="48" />
-              <folding>
-                <element signature="e#482#585#0" />
-                <element signature="e#628#980#0" />
-                <element signature="e#1161#1858#0" />
-                <element signature="e#4210#4298#0" />
-                <element signature="e#4346#4595#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/mature.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11026" column="8" lean-forward="true" selection-start-line="11026" selection-start-column="1" selection-end-line="11026" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/hairpin.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12959" selection-start-line="12959" selection-end-line="12960" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Model/data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="264" column="43" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#1671#6796#0" />
-                <element signature="e#10757#11160#0" />
-                <element signature="e#12091#13719#0" />
-                <element signature="e#13779#13907#0" />
-                <element signature="e#13958#14136#0" />
-                <element signature="e#14187#14365#0" />
-                <element signature="e#14568#14896#0" />
-                <element signature="e#14977#15459#0" />
               </folding>
             </state>
           </provider>
@@ -207,12 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>compo</find>
-      <find>bar</find>
-      <find>content</find>
-      <find>gro</find>
-      <find>&lt;name</find>
-      <find>&lt;clade</find>
       <find>ann</find>
       <find>anno</find>
       <find>ssy</find>
@@ -234,9 +209,15 @@
       <find>print</find>
       <find>seed_or_family_name</find>
       <find>3p o</find>
-      <find>let organism_three_p_five_p_count = {};</find>
       <find>base</find>
       <find>defaultdict</find>
+      <find>let organism_three_p_five_p_count = {};</find>
+      <find>/seeds</find>
+      <find>create</find>
+      <find>create_seed_json</find>
+      <find>in thi</find>
+      <find>with</find>
+      <find>treeTextArea</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,17 +265,17 @@
         <option value="$PROJECT_DIR$/static/ViewModel/38.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/39.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/40.xml" />
-        <option value="$PROJECT_DIR$/templates/examples.html" />
         <option value="$PROJECT_DIR$/static/Model/maps/mature_to_seed_map_6.txt" />
         <option value="$PROJECT_DIR$/static/Model/maps/mature_to_seed_map_7.txt" />
         <option value="$PROJECT_DIR$/static/Model/maps/seed_to_mature_map_6.txt" />
         <option value="$PROJECT_DIR$/static/Model/maps/seed_to_mature_map_7.txt" />
         <option value="$PROJECT_DIR$/static/Model/mature.txt" />
         <option value="$PROJECT_DIR$/static/Model/hairpin.txt" />
-        <option value="$PROJECT_DIR$/static/Model/data.py" />
         <option value="$PROJECT_DIR$/static/Model/mapper.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/Model/data.py" />
+        <option value="$PROJECT_DIR$/templates/examples.html" />
         <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
       </list>
     </option>
@@ -334,6 +315,11 @@
             <path>
               <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="rna_project" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rna_project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,25 +327,12 @@
               <item name="rna_project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rna_project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="maps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="rna_project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rna_project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewModel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rna_project" type="b2602c69:ProjectViewProjectNode" />
@@ -590,7 +563,7 @@
     <frame x="0" y="23" width="1336" height="673" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.19706337" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.19706337" />
       <window_info id="Structure" order="1" sideWeight="0.5024155" side_tool="true" weight="0.21978852" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -604,7 +577,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50453174" side_tool="true" weight="0.3297491" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" visible="true" weight="0.25268817" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" weight="0.25268817" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49773413" weight="0.3297491" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -658,34 +631,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/22.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="610" column="11" selection-start-line="610" selection-start-column="11" selection-end-line="610" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/20.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="67" column="40" selection-end-line="610" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/23.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="610" column="11" selection-start-line="610" selection-start-column="11" selection-end-line="610" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/19.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="121" column="36" selection-end-line="610" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/ViewModel/14.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -863,16 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/examples.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/ViewModel/jsphylosvg-min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -950,74 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/list_creator.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/mature.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="89" column="46" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
-          <folding>
-            <element signature="e#1656#1760#0" />
-            <element signature="e#1840#2423#0" />
-            <marker date="1557263012000" expanded="true" signature="298:300" ph="..." />
-            <marker date="1557263012000" expanded="true" signature="2356:2361" ph="..." />
-            <marker date="1557263012000" expanded="true" signature="2547:3137" ph="..." />
-            <marker date="1557263012000" expanded="true" signature="3286:3291" ph="..." />
-            <marker date="1557263012000" expanded="true" signature="4914:4916" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="264" column="43" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1671#6796#0" />
-            <element signature="e#10757#11160#0" />
-            <element signature="e#12091#13719#0" />
-            <element signature="e#13779#13907#0" />
-            <element signature="e#13958#14136#0" />
-            <element signature="e#14187#14365#0" />
-            <element signature="e#14568#14896#0" />
-            <element signature="e#14977#15459#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="104" column="48" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="48" />
-          <folding>
-            <element signature="e#482#585#0" />
-            <element signature="e#628#980#0" />
-            <element signature="e#1161#1858#0" />
-            <element signature="e#4210#4298#0" />
-            <element signature="e#4346#4595#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/ViewModel/40.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1025,17 +892,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="89" column="46" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/mature.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/list_creator.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+          <folding>
+            <element signature="e#482#585#0" />
+            <element signature="e#628#980#0" />
+            <element signature="e#1161#1858#0" />
+            <element signature="e#2099#4164#0" />
+            <element signature="e#4346#4595#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1636#6761#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_entry.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_wiki.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/examples.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="78" column="63" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+          <folding>
+            <element signature="e#1656#1760#0" />
+            <element signature="e#1840#2423#0" />
+            <marker date="1557270408000" expanded="true" signature="298:300" ph="..." />
+            <marker date="1557270408000" expanded="true" signature="2358:2363" ph="..." />
+            <marker date="1557270408000" expanded="true" signature="2549:3139" ph="..." />
+            <marker date="1557270408000" expanded="true" signature="3288:3293" ph="..." />
+            <marker date="1557270408000" expanded="true" signature="4916:4918" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="292" column="91" selection-start-line="292" selection-start-column="79" selection-end-line="292" selection-end-column="91" />
+        <state relative-caret-position="153">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
           <folding>
             <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
             <element signature="n#!!block;n#download#0" />
             <element signature="e#4292#4326#0" />
             <element signature="n#!!block;n#jsonToFasta#0" />
             <element signature="n#!!block;n#jsonToHtml#0" />
-            <element signature="n#!!block;n#jsonToTree#0" />
+            <element signature="n#!!block;n#edit_graph#0" />
             <element signature="n#!!block;n#getOrganismFullName#0" />
             <element signature="n#!!block;n#sleep#0" />
           </folding>

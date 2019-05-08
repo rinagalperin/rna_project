@@ -60,7 +60,7 @@ def get_data(user_input):
     if len(seed_dict[chosen_seed]) == 0:
         return '-1'
 
-    mapper.create_seed_json(chosen_seed, seed_dict)
+    # mapper.create_seed_json(chosen_seed, seed_dict)
     json_result = json.dumps(seed_dict)
 
     # concatenate several results using the '$' separator
