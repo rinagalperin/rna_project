@@ -110,26 +110,32 @@ def json_to_html(json_input):
     return base
 
 
-# TODO
 @app.route('/json_to_fasta/<json_input>')
 def json_to_fasta(json_input):
-    # json_dict = json.loads(json_input)
-    #
-    # seed = list(json_dict)[0]
-    # organisms = list(json_dict[seed])
-    # organism_num_of_matures = {}
-    #
-    # for organism in organisms:
-    #     matures = list(json_dict[seed][organism])
-    #     organism_num_of_matures[organism] = len(matures)
-    #
-    #     for mature in matures:
-    #         mature_name = json_dict[seed][organism][mature]['mature name']
-    #         mature_3p_or_5p = json_dict[seed][organism][mature]['mature 3p or 5p']
-    #
-    # tree_builder = tree_creator.TreeCreator(json_input)
+    # FASTA format:
+    # > mature_name
+    # mature_sequence
 
-    return 'Rina'
+    result = ''
+    json_dict = json.loads(json_input)
+
+    seed = list(json_dict)[0]
+    organisms = list(json_dict[seed])
+
+    for organism in organisms:
+        matures = list(json_dict[seed][organism])
+        for mature in matures:
+            mature_name = json_dict[seed][organism][mature]['mature name']
+            # TODO: get mature sequence
+            mature_sequence = ''
+            # not first entry
+            if result != '':
+                result = result + '\n>' + mature_name + '\n' + mature_sequence
+            # first entry in result FASTA file
+            else:
+                result = result + '>' + mature_name + '\n' + mature_sequence
+
+    return result
 
 
 # returns all relevant organisms to the user's entry, in abbreviation format.

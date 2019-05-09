@@ -18,7 +18,7 @@ $(document).ready(function () {
    console.log('page is loaded');
    onSeedButtonClick();
    onDwnJsonButtonClick();
-   //onDwnCsvButtonClick();
+   onDwnCsvButtonClick();
    onDwnFastaButtonClick();
    onDwnHtmlButtonClick();
    onDwnTreeButtonClick();
@@ -67,13 +67,12 @@ function onDwnHtmlButtonClick(){
     })
 }
 
-// TODO: allow downloading the result as image
 function onDwnFastaButtonClick(){
     $('#dwn_fasta_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
         let fasta_data = $('#fastaTextArea').val();
-        download(fasta_data, "BioMir_fasta_"+seed, "txt");
+        download(fasta_data, "BioMir_fasta_"+seed+'.fa', "text/fa");
     })
 }
 
