@@ -1,5 +1,6 @@
 import json
 import re
+import numpy as np
 from collections import defaultdict
 
 from flask import Flask, render_template
@@ -27,36 +28,47 @@ def get_data(user_input):
     if seed_length != 6 and seed_length != 7:
         return '-1'
 
-    my_data = data.Data(seed_length)
+    if seed_length == 6:
+        mature_name_seed_map = data.mature_name_seed_map_6
+        seed_mature_name_map = data.seed_mature_name_map_6
+        table_data = data.table_data_6
+        pre_mir_name_to_seeds_map = data.pre_mir_name_to_seeds_map_6
+        organisms = data.organisms_6
+        pre_mir_name_to_mature_5p_or_3p_map = data.pre_mir_name_to_mature_5p_or_3p_map_6
+    else:
+        mature_name_seed_map = data.mature_name_seed_map_7
+        seed_mature_name_map = data.seed_mature_name_map_7
+        table_data = data.table_data_7
+        pre_mir_name_to_seeds_map = data.pre_mir_name_to_seeds_map_7
+        organisms = data.organisms_7
+        pre_mir_name_to_mature_5p_or_3p_map = data.pre_mir_name_to_mature_5p_or_3p_map_7
+
     seed_or_family_name = ''
 
     if '-' in user_input:
         user_input = user_input.lower()
-        if user_input not in my_data.mature_name_seed_map.keys():
+        if user_input not in mature_name_seed_map.keys():
             return '-1'
-        chosen_seed = my_data.mature_name_seed_map[user_input]
+        chosen_seed = mature_name_seed_map[user_input]
         # user entered family name, so other name is the seed
         seed_or_family_name = chosen_seed
     else:
         # in case user enters the seed sequence in non-capital letters,
         # turn the input to all upper case.
         user_input = user_input.upper()
+        if user_input not in seed_mature_name_map.keys():
+            return '-1'
         chosen_seed = user_input
         # user entered seed sequence, so other name is the family name
-        family_name = my_data.seed_mature_name_map[user_input]
+        family_name = seed_mature_name_map[user_input]
         seed_or_family_name = family_name
-
-    table_data = my_data.table_data
-    seed_list = my_data.seed_list
-    pre_mir_name_to_seeds_map = my_data.pre_mir_name_to_seeds_map
-    organisms = my_data.organisms
 
     seed_dict = mapper.map_seed_to_organisms_extended(
         table_data,
         chosen_seed,
         organisms,
         pre_mir_name_to_seeds_map,
-        my_data.pre_mir_name_to_mature_5p_or_3p_map)
+        pre_mir_name_to_mature_5p_or_3p_map)
 
     if len(seed_dict[chosen_seed]) == 0:
         return '-1'
@@ -124,18 +136,38 @@ def json_to_fasta(json_input):
 
     for organism in organisms:
         matures = list(json_dict[seed][organism])
+
         for mature in matures:
             mature_name = json_dict[seed][organism][mature]['mature name']
-            # TODO: get mature sequence
-            mature_sequence = ''
-            # not first entry
-            if result != '':
-                result = result + '\n>' + mature_name + '\n' + mature_sequence
-            # first entry in result FASTA file
-            else:
-                result = result + '>' + mature_name + '\n' + mature_sequence
 
-    return result
+            filter1 = data.table_data_6[3] == mature_name
+            filter2 = data.table_data_6[6] == mature_name
+            idx = np.logical_or(filter1, filter2)
+            res = data.table_data_6[:, idx]
+
+            # the given mature name is of type 5p
+            if res[3] == mature_name:
+                mature_sequence = res[4]
+            # the given mature name is of type 3p
+            elif res[6] == mature_name:
+                mature_sequence = res[7]
+            else:
+                mature_sequence = 'error'
+
+            if mature_sequence != None:
+                # not first entry
+                if result != '':
+                    result = result + '\n>' + mature_name + '\n' + mature_sequence
+                # first entry in result FASTA file
+                else:
+                    result = result + '>' + mature_name + '\n' + mature_sequence
+            else:
+                print(mature_sequence)
+                print(mature_name)
+                print(res)
+                print('--------------')
+
+    return str(result[0])
 
 
 # returns all relevant organisms to the user's entry, in abbreviation format.
