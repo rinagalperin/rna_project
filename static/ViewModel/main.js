@@ -46,7 +46,7 @@ function onDwnCsvButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let csv_data = $('#csvTextArea').val();
-        download(csv_data, "BioMir_"+seed, "csv");
+        download(csv_data, "BioMir_"+seed+".csv", "text");
     })
 }
 
@@ -164,6 +164,13 @@ function getData(input) {
             } else {
                 controlOutput(false, "htmlArea");
             }
+
+            if (isChecked("csv")) {
+                controlOutput(true, "csvArea");
+                jsonToCsv(data);
+            } else {
+                controlOutput(false, "csvArea");
+            }
         }
     });
 }
@@ -186,15 +193,15 @@ function download(data, filename, type) {
     }
 }
 
-// function jsonToCsv(json_input){
-//     $.ajax({
-//         method: "GET",
-//         url: "json_to_csv/" + json_input
-//     }).done(function (result) {
-//         console.log(result);
-//         $('#csvTextArea').text(result);
-//     });
-// }
+function jsonToCsv(json_input){
+    $.ajax({
+        method: "GET",
+        url: "json_to_csv/" + json_input
+    }).done(function (result) {
+        console.log(result);
+        $('#csvTextArea').text(result);
+    });
+}
 
 function jsonToFasta(json_input){
     $.ajax({
@@ -243,6 +250,7 @@ function jsonToTree(json_input){
     });
 }
 
+// add all necessary features to the evolutionary tree: background colors, full names, matures' count, etc.
 function edit_graph(xmlFile, relevant_organisms){
     var xmlString = new XMLSerializer().serializeToString(xmlFile);
     var updated_bg_colors = xmlString.replace(

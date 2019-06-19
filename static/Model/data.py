@@ -10,6 +10,9 @@ from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed
 
 
 def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_mir_name_to_mature_5p_or_3p_map):
+    """
+        Creates databse from original FASTA files
+        """
     pname_to_data = create_map_5p_3p("static/Model/mature.txt")
     with open(path_input, "r") as f:
         split_txt = f.read().split('>')
@@ -183,6 +186,7 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
             split_entry = entry.split(" ")
             organism = split_entry[2] + " " + split_entry[3]
 
+            # filter organisms not from Metazoa family of organisms
             if organism in metazoaFamilies:
                 pre_mir_name = split_entry[0].lower()
                 pre_mir_sequence = split_entry[-1].replace("\n", '').replace('stem-loop', '')
@@ -195,7 +199,8 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 entry_five_p = pname_to_data.get(pre_mir_name + '-5p', None)
                 entry_three_p = pname_to_data.get(pre_mir_name + '-3p', None)
 
-                # if the entry doesn't explicitly states '3p' or '5p'
+                # if the entry doesn't explicitly states '3p' or '5p', check the sub-sequence
+                # location in the full pre-mir sequence to determine its type (using function find_three_or_five_p)
                 if entry_three_p is None or entry_five_p is None:
                     general_entry = pname_to_data.get(pre_mir_name, None)
                     if general_entry is not None:
@@ -207,6 +212,7 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 pre_mir_name_to_seeds_map[pre_mir_name] = {}
                 pre_mir_name_to_mature_5p_or_3p_map[pre_mir_name] = {}
 
+                # handle 5p sub-sequence of pre-mir
                 if entry_five_p is not None:
                     name, seq, seed = init_p(entry_five_p, seed_length)
                     pre_mir_name_to_seeds_map[pre_mir_name][seed] = entry_five_p
@@ -220,6 +226,7 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 fivePMatureMirSeq.append(seq)
                 fivePMatureMirSeed.append(seed)
 
+                # handle 3p sub-sequence of pre-mir
                 if entry_three_p is not None:
                     name, seq, seed = init_p(entry_three_p, seed_length)
                     pre_mir_name_to_seeds_map[pre_mir_name][seed] = entry_three_p
@@ -233,6 +240,7 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 threePMatureMirSeq.append(seq)
                 threePMatureMirSeed.append(seed)
 
+    # completed database construction
     data = np.array([preMirName,
                      organisms,
                      preMirSeq,
@@ -242,18 +250,6 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                      threePMatureMirName,
                      threePMatureMirSeq,
                      threePMatureMirSeed])
-
-    ##########################################
-    # export_table_to_csv([preMirName,
-    #                      organisms,
-    #                      preMirSeq,
-    #                      fivePMatureMirName,
-    #                      fivePMatureMirSeq,
-    #                      fivePMatureMirSeed,
-    #                      threePMatureMirName,
-    #                      threePMatureMirSeq,
-    #                      threePMatureMirSeed])
-    ##########################################
 
     return data
 
@@ -273,6 +269,10 @@ def find_common_prefix(mature_name_list):
 
 
 def reconstruct_mature_name(mature_name):
+    """
+        Reconstructs a mature miRNA name to be able to compare all mature names and
+        choose one representative name for the entire family
+        """
     mature_name_without_prefix = mature_name.split("-", 1)[1].lower()
     mature_name_split_arr = mature_name_without_prefix.split('-')
     # if mature_name_split_arr[0] == 'mir' and (mature_name_split_arr[2] == '5p' or mature_name_split_arr[2] == '3p'):
@@ -289,8 +289,11 @@ def reconstruct_mature_name(mature_name):
     return mature_name_reconstructed
 
 
-# two-way mapping between a seed and a mature mir name
 def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mature_5p_or_3p_map, pre_mir_name_to_seeds_map):
+    """
+        two-way mapping between a seed and a mature mir name.
+        creates actual database files.
+        """
     seed_to_mature_map = {}
     mature_to_seed_map = {}
 
@@ -314,17 +317,21 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
         for organism in seed_dict[seed]:
             for pre_mir_name in seed_dict[seed][organism]:
                 mature_name = seed_dict[seed][organism][pre_mir_name]['mature name']
+                # reconstruct mature name: remove prefix, remove letters from mid name, etc.
                 mature_name_reconstructed = reconstruct_mature_name(mature_name)
                 if mature_name_reconstructed is not None and len(mature_name_reconstructed) != 0:
+                    # collect all reconstructed names to later chose one family name representative from
                     mature_name_list.append(mature_name_reconstructed)
                 # mature_name_appearances_map[mature_name_filtered] += 1
 
+        # decide on the chosen family name using majority vote selection
         common_prefix = find_common_prefix(mature_name_list)
         if common_prefix is not None or len(str(common_prefix)) != 0:
             seed_to_mature_map[seed] = common_prefix
             mature_to_seed_map[common_prefix] = seed
             # print("done with entry " + str(len(seed_to_mature_map)))
 
+    # access to databse
     with open('static/Model/maps/seed_to_mature_map_' + str(seed_length) + '.txt', "w") as f:
         json.dump(seed_to_mature_map, f, indent=4)
     with open('static/Model/maps/mature_to_seed_map_' + str(seed_length) + '.txt', "w") as f:
@@ -332,6 +339,10 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
 
 
 def remove_letters_from_string(string):
+    """
+        helper function to remove letters from mature name middle part.
+        :returns original string after letter removal
+        """
     for letter in string:
         if letter.isalpha():
             string = string.replace(letter, '')
@@ -352,9 +363,11 @@ def init_mature_name_seed_map(seed_length):
     return mature_to_seed_map
 
 
-# return the *end* index of sub_string's first appearance in full_string
-# for example: find_str("Happy birthday", "py") will return: 4
 def find_str(full_string, sub_string):
+    """
+        :returns the *end* index of sub_string's first appearance in full_string
+        for example: find_str("Happy birthday", "py") will return: 4
+        """
     index = 0
 
     if sub_string in full_string:
@@ -370,6 +383,10 @@ def find_str(full_string, sub_string):
 
 
 def find_three_or_five_p(unknown_p_entry, pre_mir_sequence):
+    """
+        Determine whether an entry is of type 3p or 5p according to its location in the pre-mir sequence
+        :returns '3p' or '5p'
+        """
     if unknown_p_entry is not None:
         entry_three_p_seq = unknown_p_entry[-1:]
         lines = entry_three_p_seq[0].splitlines()
@@ -377,8 +394,10 @@ def find_three_or_five_p(unknown_p_entry, pre_mir_sequence):
         if len(lines) == 2:
             sub_sequence = lines[1]
             end_index_of_sub_in_full = find_str(pre_mir_sequence, sub_sequence)
+            # left half -> 5p
             if end_index_of_sub_in_full <= len(pre_mir_sequence) / 2:
                 return '5p'
+            # right half -> 3p
             else:
                 return '3p'
     return 'none'

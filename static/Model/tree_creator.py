@@ -14,6 +14,9 @@ class TreeCreator:
         self.init_name_maps()
 
     def init_name_maps(self):
+        """
+            Initialize the two-way mapping between a short name and full name of an organism
+            """
         map_1 = {}
         with open(self.organisms_code_names_path) as f:
             content = f.readlines()
@@ -34,12 +37,23 @@ class TreeCreator:
         self.full_name_to_short_name_map = map_2
 
     def get_short_organism_name(self, full_name):
+        """
+            Gets full organism name as input
+            Returns organism short name (abbreviation) as output
+            """
         return self.full_name_to_short_name_map[full_name]
 
     def get_full_organism_name(self, short_name):
+        """
+            Gets short organism name (abbreviation) as input
+            Returns organism full name as output
+            """
         return self.short_name_to_full_name_map[short_name]
 
     def init_newick(self):
+        """
+            Returns newick string from file
+            """
         with open(self.newick_path, 'r') as myfile:
             tree_str = myfile.read().replace('\n', '')
 

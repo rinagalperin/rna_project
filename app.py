@@ -28,6 +28,7 @@ def get_data(user_input):
     if seed_length != 6 and seed_length != 7:
         return '-1'
 
+    # turn to the relevant databse given the user's input seed length
     if seed_length == 6:
         mature_name_seed_map = data.mature_name_seed_map_6
         seed_mature_name_map = data.seed_mature_name_map_6
@@ -80,25 +81,27 @@ def get_data(user_input):
     return json_result + '$' + seed_or_family_name
 
 
-# @app.route('/json_to_csv/<json_input>')
-# def json_to_csv(json_input):
-#     result = json_to_table_txt(json_input)
-#     df = pd.read_fwf(result, 'results')
-#     df.to_csv('results-rina.csv')
-#     return df
+@app.route('/json_to_csv/<json_input>')
+def json_to_csv(json_input):
+    #result = json_to_table_txt(json_input)
+    print(json_input)
 
+    return json_input
 
+# HTML output
 @app.route('/json_to_html/<json_input>')
 def json_to_html(json_input):
     import codecs
     f = codecs.open('templates/tree.html', 'r')
-    # base html tree, need to add info on relevant organisms
+    # base html tree
     base = f.read()
 
     json_dict = json.loads(json_input)
     seed = list(json_dict)[0]
     organisms = list(json_dict[seed])
 
+    # go over each relevant organism and count the number of mature miRNA sequences in it that
+    # contain the given seed
     for organism in organisms:
         matures = list(json_dict[seed][organism])
         num_of_3p = 0
@@ -111,8 +114,10 @@ def json_to_html(json_input):
             else:
                 num_of_5p += 1
 
+        # added information that is attached to all organisms with the given seed
         extra_info = '<span class=INFO3> [' + str(num_of_3p) + '-3p, ' + str(num_of_5p) + '-5p] </span>'
         result = re.search(organism+'(.*)</LI>', base)
+        # for testing purposes
         if result is None:
             print(organism)
         else:
@@ -122,6 +127,7 @@ def json_to_html(json_input):
     return base
 
 
+# FASTA output
 @app.route('/json_to_fasta/<json_input>')
 def json_to_fasta(json_input):
     # FASTA format:
@@ -134,12 +140,15 @@ def json_to_fasta(json_input):
     seed = list(json_dict)[0]
     organisms = list(json_dict[seed])
 
+    # go over all relevant miRNA matures and extract their full sequence for the
+    # FASTA file output
     for organism in organisms:
         matures = list(json_dict[seed][organism])
 
         for mature in matures:
             mature_name = json_dict[seed][organism][mature]['mature name']
 
+            # extract only the mature sequence from the database
             filter1 = data.table_data_6[3] == mature_name
             filter2 = data.table_data_6[6] == mature_name
             idx = np.logical_or(filter1, filter2)
@@ -154,6 +163,7 @@ def json_to_fasta(json_input):
             else:
                 mature_sequence = 'error'
 
+            # if it's the first entry in the file - don't start with new line. Otherwise - add new line first.
             if mature_sequence != None:
                 # not first entry
                 if result != '':
@@ -161,6 +171,7 @@ def json_to_fasta(json_input):
                 # first entry in result FASTA file
                 else:
                     result = result + '>' + mature_name + '\n' + mature_sequence
+            # for testing purposes
             else:
                 print(mature_sequence)
                 print(mature_name)
@@ -186,6 +197,7 @@ def json_to_tree(json_input):
 
     tree_builder = tree_creator.TreeCreator(json_input)
 
+    # collect the abbreviations of each mature sequence and the number of matures for each organism
     for organism in organisms:
         short_name_organism = tree_builder.get_short_organism_name(organism)
         matures = list(json_dict[seed][organism])
@@ -206,6 +218,7 @@ def json_to_tree(json_input):
     return str(short_names_organisms).strip('[]')
 
 
+# returns the full name of an organism, given its short name
 @app.route('/get_organism_full_name/<short_name>')
 def get_organism_full_name(short_name):
     organisms_code_names_path = 'static/Model/miRbase_codes_names.txt'

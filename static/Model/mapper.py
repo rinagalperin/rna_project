@@ -5,6 +5,10 @@ from collections import defaultdict
 
 
 def create_map_5p_3p(path_input):
+    """
+        Gets full organism name as input
+        Returns organism short name (abbreviation) as output
+        """
     with open(path_input, "r") as f:
         split_txt = f.read().split('>')
         pname_to_data = {}
@@ -18,6 +22,10 @@ def create_map_5p_3p(path_input):
 
 
 def init_p(p, seed_length):
+    """
+        Gets mature miRNA entry (p): either 3p or 5p entry, and seed length as indicated by the user's input
+        Returns the miRNA name, sequence, and sub-sequence seed
+        """
     name = p[0]
     seq = p[4].split("\n")[1]
     seed = seq[1:seed_length + 1]
@@ -26,6 +34,9 @@ def init_p(p, seed_length):
 
 
 def export_table_to_csv(data_list):
+    """
+        Exports list of data to a CSV format file
+        """
     table = Table(data_list, names=(
         'Pre Mir Name',
         'Organism',
@@ -41,6 +52,10 @@ def export_table_to_csv(data_list):
 
 
 def get_all_seed(data):
+    """
+        Gets database NUMPY array
+        Returns all unique seed in the database
+        """
     seed = np.append(data[5], data[8])
     # WARNING: do not change to: 'seed is not None'!
     seed = seed[seed != None]
@@ -48,14 +63,24 @@ def get_all_seed(data):
 
 
 def get_organisms_with_seed(seed, organisms, data):
+    """
+        Goes over all the organisms' data and collects only those that contain
+        the given seed in at least one mature miRNA sequence.
+        """
     organisms_with_seed = []
     for j, organism in enumerate(organisms):
+        # get the current organism's data
         idx = data[1] == organism
         only_organism_data = data[:, idx]
+
+        # get mature miRNAs for the organism
+        # 5p matures
         five_seed = only_organism_data[5] == seed
+        # 3p matures
         three_seed = only_organism_data[8] == seed
         both_seed = np.logical_and(five_seed, three_seed)
 
+        # at least one mature sequence contains the seed (3p or 5p mature miRNA)
         if sum(five_seed) + sum(three_seed) - sum(both_seed) != 0:
             organisms_with_seed.append(organism)
 
@@ -65,14 +90,15 @@ def get_organisms_with_seed(seed, organisms, data):
     # return 1 if (sum(five_seed) + sum(three_seed) - sum(both_seed)) != 0 else 0
 
 
-# get input seed from user, and gathers all information on that seed
 def map_seed_to_organisms_extended(
         data,
         seed,
         organisms,
         pre_mir_name_to_seeds_map,
         pre_mir_name_to_mature_5p_or_3p_map):
-
+    """
+        get input seed from user, and gathers all information on that seed
+        """
     # find the organisms who have the given seed
     organisms_with_seed = get_organisms_with_seed(seed, organisms, data)
 
@@ -115,13 +141,16 @@ def map_seed_to_organisms_extended(
     return seed_dict
 
 
+# for testing purposes
 def create_seed_json(seed, seed_dict):
     with open("seeds/" + seed + ".txt", "w") as f:
         json.dump(seed_dict, f, indent=4)
 
 
 def map_organism_to_pre_mir_names(data):
-    # for example: mapping Caenorhabditis elegans to {cel-let-7, cel-lin-4, cel-mir-1, ...}
+    """
+        for example: mapping Caenorhabditis elegans to {cel-let-7, cel-lin-4, cel-mir-1, ...}
+        """
     i = 0
     length = len(data[0])
 
