@@ -1,11 +1,9 @@
 import json
 import re
-import subprocess
-
 import numpy as np
 from collections import defaultdict
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 from static.Model import data, mapper, tree_creator
 
@@ -268,4 +266,5 @@ def json_to_table_txt(json_input):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
+    #app.run(debug=True)

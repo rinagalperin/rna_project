@@ -164,13 +164,14 @@ function getData(input) {
             } else {
                 controlOutput(false, "htmlArea");
             }
-
+            /*
             if (isChecked("csv")) {
                 controlOutput(true, "csvArea");
                 jsonToCsv(data);
             } else {
                 controlOutput(false, "csvArea");
             }
+            */
         }
     });
 }
@@ -227,7 +228,8 @@ function jsonToTree(json_input){
         url: "json_to_tree/" + json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-    	let uri = "/static/ViewModel/evolutionary_tree.xml";
+        let uri = "/static/ViewModel/evolutionary_tree.xml";
+
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
     	    var temp_xml = edit_graph(data, relevant_organisms_arr);
@@ -237,7 +239,10 @@ function jsonToTree(json_input){
                 fileSource: false    // Need to indicate that it is from a file for us to process it correctly
             };
 
-            // TODO: not duplicate graph visual on page if clicking "SEARCH" again...
+            // reset tree (ready to draw a new tree according to user's input seed)
+            // TODO: not duplicate graph visual on page when clicking "SEARCH" again...
+
+
             let phylocanvas = new Smits.PhyloCanvas(
                 dataObject,     // Newick or XML string
                 'treeTextArea',    // Div Id where to render
@@ -328,3 +333,15 @@ function sleep(milliseconds) {
     }
   }
 }
+
+/**
+  * getTimeForURL method returns the current time
+  * in a URL friendly format, so that it can be appended to
+  * dataURL for effective non-caching.
+ */
+ function getTimeForURL(){
+  var dt = new Date();
+  var strOutput = "";
+  strOutput = dt.getHours() + "_" + dt.getMinutes() + "_" + dt.getSeconds() + "_" + dt.getMilliseconds();
+  return strOutput;
+ }

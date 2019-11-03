@@ -40,6 +40,8 @@ textarea {
 
 </style>
 <head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
     <!--Navigation bar-->
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
@@ -49,9 +51,6 @@ textarea {
     </script>
     <!--end of Navigation bar-->
     <title></title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
 </head>
 
 <body>
@@ -86,8 +85,12 @@ textarea {
                 <input type="checkbox" id="html">&nbsp;&nbsp;HTML
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="fasta">&nbsp;&nbsp;FASTA
+                
+                <!-- TODO: CSV 
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="csv">&nbsp;&nbsp;CSV
+                 END TODO -->
+
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
 
@@ -159,6 +162,7 @@ textarea {
     <script type="text/javascript" src="../static/ViewModel/raphael.min.js"></script>
     <script type="module" src="../static/ViewModel/unitip.js"></script>
     <script type="text/javascript" src="../static/ViewModel/jsphylosvg-min.js"></script>
+    <script type="application/javascript" src="https://cdn.rawgit.com/phylocanvas/phylocanvas-quickstart/v2.8.1/phylocanvas-quickstart.js"></script>
     <script src="../static/ViewModel/bonsai.js"></script>
     <script type="module" src="../static/ViewModel/yui-min.js"></script>
     <script type="module" src="../static/ViewModel/unitip.js"></script>
