@@ -57,26 +57,56 @@ textarea {
     <div class="container">
         <div id="nav-placeholder" style="height: 100px"></div>
 
-        <main role="main" class="col-md-12">
-            <div class="col-md-5">
+        <main role="main" class="col-md-12.5">
+            <div class="col-md-11">
+                miRNAs regulate the gene expression by binding to the mRNA, with the seed sequence being an essential part of the process.
                 <br>
+                The seed sequence is a conserved heptametrical sequence which is mostly situated at positions 2-7 from the miRNA 5´-end.
+                <br>
+                Even though base pairing of miRNA and its target mRNA does not match perfectly, the seed sequence has to be perfectly complementary.
+                <br>
+                The miRNA can be divided into families based on their seed sequences. Family analysis done in previous studies showed that
+                <br>
+                there are miRNA with the same seed in many organisms.
+                <br>
+                <b>miRSeedBase</b> offers IR from a seed-based database, mapping of evolutionary events in miRNA families and provides both
+                <br>
+                visual outputs and raw data.
+                <br><br>
+                <b>
+                Perform a microRNA-seed or microRNA-family search in the search area below to get started, or view the examples page.
+                </b>
+            </div>
+
+            <br>
+            <font color = "#18273D">
+                Enter a seed family or seed sequence:
+            </font>
+
+            <div class="col-md-6">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Enter seed family" aria-label="Recipient's username" aria-describedby="button-addon2" id="seed">
+                  <input type="text" class="form-control" placeholder="seed family / sequence" aria-label="Recipient's username" aria-describedby="button-addon2" id="seed">
                   &nbsp;&nbsp;
-                    <div>
-                    <button class="btn btn-outline-secondary" type="button" id="seed_btn">Search</button>
-                  </div>
-                    &nbsp;&nbsp;
                     <!-- search TOOL TIP -->
-                    <div class="help-tip">
-                        <p><br>
-                            Enter a 6 or 7 characters long seed sequence or a family name
-                            (for example: <font color="#375991">AACUAG</font> or <br> <font color="#375991">let-7-3p</font>)
-                        </p>
-                    </div>
+                <div class="help-tip">
+                    <p><br>
+                        Enter an input in one of the following formats:
+                        <br>
+                        * sequence (for example: <font color = "#add8e6">GAGGUA</font>)
+                        <br>
+                        * miRNA family (for example: <font color = "#add8e6">let-7</font>)
+                        <br>
+                        * miRNA family specific arm (for example: <font color = "#add8e6">let-7-5p</font>)
+                    </p>
+                </div>
                 </div>
             </div>
 
+            <font color = "#18273D">
+                Choose one or more desired output types:
+            </font>
+
+            <br>
             <div class="input-group mb-3">
                 <!-- choose one/more output type -->
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -94,13 +124,12 @@ textarea {
                 &nbsp;&nbsp;&nbsp;
                 <input type="checkbox" id="tree">&nbsp;&nbsp;Phylogenetic Tree
 
-                &nbsp;
-                <!-- output types TOOL TIP -->
-                <div class="help-tip">
-                    <p><br>
-                        Choose one or more output types, and click "Search"
-                    </p>
-                </div>
+
+            </div>
+
+            <div>
+                <button class="btn btn-outline-secondary" type="button" id="seed_btn">Search</button>
+                <button class="btn btn-outline-secondary" type="button" onClick="window.location.reload();">Reset search</button>
             </div>
 
             <!-- Result title -->
@@ -141,13 +170,17 @@ textarea {
             </div>
 
             <!-- Tree output -->
-            <div class="col-md-20" id="treeArea"  hidden="true">
+            <div class="col-md-12" id="treeArea"  hidden="true" style="background-color:#333">
                 <br>
                 <div id="treeTextArea" title=""></div>
                 <br>
                 <button class="btn btn-outline-secondary" type="button" id="dwn_tree_btn">Download</button>
             </div>
 
+            <br><br>
+            To cite miRSeedBase:
+            <br>
+            < PLACEHOLDER >
 
             <div class="col-md-12">
                 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -170,7 +203,3 @@ textarea {
 
 </body>
 </html>
-
-<!---
-<p> BioMIR <sup>&reg;</sup> Rina Galperin & Shachar Oren | BGU university | 2019 </p>
---->

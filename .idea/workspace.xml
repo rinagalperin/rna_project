@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e45d915-2b0d-4615-bd1f-5deb76f086f1" name="Default Changelist" comment="delete main py">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rna_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myproject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Model/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/static/Model/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/View/cover.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/View/cover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/View/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/View/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/ViewModel/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ViewModel/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pics/biomir.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pics/img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pics/myplot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pics/tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_dwn.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_dwn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_entry.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_entry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,8 @@
     <SUITE FILE_PATH="coverage/rna_project$Flask__app_py___1_.coverage" NAME="Flask (static/Model/app.py) Coverage Results" MODIFIED="1552394680993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rna_project$test.coverage" NAME="test Coverage Results" MODIFIED="1552859927086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/static/ViewModel" />
     <SUITE FILE_PATH="coverage/rna_project$rna_project.coverage" NAME="rna_project Coverage Results" MODIFIED="1546508350750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/myproject$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1572789355487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/myproject$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1572875261517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/myproject$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) Coverage Results" MODIFIED="1576531142599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1142406138">
@@ -108,50 +110,56 @@
     <session id="-1502926306">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="2" />
-          <entry key="js" value="10" />
+          <entry key="css" value="7" />
+          <entry key="html" value="10" />
+          <entry key="js" value="11" />
           <entry key="php" value="7" />
-          <entry key="py" value="8" />
+          <entry key="py" value="20" />
           <entry key="ts" value="3" />
-          <entry key="xml" value="2" />
+          <entry key="txt" value="2" />
+          <entry key="xml" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="10" />
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="8" />
+          <entry key="CSS" value="7" />
+          <entry key="HTML" value="10" />
+          <entry key="JavaScript" value="11" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="20" />
           <entry key="TypeScript" value="3" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Python Console" value="34" />
           <entry key="css" value="1" />
-          <entry key="html" value="202" />
-          <entry key="js" value="345" />
+          <entry key="html" value="1302" />
+          <entry key="js" value="596" />
           <entry key="php" value="187" />
-          <entry key="py" value="154" />
+          <entry key="py" value="1273" />
+          <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="202" />
-          <entry key="JavaScript" value="345" />
+          <entry key="HTML" value="1302" />
+          <entry key="JavaScript" value="596" />
           <entry key="PLAIN_TEXT" value="187" />
-          <entry key="Python" value="154" />
+          <entry key="Python" value="1307" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
     </session>
@@ -161,61 +169,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1272">
-              <caret line="227" column="41" lean-forward="true" selection-start-line="227" selection-start-column="41" selection-end-line="227" selection-end-column="41" />
+            <state relative-caret-position="-57">
+              <caret line="66" column="6" lean-forward="true" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
               <folding>
                 <element signature="n#!!block;n#isChecked#0" />
-                <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
-                <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
-                <element signature="n#!!block;n#onDwnHtmlButtonClick#0" />
-                <element signature="n#!!block;n#onDwnFastaButtonClick#0" />
                 <element signature="n#!!block;n#download#0" />
                 <element signature="n#!!block;n#jsonToCsv#0" />
-                <element signature="n#!!block;n#jsonToFasta#0" />
-                <element signature="n#!!block;n#jsonToHtml#0" />
-                <element signature="n#!!block;n#edit_graph#0" />
                 <element signature="n#!!block;n#getOrganismFullName#0" />
-                <element signature="n#!!block;n#sleep#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/View/cover.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/nav.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="66" column="89" selection-start-line="66" selection-start-column="89" selection-end-line="66" selection-end-column="89" />
+            <state relative-caret-position="3060">
+              <caret line="204" column="7" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/View/cover.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -223,15 +202,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1413">
-              <caret line="260" column="51" selection-start-line="260" selection-start-column="51" selection-end-line="260" selection-end-column="51" />
+            <state relative-caret-position="-187">
+              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#2783#2867#0" />
-                <element signature="e#2958#4208#0" />
-                <element signature="e#4303#6053#0" />
-                <element signature="e#6209#7495#0" />
-                <element signature="e#7654#7993#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/Model/data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="307" column="17" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#406#8628#0" />
+                <element signature="e#866#5391#0" />
+                <marker date="1573382412000" expanded="true" signature="12298:12301" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1125">
+              <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+              <folding>
+                <element signature="e#139#569#0" />
               </folding>
             </state>
           </provider>
@@ -253,20 +254,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>base</find>
-      <find>defaultdict</find>
-      <find>let organism_three_p_five_p_count = {};</find>
-      <find>/seeds</find>
-      <find>create</find>
-      <find>create_seed_json</find>
-      <find>in thi</find>
-      <find>with</find>
-      <find>treeTextArea</find>
-      <find>ddi</find>
-      <find>Ciona intestinalis</find>
-      <find>img</find>
-      <find>self.seed_length</find>
-      <find>self.seed_list</find>
       <find>init_seed_mature_name_map</find>
       <find>seed_mature_name_map</find>
       <find>self</find>
@@ -283,6 +270,20 @@
       <find>searc</find>
       <find>hey</find>
       <find>echo</find>
+      <find>hr</find>
+      <find>d</find>
+      <find>replace</find>
+      <find>ddd</find>
+      <find>ev</find>
+      <find>ev4</find>
+      <find>barChart fill</find>
+      <find>ev6</find>
+      <find>ev1</find>
+      <find>Sea</find>
+      <find>print</find>
+      <find>in json</find>
+      <find>action</find>
+      <find>BioMir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -291,24 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/ViewModel/16.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/15.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/18.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/17.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/19.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/20.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/21.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/22.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/23.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/24.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/perm.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/25.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/26.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/27.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/28.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/29.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/30.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/31.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/33.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/34.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/32.xml" />
@@ -326,22 +309,40 @@
         <option value="$PROJECT_DIR$/templates/examples.html" />
         <option value="$PROJECT_DIR$/static/ViewModel/tree_base_structure.xml" />
         <option value="$PROJECT_DIR$/static/ViewModel/39.xml" />
-        <option value="$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml" />
         <option value="$PROJECT_DIR$/templates/tree.html" />
-        <option value="$PROJECT_DIR$/templates/info.html" />
         <option value="$PROJECT_DIR$/static/Model/list_creator.py" />
         <option value="$PROJECT_DIR$/static/Model/tree_creator.py" />
         <option value="$PROJECT_DIR$/static/Model/mature.py" />
         <option value="$PROJECT_DIR$/static/Model/mapper.py" />
-        <option value="$PROJECT_DIR$/static/Model/data.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
         <option value="$PROJECT_DIR$/templates/contact-form-handler.php" />
         <option value="$PROJECT_DIR$/static/Model/forms.py" />
         <option value="$PROJECT_DIR$/templates/contact.html" />
+        <option value="$PROJECT_DIR$/static/View/tooltip.css" />
         <option value="$PROJECT_DIR$/templates/nav.html" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/info.html" />
         <option value="$PROJECT_DIR$/static/View/cover.css" />
+        <option value="$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev1.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev2.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev3.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev4.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev5.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev6.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev7.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev8.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev11.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev10.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev12.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev9.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev13.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/dsdasdas.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/qwe.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/qwr.xml" />
+        <option value="$PROJECT_DIR$/static/ViewModel/ev_tree_skel.xml" />
+        <option value="$PROJECT_DIR$/static/Model/data.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/ViewModel/main.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -393,12 +394,6 @@
               <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="myproject" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="pics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -411,6 +406,15 @@
               <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="myproject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myproject" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -457,7 +461,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flask server.Flask (app.py)">
+  <component name="RunManager" selected="Flask server.Flask (app.py) (1)">
     <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rna_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -472,28 +476,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/static/Model/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="rna_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/static/Model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/static/Model/tree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -524,7 +506,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py) (1)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <module name="rna_project" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Flask (app.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <option name="additionalOptions" value="" />
+      <option name="application" value="" />
+      <option name="flaskDebug" value="true" />
       <module name="rna_project" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
       <option name="targetType" value="PATH" />
@@ -572,18 +572,18 @@
     <list>
       <item itemvalue="Flask server.rna_project" />
       <item itemvalue="Flask server.Flask (myproject.py)" />
-      <item itemvalue="Python.tree" />
+      <item itemvalue="Flask server.Flask (app.py)" />
       <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.tree_creator" />
-      <item itemvalue="Flask server.Flask (app.py)" />
+      <item itemvalue="Flask server.Flask (app.py) (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flask server.Flask (app.py) (1)" />
         <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.tree_creator" />
         <item itemvalue="Flask server.Flask (myproject.py)" />
         <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.tree" />
       </list>
     </recent_temporary>
   </component>
@@ -613,12 +613,12 @@
     <frame x="0" y="23" width="1336" height="673" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.2156105" />
-      <window_info id="Structure" order="1" sideWeight="0.5024155" side_tool="true" weight="0.21978852" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.22488408" />
+      <window_info id="Structure" order="1" sideWeight="0.5049261" side_tool="true" visible="true" weight="0.22488408" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4954683" weight="0.23835126" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47280967" weight="0.4014337" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47280967" visible="true" weight="0.27240142" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4939577" weight="0.39964157" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -626,9 +626,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50453174" side_tool="true" weight="0.3297491" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47583082" weight="0.23655914" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49773413" weight="0.3297491" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.52472955" side_tool="true" weight="0.23655914" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47527048" weight="0.23655914" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496136" weight="0.3297491" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -659,154 +659,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static/ViewModel/main.js</url>
-          <line>197</line>
+          <line>209</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/numpy/lib/arraysetops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/40.xml" />
-    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_entry.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_zoom_name.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/exmaple_graph.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/example_pics/example_wiki.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/examples.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="78" column="63" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/life.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="686" selection-start-column="686" selection-end-column="686" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/tree_base_structure.xml" />
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/39.xml" />
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/OrganismsMirbase_mine_let7.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="367" selection-start-line="6" selection-start-column="349" selection-end-line="6" selection-end-column="367" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tree.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3882">
-          <caret line="54" column="141" selection-start-line="54" selection-start-column="141" selection-end-line="54" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/about_pics/3.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/about_pics/2.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/about_pics/1.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/about_pics/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/about_pics/5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pics/arrow.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-567688234/numpy/core/_multiarray_umath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="5096" column="4" selection-start-line="5096" selection-start-column="4" selection-end-line="5096" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/werkzeug/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="922" selection-start-line="922" selection-end-line="922" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/mature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pynteractive-1.1.1-py3.6.egg!/webfiles/libs/vis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="20670" column="2" selection-start-line="20670" selection-start-column="2" selection-end-line="20670" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/maps/mature_to_seed_map_6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/maps/mature_to_seed_map_7.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///private/var/folders/kd/1wpy8qgx1z1cccr1j6r86yth0000gn/T/801b8ba7-a3a8-4a06-9538-9b6eca657c8d/home/372-19-20/myproject/myproject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="27" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_d3js.org_d3.v4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -828,27 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="567" selection-start-line="567" selection-end-line="569" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/raphael.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14836" selection-start-column="14836" selection-end-column="14836" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myproject.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3840">
           <caret line="263" selection-start-line="263" selection-end-line="263" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -856,16 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194310">
           <caret line="12954" column="25" selection-start-line="12954" selection-start-column="25" selection-end-line="12954" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding>
-            <element signature="e#139#569#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,34 +715,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ViewModel/gen_validatorv4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="1956" selection-start-line="1956" selection-end-line="1956" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="273" column="60" selection-start-line="273" selection-start-column="60" selection-end-line="273" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1560935190000" expanded="true" signature="12155:12158" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/gen_validatorv4.js" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-352">
@@ -918,84 +723,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contact-form-handler.php">
+    <entry file="file://$PROJECT_DIR$/templates/contact-form-handler.php" />
+    <entry file="file://$PROJECT_DIR$/static/Model/forms.py" />
+    <entry file="file://$PROJECT_DIR$/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="196">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/View/bootstrap-grid.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17679" selection-start-line="5" selection-start-column="17677" selection-end-line="5" selection-end-column="17679" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/OrganismsMirbase_mine_let7.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="367" selection-start-line="6" selection-start-column="349" selection-end-line="6" selection-end-column="367" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev1.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev2.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev3.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev4.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev5.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev6.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev7.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev8.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev10.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev11.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev12.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev13.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev9.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/dsdasdas.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/evolutionary_tree.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/qwe.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/qwr.xml" />
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/ev_tree_skel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="573" column="11" selection-start-line="573" selection-start-column="11" selection-end-line="573" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/View/tooltip.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="103" column="52" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/myproject.py" />
+    <entry file="file://$PROJECT_DIR$/static/Model/mature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.txt" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/bio/Graphics/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-907" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="842" column="8" selection-start-line="842" selection-start-column="8" selection-end-line="842" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/tree_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-611" />
+      </provider>
+    </entry>
+    <entry file="file:///miniconda3/lib/python2.7/site-packages/flask/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="337" selection-start-line="337" selection-end-line="337" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../algotrade/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/View/cover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="307" column="17" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#406#8628#0" />
+            <element signature="e#866#5391#0" />
+            <marker date="1573382412000" expanded="true" signature="12298:12301" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Model/mapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+          <folding>
+            <element signature="e#139#569#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ViewModel/raphael.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14716" lean-forward="true" selection-start-column="14716" selection-end-column="14716" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/ViewModel/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1272">
-          <caret line="227" column="41" lean-forward="true" selection-start-line="227" selection-start-column="41" selection-end-line="227" selection-end-column="41" />
+        <state relative-caret-position="-57">
+          <caret line="66" column="6" lean-forward="true" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
           <folding>
             <element signature="n#!!block;n#isChecked#0" />
-            <element signature="n#!!block;n#onDwnJsonButtonClick#0" />
-            <element signature="n#!!block;n#onDwnCsvButtonClick#0" />
-            <element signature="n#!!block;n#onDwnHtmlButtonClick#0" />
-            <element signature="n#!!block;n#onDwnFastaButtonClick#0" />
             <element signature="n#!!block;n#download#0" />
             <element signature="n#!!block;n#jsonToCsv#0" />
-            <element signature="n#!!block;n#jsonToFasta#0" />
-            <element signature="n#!!block;n#jsonToHtml#0" />
-            <element signature="n#!!block;n#edit_graph#0" />
             <element signature="n#!!block;n#getOrganismFullName#0" />
-            <element signature="n#!!block;n#sleep#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Model/forms.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="-187">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="66" column="89" selection-start-line="66" selection-start-column="89" selection-end-line="66" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1413">
-          <caret line="260" column="51" selection-start-line="260" selection-start-column="51" selection-end-line="260" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#2783#2867#0" />
-            <element signature="e#2958#4208#0" />
-            <element signature="e#4303#6053#0" />
-            <element signature="e#6209#7495#0" />
-            <element signature="e#7654#7993#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/View/cover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="3060">
+          <caret line="204" column="7" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
         </state>
       </provider>
     </entry>

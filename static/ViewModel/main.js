@@ -37,7 +37,7 @@ function onDwnJsonButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let json_data = $('#jsonTextArea').val();
-        download(json_data, "BioMir_json_"+seed, "txt");
+        download(json_data, "miRSeedBase_json_"+seed, "txt");
     })
 }
 
@@ -46,7 +46,7 @@ function onDwnCsvButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let csv_data = $('#csvTextArea').val();
-        download(csv_data, "BioMir_"+seed+".csv", "text");
+        download(csv_data, "miRSeedBase_"+seed+".csv", "text");
     })
 }
 
@@ -54,7 +54,7 @@ function onDwnTreeButtonClick(){
     $('#dwn_tree_btn').click(function (event) {
         event.preventDefault();
         let seed = $('#seed').val();
-        download(tree_dwn_path, "BioMir_"+seed, "image/svg+xml;charset=utf-8");
+        download(tree_dwn_path, "miRSeedBase_"+seed, "image/svg+xml;charset=utf-8");
     })
 }
 
@@ -63,7 +63,7 @@ function onDwnHtmlButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let tree_data = $('#htmlTextArea').html();
-        download(tree_data, "BioMir_"+seed, "text/html");
+        download(tree_data, "miRSeedBase_"+seed, "text/html");
     })
 }
 
@@ -72,35 +72,46 @@ function onDwnFastaButtonClick(){
         event.preventDefault();
         let seed = $('#seed').val();
         let fasta_data = $('#fastaTextArea').val();
-        download(fasta_data, "BioMir_fasta_"+seed+'.fa', "text/fa");
+        download(fasta_data, "miRSeedBase_fasta_"+seed+'.fa', "text/fa");
     })
 }
 
 function getData(input) {
     $.ajax({
         method: "GET",
-        url: "get_data/" + input
+        url: "get_data/" + input,
     }).done(function (data) {
         if(data === '-1'){
             alert("Seed sequence does not exist! \n Please verify you have entered a valid seed or family name \n and try again.")
         }else {
+            console.log("in getData")
             // construct output page title of seed sequence + family name
             let user_input = $('#seed').val().toLowerCase();
             let other_name = data.split('$')[1];
             let result_title = '';
             if(user_input.includes('-')){
-                result_title = 'seed sequence: ' + other_name.toUpperCase() + ', family name: ' + user_input.toLowerCase();
+                result_title =
+                    'seed sequence: ' +
+                    other_name.toUpperCase() +
+                    ', family name: ' +
+                    user_input.toLowerCase().replace('mir', 'miR');
             }else{
-                result_title = 'seed sequence: ' + user_input.toUpperCase() + ', family name: ' + other_name.toLowerCase();
+                result_title = 'seed sequence: ' +
+                    user_input.toUpperCase() +
+                    ', family name: ' +
+                    other_name.toLowerCase().replace('mir', 'miR');
             }
             $('#result_title').text(result_title);
 
             data = data.split('$')[0];
+            console.log(data)
 
             // ------------------------------------
             // gather 3p/5p count per organism:
             let seed = Object.keys(JSON.parse(data))[0];
+            console.log(seed)
             let organisms_json = JSON.parse(data)[seed];
+            console.log(organisms_json)
             // iterate over all organisms
             Object.keys(organisms_json).forEach(function(organism) {
                 let matures_json = organisms_json[organism];
@@ -144,6 +155,7 @@ function getData(input) {
             */
 
             if (isChecked("fasta")) {
+                console.log("fasta checked")
                 controlOutput(true, "fastaArea");
                 jsonToFasta(data)
             } else {
@@ -205,18 +217,22 @@ function jsonToCsv(json_input){
 }
 
 function jsonToFasta(json_input){
+    console.log("in jsonToFasta")
     $.ajax({
-        method: "GET",
-        url: "json_to_fasta/" + json_input
+        method: "POST",
+        url: "json_to_fasta",
+        data: json_input
     }).done(function (result) {
+        console.log("FASTA result: " + result)
         $('#fastaTextArea').text(result);
     });
 }
 
 function jsonToHtml(json_input){
     $.ajax({
-        method: "GET",
-        url: "json_to_html/" + json_input
+        method: "POST",
+        url: "json_to_html",
+        data: json_input
     }).done(function (result) {
         $('#htmlTextArea').html(result);
     });
@@ -224,11 +240,12 @@ function jsonToHtml(json_input){
 
 function jsonToTree(json_input){
     $.ajax({
-        method: "GET",
-        url: "json_to_tree/" + json_input
+        method: "POST",
+        url: "json_to_tree",
+        data: json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-        let uri = "/static/ViewModel/evolutionary_tree.xml";
+        let uri = "/static/ViewModel/ev_tree_skel.xml";
 
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');

@@ -1,13 +1,12 @@
 import json
 import re
-import subprocess
 
 import numpy as np
 from collections import defaultdict
+from static.Model import data, mapper, tree_creator
 
 from flask import Flask, render_template, request
 
-from static.Model import data, mapper, tree_creator
 
 app = Flask(__name__)
 
@@ -30,7 +29,7 @@ def get_data(user_input):
     if seed_length != 6 and seed_length != 7:
         return '-1'
 
-    # turn to the relevant databse given the user's input seed length
+    # turn to the relevant database given the user's input seed length
     if seed_length == 6:
         mature_name_seed_map = data.mature_name_seed_map_6
         seed_mature_name_map = data.seed_mature_name_map_6
@@ -50,15 +49,27 @@ def get_data(user_input):
 
     if '-' in user_input:
         user_input = user_input.lower()
-        if user_input not in mature_name_seed_map.keys():
+        # user entered general family name (for example: "let-7"), without a specific arm ('3p'/'5p')
+        if '-3p' not in user_input and '-5p' not in user_input and \
+                (user_input + '-3p' in mature_name_seed_map.keys() or
+                 user_input + '-5p' in mature_name_seed_map.keys()):
+            user_input = get_dominant_arm(mature_name_seed_map,
+                                          user_input,
+                                          table_data,
+                                          organisms,
+                                          pre_mir_name_to_seeds_map,
+                                          pre_mir_name_to_mature_5p_or_3p_map)
+
+        elif user_input not in mature_name_seed_map.keys():
             return '-1'
+
         chosen_seed = mature_name_seed_map[user_input]
         # user entered family name, so other name is the seed
         seed_or_family_name = chosen_seed
     else:
         # in case user enters the seed sequence in non-capital letters,
         # turn the input to all upper case.
-        user_input = user_input.upper()
+        user_input = user_input.replace('t', 'u').upper()
         if user_input not in seed_mature_name_map.keys():
             return '-1'
         chosen_seed = user_input
@@ -83,22 +94,23 @@ def get_data(user_input):
     return json_result + '$' + seed_or_family_name
 
 
-@app.route('/json_to_csv/<json_input>')
-def json_to_csv(json_input):
-    #result = json_to_table_txt(json_input)
-    print(json_input)
+@app.route('/json_to_csv', methods=['POST'])
+def json_to_csv():
+    json_dict = json.loads(list(request.form.keys())[0])
+    print(json_dict)
 
-    return json_input
+    return 'CSV SUCCESS'
+
 
 # HTML output
-@app.route('/json_to_html/<json_input>')
-def json_to_html(json_input):
+@app.route('/json_to_html', methods=['POST'])
+def json_to_html():
     import codecs
     f = codecs.open('templates/tree.html', 'r')
     # base html tree
     base = f.read()
 
-    json_dict = json.loads(json_input)
+    json_dict = json.loads(list(request.form.keys())[0])
     seed = list(json_dict)[0]
     organisms = list(json_dict[seed])
 
@@ -118,9 +130,10 @@ def json_to_html(json_input):
 
         # added information that is attached to all organisms with the given seed
         extra_info = '<span class=INFO3> [' + str(num_of_3p) + '-3p, ' + str(num_of_5p) + '-5p] </span>'
-        result = re.search(organism+'(.*)</LI>', base)
+        result = re.search(organism + '(.*)</LI>', base)
         # for testing purposes
         if result is None:
+            print("ERROR! exception in json_to_html")
             print(organism)
         else:
             original_line = result.group(1)
@@ -130,18 +143,19 @@ def json_to_html(json_input):
 
 
 # FASTA output
-@app.route('/json_to_fasta/<json_input>')
-def json_to_fasta(json_input):
+@app.route('/json_to_fasta', methods=['POST'])
+def json_to_fasta():
     # FASTA format:
     # > mature_name
     # mature_sequence
-
     result = ''
-    json_dict = json.loads(json_input)
+
+    json_dict = json.loads(list(request.form.keys())[0])
 
     seed = list(json_dict)[0]
-    organisms = list(json_dict[seed])
+    print(seed)
 
+    organisms = list(json_dict[seed])
     # go over all relevant miRNA matures and extract their full sequence for the
     # FASTA file output
     for organism in organisms:
@@ -175,18 +189,21 @@ def json_to_fasta(json_input):
                     result = result + '>' + mature_name + '\n' + mature_sequence
             # for testing purposes
             else:
+                print("ERROR! exception in json_to_fasta")
                 print(mature_sequence)
                 print(mature_name)
                 print(res)
                 print('--------------')
 
-    return str(result[0])
+    ans = str(result[0])
+    print(ans)
+    return ans
 
 
 # returns all relevant organisms to the user's entry, in abbreviation format.
-@app.route('/json_to_tree/<json_input>')
-def json_to_tree(json_input):
-    json_dict = json.loads(json_input)
+@app.route('/json_to_tree', methods=['POST'])
+def json_to_tree():
+    json_dict = json.loads(list(request.form.keys())[0])
     seed = list(json_dict)[0]
 
     organisms = list(json_dict[seed])
@@ -197,7 +214,7 @@ def json_to_tree(json_input):
     organism_three_p = defaultdict(int)
     organism_five_p = defaultdict(int)
 
-    tree_builder = tree_creator.TreeCreator(json_input)
+    tree_builder = tree_creator.TreeCreator(json_dict)
 
     # collect the abbreviations of each mature sequence and the number of matures for each organism
     for organism in organisms:
@@ -236,6 +253,7 @@ def get_organism_full_name(short_name):
 
     return result
 
+
 @app.route('/info')
 def info():
     return render_template('info.html', data={})
@@ -267,5 +285,40 @@ def json_to_table_txt(json_input):
     return res
 
 
+def get_dominant_arm(mature_name_seed_map,
+                     family_name,
+                     table_data,
+                     organisms,
+                     pre_mir_name_to_seeds_map,
+                     pre_mir_name_to_mature_5p_or_3p_map):
+    option_a_family_name = family_name + '-3p'
+    option_b_family_name = family_name + '-5p'
+
+    option_a_seed_dict = {}
+    option_b_seed_dict = {}
+
+    if option_a_family_name in mature_name_seed_map.keys():
+        option_a_seed = mature_name_seed_map[option_a_family_name]
+
+        option_a_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
+                                                                   option_a_seed,
+                                                                   organisms,
+                                                                   pre_mir_name_to_seeds_map,
+                                                                   pre_mir_name_to_mature_5p_or_3p_map)
+    if option_b_family_name in mature_name_seed_map.keys():
+        option_b_seed = mature_name_seed_map[option_b_family_name]
+
+        option_b_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
+                                                                   option_b_seed,
+                                                                   organisms,
+                                                                   pre_mir_name_to_seeds_map,
+                                                                   pre_mir_name_to_mature_5p_or_3p_map)
+
+    if sum(len(v)for v in option_a_seed_dict.values()) > sum(len(v)for v in option_b_seed_dict.values()):
+        return option_a_family_name
+
+    return option_b_family_name
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='localhost', port=5000, debug=True)

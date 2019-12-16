@@ -326,12 +326,14 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
 
         # decide on the chosen family name using majority vote selection
         common_prefix = find_common_prefix(mature_name_list)
+        # TODO: mature to seed can be set more than once!
+        # TODO: we should choose the one that provides the most info (largest json)
         if common_prefix is not None or len(str(common_prefix)) != 0:
             seed_to_mature_map[seed] = common_prefix
             mature_to_seed_map[common_prefix] = seed
             # print("done with entry " + str(len(seed_to_mature_map)))
 
-    # access to databse
+    # access to database
     with open('static/Model/maps/seed_to_mature_map_' + str(seed_length) + '.txt', "w") as f:
         json.dump(seed_to_mature_map, f, indent=4)
     with open('static/Model/maps/mature_to_seed_map_' + str(seed_length) + '.txt', "w") as f:
