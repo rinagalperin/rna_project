@@ -46,26 +46,40 @@ def get_data(user_input):
         pre_mir_name_to_mature_5p_or_3p_map = data.pre_mir_name_to_mature_5p_or_3p_map_7
 
     seed_or_family_name = ''
+    seed_dict = {}
 
+    ##################################
+    # CASE: FAMILY NAME / ARM
+    ##################################
     if '-' in user_input:
         user_input = user_input.lower()
-        # user entered general family name (for example: "let-7"), without a specific arm ('3p'/'5p')
+
+        # user entered general family name (for example: "let-7"), without a specific arm ('3p'/'5p'):
         if '-3p' not in user_input and '-5p' not in user_input and \
                 (user_input + '-3p' in mature_name_seed_map.keys() or
                  user_input + '-5p' in mature_name_seed_map.keys()):
-            user_input = get_dominant_arm(mature_name_seed_map,
-                                          user_input,
-                                          table_data,
-                                          organisms,
-                                          pre_mir_name_to_seeds_map,
-                                          pre_mir_name_to_mature_5p_or_3p_map)
+            seed_dict = get_dominant_arm(mature_name_seed_map,
+                                         user_input,
+                                         table_data,
+                                         organisms,
+                                         pre_mir_name_to_seeds_map,
+                                         pre_mir_name_to_mature_5p_or_3p_map)
 
+            chosen_seed = list(seed_dict.keys())[0]
+
+        # user entered non-existent family name / seed:
         elif user_input not in mature_name_seed_map.keys():
             return '-1'
 
-        chosen_seed = mature_name_seed_map[user_input]
-        # user entered family name, so other name is the seed
-        seed_or_family_name = chosen_seed
+        # user entered legitimate family name:
+        else:
+            chosen_seed = mature_name_seed_map[user_input]
+            # user entered family name, so other name is the seed
+            seed_or_family_name = chosen_seed
+
+    ##################################
+    # CASE: SEED SEQUENCE
+    ##################################
     else:
         # in case user enters the seed sequence in non-capital letters,
         # turn the input to all upper case.
@@ -77,13 +91,16 @@ def get_data(user_input):
         family_name = seed_mature_name_map[user_input]
         seed_or_family_name = family_name
 
-    seed_dict = mapper.map_seed_to_organisms_extended(
-        table_data,
-        chosen_seed,
-        organisms,
-        pre_mir_name_to_seeds_map,
-        pre_mir_name_to_mature_5p_or_3p_map)
+    # initialize seed dict
+    if len(seed_dict) == 0:
+        seed_dict = mapper.map_seed_to_organisms_extended(
+            table_data,
+            chosen_seed,
+            organisms,
+            pre_mir_name_to_seeds_map,
+            pre_mir_name_to_mature_5p_or_3p_map)
 
+    # error
     if len(seed_dict[chosen_seed]) == 0:
         return '-1'
 
@@ -294,30 +311,28 @@ def get_dominant_arm(mature_name_seed_map,
     option_a_family_name = family_name + '-3p'
     option_b_family_name = family_name + '-5p'
 
-    option_a_seed_dict = {}
-    option_b_seed_dict = {}
+    option_a_seed = mature_name_seed_map[option_a_family_name]
+    option_b_seed = mature_name_seed_map[option_b_family_name]
 
-    if option_a_family_name in mature_name_seed_map.keys():
-        option_a_seed = mature_name_seed_map[option_a_family_name]
+    # largest dict for a seed that matches option a family name
+    option_a_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
+                                                               option_a_seed,
+                                                               organisms,
+                                                               pre_mir_name_to_seeds_map,
+                                                               pre_mir_name_to_mature_5p_or_3p_map)
 
-        option_a_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
-                                                                   option_a_seed,
-                                                                   organisms,
-                                                                   pre_mir_name_to_seeds_map,
-                                                                   pre_mir_name_to_mature_5p_or_3p_map)
-    if option_b_family_name in mature_name_seed_map.keys():
-        option_b_seed = mature_name_seed_map[option_b_family_name]
+    # largest dict for a seed that matches option b family name
+    option_b_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
+                                                               option_b_seed,
+                                                               organisms,
+                                                               pre_mir_name_to_seeds_map,
+                                                               pre_mir_name_to_mature_5p_or_3p_map)
 
-        option_b_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
-                                                                   option_b_seed,
-                                                                   organisms,
-                                                                   pre_mir_name_to_seeds_map,
-                                                                   pre_mir_name_to_mature_5p_or_3p_map)
-
+    # find the longer JSON among the 2 options
     if sum(len(v)for v in option_a_seed_dict.values()) > sum(len(v)for v in option_b_seed_dict.values()):
-        return option_a_family_name
+        return option_a_seed_dict
 
-    return option_b_family_name
+    return option_b_seed_dict
 
 
 if __name__ == '__main__':

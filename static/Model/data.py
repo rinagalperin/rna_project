@@ -4,14 +4,14 @@ from os.path import commonprefix
 import numpy as np
 import operator
 
+from static.Model import mapper
 from static.Model.mature import Mature
-from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended, \
-    export_table_to_csv
+from static.Model.mapper import create_map_5p_3p, init_p, get_all_seed, map_seed_to_organisms_extended
 
 
 def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_mir_name_to_mature_5p_or_3p_map):
     """
-        Creates databse from original FASTA files
+        Creates database from original FASTA files
         """
     pname_to_data = create_map_5p_3p("static/Model/mature.txt")
     with open(path_input, "r") as f:
@@ -215,6 +215,8 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 # handle 5p sub-sequence of pre-mir
                 if entry_five_p is not None:
                     name, seq, seed = init_p(entry_five_p, seed_length)
+                    if name is not None and '5p' not in name:
+                        name = name + '-5p'
                     pre_mir_name_to_seeds_map[pre_mir_name][seed] = entry_five_p
 
                     mature = Mature(pre_mir_name, name, "5p", seed)
@@ -229,6 +231,8 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
                 # handle 3p sub-sequence of pre-mir
                 if entry_three_p is not None:
                     name, seq, seed = init_p(entry_three_p, seed_length)
+                    if name is not None and '3p' not in name:
+                        name = name + '-3p'
                     pre_mir_name_to_seeds_map[pre_mir_name][seed] = entry_three_p
 
                     mature = Mature(pre_mir_name, name, "3p", seed)
@@ -254,11 +258,11 @@ def table_from_txt_file(path_input, seed_length, pre_mir_name_to_seeds_map, pre_
     return data
 
 
-def find_common_prefix(mature_name_list):
+def find_common_prefix(mature_names_list):
     mature_name_appearances_map = defaultdict(int)
 
-    for mature_name in mature_name_list:
-        mature_name_appearances_map[mature_name] += 1
+    for mature_name in mature_names_list:
+        mature_name_appearances_map[mature_name] = mature_name_appearances_map.get(mature_name, 0) + 1
 
     try:
         common_prefix = max(mature_name_appearances_map.items(), key=operator.itemgetter(1))[0]
@@ -273,20 +277,54 @@ def reconstruct_mature_name(mature_name):
         Reconstructs a mature miRNA name to be able to compare all mature names and
         choose one representative name for the entire family
         """
+
+    # for example: ppy-miR-548e -> we get: ['ppy', 'mir-548e']. note we split once by '-'.
+    # result: mature_name_without_prefix = mir-548e
     mature_name_without_prefix = mature_name.split("-", 1)[1].lower()
-    mature_name_split_arr = mature_name_without_prefix.split('-')
-    # if mature_name_split_arr[0] == 'mir' and (mature_name_split_arr[2] == '5p' or mature_name_split_arr[2] == '3p'):
-    name = remove_letters_from_string(mature_name_split_arr[1])
+    mature_name_split_arr = ''
     mir = ''
-    threeP_fiveP = ''
-    if len(mature_name_split_arr) >= 1:
+    name = ''
+
+    # remove prefix
+    if len(mature_name_without_prefix) > 0 and '-' in mature_name_without_prefix:
+        # ['mir', '548e']
+        mature_name_split_arr = mature_name_without_prefix.split('-')
+    else:
+        print("error in removing prefix - with name " + mature_name_without_prefix)
+
+    # get the prefix (mir/let/..) and remove redundant letters from the name
+    if len(mature_name_split_arr) > 1:
         mir = mature_name_split_arr[0] + '-'
+        # 548e -> 548
+        name = remove_letters_from_string(mature_name_split_arr[1])
+        # TODO: remove?
+        if len(name) == 0:
+            name = mature_name_split_arr[1]
+
+    else:
+        print("error in removing letters - with name " + mature_name_without_prefix)
+
+    threeP_fiveP = ''
     if len(mature_name_split_arr) >= 3:
-        threeP_fiveP = '-' + mature_name_split_arr[2]
-    mature_name_reconstructed = mir + \
-                                str(name) + \
-                                threeP_fiveP
-    return mature_name_reconstructed
+        # add the rest of the name if exists (for example, in: mir-9-3-3p the name will change from '9' to '9-3')
+        name_remainder = mature_name_split_arr[2:-1]
+        if len(name_remainder) > 0:
+            if len(name) == 0:
+                name = '-'.join(name_remainder)
+            else:
+                name += '-'+'-'.join(name_remainder)
+
+        # add the 3p/5p suffix
+        threeP_fiveP = '-' + mature_name_split_arr[-1]
+
+    if len(name) != 0:
+        mature_name_reconstructed = mir + \
+                                    str(name) + \
+                                    threeP_fiveP
+
+        return mature_name_reconstructed
+
+    return None
 
 
 def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mature_5p_or_3p_map, pre_mir_name_to_seeds_map):
@@ -295,7 +333,6 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
         creates actual database files.
         """
     seed_to_mature_map = {}
-    mature_to_seed_map = {}
 
     if seed_length == 6:
         table_data = table_data_6
@@ -313,7 +350,7 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
             pre_mir_name_to_mature_5p_or_3p_map)
 
         # mature_name_appearances_map = defaultdict(int)
-        mature_name_list = []
+        mature_names_list = []
         for organism in seed_dict[seed]:
             for pre_mir_name in seed_dict[seed][organism]:
                 mature_name = seed_dict[seed][organism][pre_mir_name]['mature name']
@@ -321,21 +358,64 @@ def create_seed_mature_name_map_file(seed_list, seed_length, pre_mir_name_to_mat
                 mature_name_reconstructed = reconstruct_mature_name(mature_name)
                 if mature_name_reconstructed is not None and len(mature_name_reconstructed) != 0:
                     # collect all reconstructed names to later chose one family name representative from
-                    mature_name_list.append(mature_name_reconstructed)
-                # mature_name_appearances_map[mature_name_filtered] += 1
+                    mature_names_list.append(mature_name_reconstructed)
 
         # decide on the chosen family name using majority vote selection
-        common_prefix = find_common_prefix(mature_name_list)
-        # TODO: mature to seed can be set more than once!
-        # TODO: we should choose the one that provides the most info (largest json)
-        if common_prefix is not None or len(str(common_prefix)) != 0:
+        common_prefix = find_common_prefix(mature_names_list)
+        if common_prefix is not None and len(str(common_prefix)) != 0:
             seed_to_mature_map[seed] = common_prefix
-            mature_to_seed_map[common_prefix] = seed
-            # print("done with entry " + str(len(seed_to_mature_map)))
+            print("done with seed " + str(seed) + " and mapped to " + str(common_prefix))
 
-    # access to database
+    # access to database and save file
     with open('static/Model/maps/seed_to_mature_map_' + str(seed_length) + '.txt', "w") as f:
         json.dump(seed_to_mature_map, f, indent=4)
+
+
+def create_mature_name_seed_map_file(seed_length,
+                                     table_data,
+                                     organisms,
+                                     pre_mir_name_to_seeds_map,
+                                     pre_mir_name_to_mature_5p_or_3p_map):
+    mature_to_seed_map = {}
+
+    # load seed-to-mature dict
+    with open('static/Model/maps/seed_to_mature_map_' + str(seed_length) + '.txt', 'rb') as fp:
+        seed_mature_name_map = json.load(fp)
+
+    # since different seeds could be mapped to the same family name, we want to first collect all the unique family
+    # names and then evaluate their most dominant seed representative
+    family_names = np.unique(list(seed_mature_name_map.values()))
+
+    # for each family name we want to find the most dominant seed sequence
+    for family_name in family_names:
+        most_dominant_seed = ''
+        most_dominant_seed_dict = {}
+        family_name_seeds = []
+
+        # collect all the seeds that are mapped to the current family name
+        for seed, fn in seed_mature_name_map.items():
+            if fn == family_name:
+                family_name_seeds.append(seed)
+
+        # go over these seeds and get the most dominant one tor represent the family
+        for seed in family_name_seeds:
+            curr_seed_dict = mapper.map_seed_to_organisms_extended(table_data,
+                                                                   seed,
+                                                                   organisms,
+                                                                   pre_mir_name_to_seeds_map,
+                                                                   pre_mir_name_to_mature_5p_or_3p_map)
+
+            # update largest dict for the family name
+            curr_size = sum(len(v) for v in curr_seed_dict.values())
+            prev_size = sum(len(v) for v in most_dominant_seed_dict.values())
+            if curr_size > prev_size:
+                most_dominant_seed = seed
+
+        # set the map value for the family name
+        mature_to_seed_map[family_name] = most_dominant_seed
+        print("done with family name " + family_name + " and mapped to " + most_dominant_seed)
+
+    # save to file
     with open('static/Model/maps/mature_to_seed_map_' + str(seed_length) + '.txt', "w") as f:
         json.dump(mature_to_seed_map, f, indent=4)
 
@@ -427,8 +507,18 @@ organisms_6 = np.unique(table_data_6[1])
 organisms_7 = np.unique(table_data_7[1])
 
 ###### create map files ##################
-# create_seed_mature_name_map_file(seed_list_6, 6, pre_mir_name_to_mature_5p_or_3p_map_6, pre_mir_name_to_seeds_map_6)
-# create_seed_mature_name_map_file(seed_list_7, 7, pre_mir_name_to_mature_5p_or_3p_map_7, pre_mir_name_to_seeds_map_7)
+#create_seed_mature_name_map_file(seed_list_6, 6, pre_mir_name_to_mature_5p_or_3p_map_6, pre_mir_name_to_seeds_map_6)
+#create_mature_name_seed_map_file(6,
+#                                 table_data_6,
+#                                 organisms_6,
+#                                 pre_mir_name_to_seeds_map_6,
+#                                 pre_mir_name_to_mature_5p_or_3p_map_6)
+#create_seed_mature_name_map_file(seed_list_7, 7, pre_mir_name_to_mature_5p_or_3p_map_7, pre_mir_name_to_seeds_map_7)
+#create_mature_name_seed_map_file(7,
+#                                 table_data_7,
+#                                 organisms_7,
+#                                 pre_mir_name_to_seeds_map_7,
+#                                 pre_mir_name_to_mature_5p_or_3p_map_7)
 ##########################################
 
 seed_mature_name_map_6 = init_seed_mature_name_map(6)
