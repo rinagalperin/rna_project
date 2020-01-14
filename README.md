@@ -1,6 +1,7 @@
 # miRSeedBase: miRNA seed-based online tool
 
-One Paragraph of project description goes here
+miRSeedBase offers IR from a seed-based database, mapping of evolutionary events in miRNA families and provides both
+visual outputs and raw data, achieved by using a two-way mapping we created between a seed sequence and a family name.
 
 ## Background information
 
@@ -9,8 +10,6 @@ The seed sequence is a conserved heptametrical sequence which is mostly situated
 Even though base pairing of miRNA and its target mRNA does not match perfectly, the seed sequence has to be perfectly complementary.
 The miRNA can be divided into families based on their seed sequences. Family analysis done in previous studies showed that
 there are miRNA with the same seed in many organisms.
-miRSeedBase offers IR from a seed-based database, mapping of evolutionary events in miRNA families and provides both
-visual outputs and raw data.
 
 ## Built With
 
