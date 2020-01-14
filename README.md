@@ -14,7 +14,7 @@ there are miRNA with the same seed in many organisms.
 ## Built With
 
 * mirbase.org, Version 22.0, database files
-* jsphylosvg.com to - used to render the graph reports
+* jsphylosvg.com - used to render the graph reports
 * phyloXML converter by Christian Zmasek - used to convert various phylogentic tree formats to phyloXML.
 
 ## Authors
