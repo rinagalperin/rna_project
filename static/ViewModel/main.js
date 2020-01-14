@@ -84,7 +84,6 @@ function getData(input) {
         if(data === '-1'){
             alert("Seed sequence does not exist! \n Please verify you have entered a valid seed or family name \n and try again.")
         }else {
-            console.log("in getData")
             // construct output page title of seed sequence + family name
             let user_input = $('#seed').val().toLowerCase();
             let other_name = data.split('$')[1];
@@ -104,14 +103,11 @@ function getData(input) {
             $('#result_title').text(result_title);
 
             data = data.split('$')[0];
-            console.log(data)
 
             // ------------------------------------
             // gather 3p/5p count per organism:
             let seed = Object.keys(JSON.parse(data))[0];
-            console.log(seed)
             let organisms_json = JSON.parse(data)[seed];
-            console.log(organisms_json)
             // iterate over all organisms
             Object.keys(organisms_json).forEach(function(organism) {
                 let matures_json = organisms_json[organism];
@@ -155,7 +151,6 @@ function getData(input) {
             */
 
             if (isChecked("fasta")) {
-                console.log("fasta checked")
                 controlOutput(true, "fastaArea");
                 jsonToFasta(data)
             } else {
@@ -211,19 +206,16 @@ function jsonToCsv(json_input){
         method: "GET",
         url: "json_to_csv/" + json_input
     }).done(function (result) {
-        console.log(result);
         $('#csvTextArea').text(result);
     });
 }
 
 function jsonToFasta(json_input){
-    console.log("in jsonToFasta")
     $.ajax({
         method: "POST",
         url: "json_to_fasta",
         data: json_input
     }).done(function (result) {
-        console.log("FASTA result: " + result)
         $('#fastaTextArea').text(result);
     });
 }
@@ -245,7 +237,7 @@ function jsonToTree(json_input){
         data: json_input
     }).done(function (relevant_organisms) {
         // result: our tree in newick format (string object)
-        let uri = "/static/ViewModel/ev_tree_skel.xml";
+        let uri = "/static/ViewModel/evolutionary_tree_core.xml";
 
     	$.get(uri, function(data) {
     	    var relevant_organisms_arr = relevant_organisms.split(',');
@@ -258,7 +250,6 @@ function jsonToTree(json_input){
 
             // reset tree (ready to draw a new tree according to user's input seed)
             // TODO: not duplicate graph visual on page when clicking "SEARCH" again...
-
 
             let phylocanvas = new Smits.PhyloCanvas(
                 dataObject,     // Newick or XML string
@@ -341,24 +332,3 @@ function getOrganismFullName(short_name){
 
      return response;
 }
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-
-/**
-  * getTimeForURL method returns the current time
-  * in a URL friendly format, so that it can be appended to
-  * dataURL for effective non-caching.
- */
- function getTimeForURL(){
-  var dt = new Date();
-  var strOutput = "";
-  strOutput = dt.getHours() + "_" + dt.getMinutes() + "_" + dt.getSeconds() + "_" + dt.getMilliseconds();
-  return strOutput;
- }

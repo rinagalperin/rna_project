@@ -564,10 +564,7 @@
           <name>sci</name>
         </clade>
       </clade>
-    </clade>
-      <clade><branch_length>0.0</branch_length>
-      <name>ddi</name>
-    </clade>
+      </clade>
   </clade>
 </phylogeny>
 
